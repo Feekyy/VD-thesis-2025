@@ -1,0 +1,27 @@
+[0.050s] Invoking command in '/root/tello_ros_ws/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/tello_ros_ws/install/tello_hand_move:/root/tello_ros_ws/install/sim:/root/tello_ros_ws/sim/install/sim:/opt/ros/foxy /usr/bin/cmake --build /root/tello_ros_ws/build/ros2_shared -- -j12 -l12
+[0.483s] Invoked command in '/root/tello_ros_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/tello_ros_ws/install/tello_hand_move:/root/tello_ros_ws/install/sim:/root/tello_ros_ws/sim/install/sim:/opt/ros/foxy /usr/bin/cmake --build /root/tello_ros_ws/build/ros2_shared -- -j12 -l12
+[0.515s] Invoking command in '/root/tello_ros_ws/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/tello_ros_ws/install/tello_hand_move:/root/tello_ros_ws/install/sim:/root/tello_ros_ws/sim/install/sim:/opt/ros/foxy /usr/bin/cmake --install /root/tello_ros_ws/build/ros2_shared
+[0.525s] -- Install configuration: ""
+[0.525s] -- Execute custom install script
+[0.526s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[0.526s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[0.526s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[0.526s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[0.527s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[0.527s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[0.527s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[0.527s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/environment/path.sh
+[0.528s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[0.528s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/local_setup.bash
+[0.528s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/local_setup.sh
+[0.529s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[0.529s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[0.529s] -- Symlinking: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/package.dsv
+[0.540s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[0.540s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake
+[0.540s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.540s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[0.540s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[0.541s] -- Up-to-date symlink: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/package.xml
+[0.541s] -- Up-to-date: /root/tello_ros_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake
+[0.543s] Invoked command in '/root/tello_ros_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/tello_ros_ws/install/tello_hand_move:/root/tello_ros_ws/install/sim:/root/tello_ros_ws/sim/install/sim:/opt/ros/foxy /usr/bin/cmake --install /root/tello_ros_ws/build/ros2_shared

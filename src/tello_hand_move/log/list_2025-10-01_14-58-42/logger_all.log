@@ -1,0 +1,85 @@
+[0.235s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list']
+[0.236s] DEBUG:colcon:Parsed command line arguments: Namespace(base_paths=['.'], build_base='build', ignore_user_meta=False, log_base=None, log_level=None, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7a58f8db3ee0>>, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('list',), names_only=False, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, paths=None, paths_only=False, topological_graph=False, topological_graph_density=False, topological_graph_dot=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, topological_graph_legend=False, topological_order=False, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7a58f8db3ee0>, verb_name='list', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a58f8ccc6d0>)
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.260s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.261s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.261s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.262s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/tello_ros_ws/src/tello_hand_move'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.263s] ERROR:colcon.colcon_core.package_identification:Exception in package identification extension 'colcon_pkg' in '.': expected '<document start>', but found '<scalar>'
+  in "<unicode string>", line 2, column 1:
+    build_type = ament_python
+    ^
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/package_identification/__init__.py", line 142, in _identify
+    retval = extension.identify(_reused_descriptor_instance)
+  File "/usr/lib/python3/dist-packages/colcon_metadata/metadata/colcon_pkg.py", line 33, in identify
+    data = self._get_colcon_pkg_data(desc.path)
+  File "/usr/lib/python3/dist-packages/colcon_metadata/metadata/colcon_pkg.py", line 80, in _get_colcon_pkg_data
+    return yaml.safe_load(content)
+  File "/usr/lib/python3/dist-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/lib/python3/dist-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/usr/lib/python3/dist-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/lib/python3/dist-packages/yaml/composer.py", line 39, in get_single_node
+    if not self.check_event(StreamEndEvent):
+  File "/usr/lib/python3/dist-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/lib/python3/dist-packages/yaml/parser.py", line 171, in parse_document_start
+    raise ParserError(None, None,
+yaml.parser.ParserError: expected '<document start>', but found '<scalar>'
+  in "<unicode string>", line 2, column 1:
+    build_type = ament_python
+    ^
+
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.catkin' and name 'tello_hand_move'
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.299s] ERROR:colcon.colcon_core.package_augmentation:Exception in package augmentation extension 'colcon_pkg': expected '<document start>', but found '<scalar>'
+  in "<unicode string>", line 2, column 1:
+    build_type = ament_python
+    ^
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/package_augmentation/__init__.py", line 97, in augment_packages
+    retval = extension.augment_packages(
+  File "/usr/lib/python3/dist-packages/colcon_core/package_augmentation/__init__.py", line 48, in augment_packages
+    self.augment_package(
+  File "/usr/lib/python3/dist-packages/colcon_metadata/metadata/colcon_pkg.py", line 64, in augment_package
+    data = self._get_colcon_pkg_data(desc.path)
+  File "/usr/lib/python3/dist-packages/colcon_metadata/metadata/colcon_pkg.py", line 80, in _get_colcon_pkg_data
+    return yaml.safe_load(content)
+  File "/usr/lib/python3/dist-packages/yaml/__init__.py", line 162, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/lib/python3/dist-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/usr/lib/python3/dist-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/lib/python3/dist-packages/yaml/composer.py", line 39, in get_single_node
+    if not self.check_event(StreamEndEvent):
+  File "/usr/lib/python3/dist-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/lib/python3/dist-packages/yaml/parser.py", line 171, in parse_document_start
+    raise ParserError(None, None,
+yaml.parser.ParserError: expected '<document start>', but found '<scalar>'
+  in "<unicode string>", line 2, column 1:
+    build_type = ament_python
+    ^
+

@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'tello-hand-move','console_scripts','teleop_wasd_altitude'
+__requires__ = 'tello-hand-move'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('tello-hand-move', 'console_scripts', 'teleop_wasd_altitude')()
+    )

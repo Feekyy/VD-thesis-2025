@@ -1,0 +1,17 @@
+[0.863s] Invoking command in '/root/tello_ros_ws/build/tello_hand_move': PYTHONPATH=/root/tello_ros_ws/build/tello_hand_move/prefix_override:/root/tello_ros_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/build/tello_hand_move/build --no-deps install_data
+[1.075s] running develop
+[1.167s] running egg_info
+[1.167s] writing tello_hand_move.egg-info/PKG-INFO
+[1.167s] writing dependency_links to tello_hand_move.egg-info/dependency_links.txt
+[1.167s] writing entry points to tello_hand_move.egg-info/entry_points.txt
+[1.167s] writing requirements to tello_hand_move.egg-info/requires.txt
+[1.168s] writing top-level names to tello_hand_move.egg-info/top_level.txt
+[1.197s] reading manifest file 'tello_hand_move.egg-info/SOURCES.txt'
+[1.197s] writing manifest file 'tello_hand_move.egg-info/SOURCES.txt'
+[1.231s] running build_ext
+[1.231s] Creating /root/tello_ros_ws/install/tello_hand_move/lib/python3.8/site-packages/tello-hand-move.egg-link (link to .)
+[1.232s] Installing teleop_wasd_altitude script to /root/tello_ros_ws/install/tello_hand_move/lib/tello_hand_move
+[1.232s] 
+[1.232s] Installed /root/tello_ros_ws/build/tello_hand_move
+[1.232s] running install_data
+[1.261s] Invoked command in '/root/tello_ros_ws/build/tello_hand_move' returned '0': PYTHONPATH=/root/tello_ros_ws/build/tello_hand_move/prefix_override:/root/tello_ros_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/build/tello_hand_move/build --no-deps install_data

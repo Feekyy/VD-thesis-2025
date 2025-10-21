@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing tello_hand_move.egg-info/PKG-INFO
+writing dependency_links to tello_hand_move.egg-info/dependency_links.txt
+writing entry points to tello_hand_move.egg-info/entry_points.txt
+writing requirements to tello_hand_move.egg-info/requires.txt
+writing top-level names to tello_hand_move.egg-info/top_level.txt
+reading manifest file 'tello_hand_move.egg-info/SOURCES.txt'
+writing manifest file 'tello_hand_move.egg-info/SOURCES.txt'
+running build_ext
+Creating /root/tello_ros_ws/install/tello_hand_move/lib/python3.8/site-packages/tello-hand-move.egg-link (link to .)
+Installing teleop_wasd_altitude script to /root/tello_ros_ws/install/tello_hand_move/lib/tello_hand_move
+
+Installed /root/tello_ros_ws/build/tello_hand_move
+running install_data

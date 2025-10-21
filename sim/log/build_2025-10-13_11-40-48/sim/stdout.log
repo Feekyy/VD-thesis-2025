@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating sim.egg-info
+writing sim.egg-info/PKG-INFO
+writing dependency_links to sim.egg-info/dependency_links.txt
+writing entry points to sim.egg-info/entry_points.txt
+writing requirements to sim.egg-info/requires.txt
+writing top-level names to sim.egg-info/top_level.txt
+writing manifest file 'sim.egg-info/SOURCES.txt'
+reading manifest file 'sim.egg-info/SOURCES.txt'
+writing manifest file 'sim.egg-info/SOURCES.txt'
+running build_ext
+Creating /root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages/site.py
+Creating /root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages/sim.egg-link (link to .)
+
+Installed /root/tello_ros_ws/sim/build/sim
+running install_data
+creating /root/tello_ros_ws/sim/install/sim/share/ament_index
+creating /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index
+creating /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index/packages
+copying resource/sim -> /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index/packages
+copying package.xml -> /root/tello_ros_ws/sim/install/sim/share/sim

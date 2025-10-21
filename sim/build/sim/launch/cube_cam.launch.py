@@ -1,0 +1,1 @@
+/root/tello_ros_ws/sim/sim/launch/cube_cam.launch.py

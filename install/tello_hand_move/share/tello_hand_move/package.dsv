@@ -1,0 +1,9 @@
+source;share/tello_hand_move/hook/pythonpath.ps1
+source;share/tello_hand_move/hook/pythonpath.dsv
+source;share/tello_hand_move/hook/pythonpath.sh
+source;share/tello_hand_move/hook/ament_prefix_path.ps1
+source;share/tello_hand_move/hook/ament_prefix_path.dsv
+source;share/tello_hand_move/hook/ament_prefix_path.sh
+source;../../build/tello_hand_move/share/tello_hand_move/hook/pythonpath_develop.ps1
+source;../../build/tello_hand_move/share/tello_hand_move/hook/pythonpath_develop.dsv
+source;../../build/tello_hand_move/share/tello_hand_move/hook/pythonpath_develop.sh

@@ -1,0 +1,25 @@
+[0.908s] Invoking command in '/root/tello_ros_ws/build/sim': PYTHONPATH=/root/tello_ros_ws/build/sim/prefix_override:/root/tello_ros_ws/install/sim/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/build/sim/build --no-deps install_data
+[1.128s] running develop
+[1.268s] running egg_info
+[1.268s] creating sim.egg-info
+[1.268s] writing sim.egg-info/PKG-INFO
+[1.268s] writing dependency_links to sim.egg-info/dependency_links.txt
+[1.269s] writing requirements to sim.egg-info/requires.txt
+[1.269s] writing top-level names to sim.egg-info/top_level.txt
+[1.270s] writing manifest file 'sim.egg-info/SOURCES.txt'
+[1.304s] reading manifest file 'sim.egg-info/SOURCES.txt'
+[1.305s] writing manifest file 'sim.egg-info/SOURCES.txt'
+[1.341s] running build_ext
+[1.341s] Creating /root/tello_ros_ws/install/sim/lib/python3.8/site-packages/site.py
+[1.343s] Creating /root/tello_ros_ws/install/sim/lib/python3.8/site-packages/sim.egg-link (link to .)
+[1.344s] 
+[1.344s] Installed /root/tello_ros_ws/build/sim
+[1.344s] running install_data
+[1.344s] creating /root/tello_ros_ws/install/sim/share/ament_index
+[1.344s] creating /root/tello_ros_ws/install/sim/share/ament_index/resource_index
+[1.344s] creating /root/tello_ros_ws/install/sim/share/ament_index/resource_index/packages
+[1.344s] copying resource/sim -> /root/tello_ros_ws/install/sim/share/ament_index/resource_index/packages
+[1.345s] copying package.xml -> /root/tello_ros_ws/install/sim/share/sim
+[1.345s] creating /root/tello_ros_ws/install/sim/share/sim/launch
+[1.345s] copying launch/cube_cam.launch.py -> /root/tello_ros_ws/install/sim/share/sim/launch
+[1.381s] Invoked command in '/root/tello_ros_ws/build/sim' returned '0': PYTHONPATH=/root/tello_ros_ws/build/sim/prefix_override:/root/tello_ros_ws/install/sim/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/build/sim/build --no-deps install_data

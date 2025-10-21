@@ -1,0 +1,24 @@
+[0.565s] Invoking command in '/root/tello_ros_ws/sim/build/sim': PYTHONPATH=/root/tello_ros_ws/sim/build/sim/prefix_override:/root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/sim/build/sim/build --no-deps install_data
+[0.743s] running develop
+[0.827s] running egg_info
+[0.827s] creating sim.egg-info
+[0.828s] writing sim.egg-info/PKG-INFO
+[0.828s] writing dependency_links to sim.egg-info/dependency_links.txt
+[0.828s] writing entry points to sim.egg-info/entry_points.txt
+[0.828s] writing requirements to sim.egg-info/requires.txt
+[0.828s] writing top-level names to sim.egg-info/top_level.txt
+[0.831s] writing manifest file 'sim.egg-info/SOURCES.txt'
+[0.858s] reading manifest file 'sim.egg-info/SOURCES.txt'
+[0.858s] writing manifest file 'sim.egg-info/SOURCES.txt'
+[0.889s] running build_ext
+[0.890s] Creating /root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages/site.py
+[0.891s] Creating /root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages/sim.egg-link (link to .)
+[0.892s] 
+[0.892s] Installed /root/tello_ros_ws/sim/build/sim
+[0.892s] running install_data
+[0.892s] creating /root/tello_ros_ws/sim/install/sim/share/ament_index
+[0.892s] creating /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index
+[0.892s] creating /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index/packages
+[0.892s] copying resource/sim -> /root/tello_ros_ws/sim/install/sim/share/ament_index/resource_index/packages
+[0.893s] copying package.xml -> /root/tello_ros_ws/sim/install/sim/share/sim
+[0.916s] Invoked command in '/root/tello_ros_ws/sim/build/sim' returned '0': PYTHONPATH=/root/tello_ros_ws/sim/build/sim/prefix_override:/root/tello_ros_ws/sim/install/sim/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /root/tello_ros_ws/sim/build/sim/build --no-deps install_data
