@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DOCKER_IMAGE="ros2-foxy-tello:latest"
-CONTAINER_NAME="ros-foxy-tello"
+DOCKER_IMAGE="foxy-docker:latest"
+CONTAINER_NAME="foxy-docker"
 
 echo "-----------------------------------"
 echo " Tello Drone Launcher Script"
@@ -21,7 +21,7 @@ case "$CMD" in
 	"build")
 		echo "Building the docker!"
 		cd Docker
-		sudo docker build -t ros2-foxy-tello .
+		sudo docker build -t $CONTAINER_NAME .
 	;;
 
 	"start")
@@ -29,8 +29,7 @@ case "$CMD" in
     	docker stop $CONTAINER_NAME 2>/dev/null
     	docker rm $CONTAINER_NAME 2>/dev/null
     	xhost +local:docker
-		sudo docker run -it --net=host --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$HOME/DockerFiles:/root/DockerFiles" --name ros2_foxy_tello ros2-foxy-tello:latest
-
+		sudo docker run -it --net=host --gpus all --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$HOME/DockerFiles:/root/DockerFiles" --name $CONTAINER_NAME $DOCKER_IMAGE
 	;;
 
 	"start2")
@@ -47,10 +46,10 @@ case "$CMD" in
 
 	"exit")
     	exit 0
-    	;;
+    ;;
 
     	*)
-    	echo "Wrong command"
-    	exit 0
-    	;;
+    	echo "Wrong command! Try again!"
+		exit 0
+    ;;
 esac

@@ -1,0 +1,12 @@
+setup.cfg
+setup.py
+build/tello_hand_move/tello_hand_move.egg-info/PKG-INFO
+build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt
+build/tello_hand_move/tello_hand_move.egg-info/dependency_links.txt
+build/tello_hand_move/tello_hand_move.egg-info/entry_points.txt
+build/tello_hand_move/tello_hand_move.egg-info/requires.txt
+build/tello_hand_move/tello_hand_move.egg-info/top_level.txt
+build/tello_hand_move/tello_hand_move.egg-info/zip-safe
+tello_hand_move/__init__.py
+tello_hand_move/teleop_move.py
+tello_hand_move/teleop_wasd_altitude.py
