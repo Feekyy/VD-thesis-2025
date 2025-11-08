@@ -1,3 +1,0 @@
-/root/tello_ros_ws/build/tello_msgs/rosidl_adapter/tello_msgs:msg/FlightData.idl
-/root/tello_ros_ws/build/tello_msgs/rosidl_adapter/tello_msgs:msg/TelloResponse.idl
-/root/tello_ros_ws/build/tello_msgs/rosidl_adapter/tello_msgs:srv/TelloAction.idl

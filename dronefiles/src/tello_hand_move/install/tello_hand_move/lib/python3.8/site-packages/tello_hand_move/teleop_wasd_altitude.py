@@ -10,7 +10,7 @@ from gazebo_msgs.msg import EntityState
 from geometry_msgs.msg import Pose, Twist as TwistMsg
 
 HELP = """
-=== Tello / Gazebo WASD Controller ===
+=== Tello Controller ===
 
 Movement:
   w/s : forward / backward
@@ -42,12 +42,12 @@ class TeleopWasdTello(Node):
 
         self.declare_parameter('simulation', True)
         self.declare_parameter('cmd_vel_topic', '/cmd_vel')
-        self.declare_parameter('model_name', 'tello')
+        self.declare_parameter('model_name', 'tello_drone')
         self.declare_parameter('reference_frame', 'world')
         self.declare_parameter('min_z', -10.0)
         self.declare_parameter('max_z', 100.0)
-        self.declare_parameter('lin_speed', 0.8)
-        self.declare_parameter('yaw_speed', 1.2)
+        self.declare_parameter('lin_speed', 1.0)
+        self.declare_parameter('yaw_speed', 1.0)
         self.declare_parameter('dz_step', 0.1)
 
         self.simulation = self.get_parameter('simulation').get_parameter_value().bool_value
@@ -127,14 +127,15 @@ class TeleopWasdTello(Node):
         vx = vy = wz = 0.0
         while rclpy.ok():
             c = getch()
+            self.get_logger().info(f"Key pressed: {c}")
             if c == 'x':
                 self.get_logger().info("Exiting...")
                 self.send_cmd(0.0, 0.0, 0.0, 0.0)
                 break
-            if c == 'w':
+            elif c == 'w':
                 vx = +self.lin_speed
             elif c == 's':
-                vx = -self.lin_speed
+                vx -= self.lin_speed
             elif c == 'a':
                 vy = +self.lin_speed
             elif c == 'd':

@@ -3,6 +3,7 @@ import sys
 import termios
 import tty
 import rclpy
+import transforms3d.euler as tfe
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from gazebo_msgs.srv import GetEntityState, SetEntityState
@@ -10,7 +11,7 @@ from gazebo_msgs.msg import EntityState
 from geometry_msgs.msg import Pose, Twist as TwistMsg
 
 HELP = """
-=== Tello / Gazebo WASD Controller ===
+=== Tello Controller ===
 
 Movement:
   w/s : forward / backward
@@ -42,12 +43,12 @@ class TeleopWasdTello(Node):
 
         self.declare_parameter('simulation', True)
         self.declare_parameter('cmd_vel_topic', '/cmd_vel')
-        self.declare_parameter('model_name', 'tello')
+        self.declare_parameter('model_name', 'tello_drone')
         self.declare_parameter('reference_frame', 'world')
         self.declare_parameter('min_z', -10.0)
         self.declare_parameter('max_z', 100.0)
-        self.declare_parameter('lin_speed', 1.0)
-        self.declare_parameter('yaw_speed', 1.0)
+        self.declare_parameter('lin_speed', 0.1)
+        self.declare_parameter('yaw_speed', 0.05)
         self.declare_parameter('dz_step', 0.1)
 
         self.simulation = self.get_parameter('simulation').get_parameter_value().bool_value
@@ -92,6 +93,83 @@ class TeleopWasdTello(Node):
         msg.angular.z = float(wz)
         self.pub_cmd.publish(msg)
 
+    def step_x(self, dx: float):
+        if self.simulation:
+            req_g = GetEntityState.Request()
+            req_g.name = self.model_name
+            req_g.reference_frame = self.reference_frame
+            fut_g = self.cli_get.call_async(req_g)
+            rclpy.spin_until_future_complete(self, fut_g)
+
+            if not fut_g.result() or not fut_g.result().success:
+                self.get_logger().error("GetEntityState unsuccessful.")
+                return
+
+            pose: Pose = fut_g.result().state.pose
+            twist: TwistMsg = fut_g.result().state.twist
+
+            new_x = pose.position.x + dx
+            pose.position.x = new_x
+
+            req_s = SetEntityState.Request()
+            req_s.state = EntityState()
+            req_s.state.name = self.model_name
+            req_s.state.reference_frame = self.reference_frame
+            req_s.state.pose = pose
+            req_s.state.twist = twist
+
+            fut_s = self.cli_set.call_async(req_s)
+            rclpy.spin_until_future_complete(self, fut_s)
+
+            if not fut_s.result() or not fut_s.result().success:
+                self.get_logger().error("SetEntityState unsuccessful.")
+            else:
+                self.get_logger().info(f"X → {new_x:.3f} m")
+
+        else:
+            vx = dx / abs(dx) * self.lin_speed if dx != 0 else 0.0
+            self.send_cmd(vx, 0.0, 0.0, 0.0)
+            self.get_logger().info(f"Sent forward velocity: {vx:.2f} m/s")
+
+    def step_y(self, dy: float):
+        if self.simulation:
+            req_g = GetEntityState.Request()
+            req_g.name = self.model_name
+            req_g.reference_frame = self.reference_frame
+            fut_g = self.cli_get.call_async(req_g)
+            rclpy.spin_until_future_complete(self, fut_g)
+
+            if not fut_g.result() or not fut_g.result().success:
+                self.get_logger().error("GetEntityState unsuccessful.")
+                return
+
+            pose: Pose = fut_g.result().state.pose
+            twist: TwistMsg = fut_g.result().state.twist
+
+            new_y = pose.position.y + dy
+            pose.position.y = new_y
+
+            req_s = SetEntityState.Request()
+            req_s.state = EntityState()
+            req_s.state.name = self.model_name
+            req_s.state.reference_frame = self.reference_frame
+            req_s.state.pose = pose
+            req_s.state.twist = twist
+
+            fut_s = self.cli_set.call_async(req_s)
+            rclpy.spin_until_future_complete(self, fut_s)
+
+            if not fut_s.result() or not fut_s.result().success:
+                self.get_logger().error("SetEntityState unsuccessful.")
+            else:
+                self.get_logger().info(f"Y → {new_y:.3f} m")
+
+        else:
+            vy = dy / abs(dy) * self.lin_speed if dy != 0 else 0.0
+            self.send_cmd(0.0, vy, 0.0, 0.0)
+            self.get_logger().info(f"Sent lateral velocity: {vy:.2f} m/s")
+
+
     def step_z(self, dz: float):
         if self.simulation:
             req_g = GetEntityState.Request()
@@ -123,6 +201,47 @@ class TeleopWasdTello(Node):
             self.send_cmd(0.0, 0.0, vz, 0.0)
             self.get_logger().info(f"Sent vertical velocity: {vz:.2f} m/s")
 
+    def step_yaw(self, dyaw: float):
+        if self.simulation:
+            req_g = GetEntityState.Request()
+            req_g.name = self.model_name
+            req_g.reference_frame = self.reference_frame
+            fut_g = self.cli_get.call_async(req_g)
+            rclpy.spin_until_future_complete(self, fut_g)
+            if not fut_g.result() or not fut_g.result().success:
+                self.get_logger().error("GetEntityState unsuccessful.")
+                return
+
+            pose = fut_g.result().state.pose
+            twist = fut_g.result().state.twist
+
+            q = pose.orientation
+            current_euler = tfe.quat2euler([q.w, q.x, q.y, q.z], axes='sxyz')
+            new_yaw = current_euler[2] + dyaw
+
+            new_quat = tfe.euler2quat(current_euler[0], current_euler[1], new_yaw, axes='sxyz')
+            pose.orientation.w = new_quat[0]
+            pose.orientation.x = new_quat[1]
+            pose.orientation.y = new_quat[2]
+            pose.orientation.z = new_quat[3]
+
+            req_s = SetEntityState.Request()
+            req_s.state = EntityState()
+            req_s.state.name = self.model_name
+            req_s.state.reference_frame = self.reference_frame
+            req_s.state.pose = pose
+            req_s.state.twist = twist
+
+            fut_s = self.cli_set.call_async(req_s)
+            rclpy.spin_until_future_complete(self, fut_s)
+            if not fut_s.result() or not fut_s.result().success:
+                self.get_logger().error("SetEntityState unsuccessful.")
+            else:
+                self.get_logger().info(f"Yaw → {new_yaw:.3f} rad")
+        else:
+            self.send_cmd(0.0, 0.0, 0.0, dyaw)
+            self.get_logger().info(f"Sent yaw velocity: {dyaw:.2f} rad/s")
+
     def run(self):
         vx = vy = wz = 0.0
         while rclpy.ok():
@@ -132,22 +251,22 @@ class TeleopWasdTello(Node):
                 self.send_cmd(0.0, 0.0, 0.0, 0.0)
                 break
             elif c == 'w':
-                vx += self.lin_speed
+                self.step_x(+self.lin_speed)
                 continue
             elif c == 's':
-                vx -= self.lin_speed
+                self.step_x(-self.lin_speed)
                 continue
             elif c == 'a':
-                vy = +self.lin_speed
+                self.step_y(+self.lin_speed)
                 continue
             elif c == 'd':
-                vy = -self.lin_speed
+                self.step_y(-self.lin_speed)
                 continue
             elif c == 'q':
-                wz = +self.yaw_speed
+                self.step_yaw(+self.yaw_speed)
                 continue
             elif c == 'e':
-                wz = -self.yaw_speed
+                self.step_yaw(-self.yaw_speed)
                 continue
             elif c == ' ':
                 self.step_z(+self.dz_step)
