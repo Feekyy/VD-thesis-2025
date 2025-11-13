@@ -1,4 +1,0 @@
-[console_scripts]
-teleop_move = tello_hand_move.teleop_move:main
-teleop_wasd_altitude = tello_hand_move.teleop_wasd_altitude:main
-

@@ -1,0 +1,116 @@
+[0.041s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_driver
+[0.145s] -- The C compiler identification is GNU 9.4.0
+[0.245s] -- The CXX compiler identification is GNU 9.4.0
+[0.253s] -- Check for working C compiler: /usr/bin/cc
+[0.371s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.372s] -- Detecting C compiler ABI info
+[0.506s] -- Detecting C compiler ABI info - done
+[0.537s] -- Detecting C compile features
+[0.537s] -- Detecting C compile features - done
+[0.537s] -- Check for working CXX compiler: /usr/bin/c++
+[0.725s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.725s] -- Detecting CXX compiler ABI info
+[0.858s] -- Detecting CXX compiler ABI info - done
+[0.873s] -- Detecting CXX compile features
+[0.873s] -- Detecting CXX compile features - done
+[0.877s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.919s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.919s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.239s] -- Found camera_calibration_parsers: 2.4.0 (/opt/ros/foxy/share/camera_calibration_parsers/cmake)
+[1.313s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.324s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.482s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.532s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.683s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.785s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.787s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.789s] -- Looking for pthread.h
+[1.937s] -- Looking for pthread.h - found
+[1.943s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.077s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.077s] -- Looking for pthread_create in pthreads
+[2.174s] -- Looking for pthread_create in pthreads - not found
+[2.174s] -- Looking for pthread_create in pthread
+[2.309s] -- Looking for pthread_create in pthread - found
+[2.317s] -- Found Threads: TRUE  
+[2.715s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[2.722s] -- Found class_loader: 2.0.3 (/opt/ros/foxy/share/class_loader/cmake)
+[2.735s] -- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)
+[2.780s] -- Found OpenCV: /usr (found version "4.2.0") 
+[2.781s] -- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[2.858s] -- Found ros2_shared: 0.1.0 (/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake)
+[2.865s] -- Found tello_msgs: 0.1.0 (/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake)
+[3.169s] -- Configuring done
+[3.285s] -- Generating done
+[3.289s] -- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_driver
+[3.322s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_driver
+[3.333s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_driver -- -j12 -l12
+[3.405s] [35m[1mScanning dependencies of target tello_driver_node[0m
+[3.412s] [35m[1mScanning dependencies of target tello_joy_main[0m
+[3.412s] [35m[1mScanning dependencies of target tello_joy_node[0m
+[3.412s] [35m[1mScanning dependencies of target tello_driver_main[0m
+[3.420s] [35m[1mScanning dependencies of target tello_emulator[0m
+[3.448s] [  4%] [32mBuilding CXX object CMakeFiles/tello_emulator.dir/src/tello_emulator.cpp.o[0m
+[3.472s] [  9%] [32mBuilding CXX object CMakeFiles/tello_joy_node.dir/src/tello_joy_node.cpp.o[0m
+[3.485s] [ 13%] [32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_main.cpp.o[0m
+[3.574s] [ 18%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_driver_node.cpp.o[0m
+[3.576s] [ 22%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_main.cpp.o[0m
+[5.586s] [ 27%] [32m[1mLinking CXX executable tello_emulator[0m
+[5.848s] [ 27%] Built target tello_emulator
+[6.775s] [ 31%] [32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_node.cpp.o[0m
+[8.684s] [ 36%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/command_socket.cpp.o[0m
+[13.271s] [ 40%] [32m[1mLinking CXX shared library libtello_joy_node.so[0m
+[13.789s] [ 45%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/state_socket.cpp.o[0m
+[13.832s] [ 45%] Built target tello_joy_node
+[15.717s] [ 50%] [32m[1mLinking CXX executable tello_joy_main[0m
+[16.321s] [ 50%] Built target tello_joy_main
+[16.391s] [ 54%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/h264decoder/h264decoder.cpp.o[0m
+[16.758s] [ 59%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/video_socket.cpp.o[0m
+[21.049s] [ 63%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/h264decoder/h264decoder.cpp.o[0m
+[21.394s] [ 68%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/video_socket.cpp.o[0m
+[21.462s] [ 72%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/state_socket.cpp.o[0m
+[25.915s] [ 77%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_socket.cpp.o[0m
+[28.509s] [ 81%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/command_socket.cpp.o[0m
+[30.010s] [ 86%] [32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_node.cpp.o[0m
+[33.115s] [ 90%] [32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_socket.cpp.o[0m
+[37.137s] [ 95%] [32m[1mLinking CXX shared library libtello_driver_node.so[0m
+[38.511s] [ 95%] Built target tello_driver_node
+[41.350s] [100%] [32m[1mLinking CXX executable tello_driver_main[0m
+[43.074s] [100%] Built target tello_driver_main
+[43.090s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_driver -- -j12 -l12
+[43.156s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_driver
+[43.170s] -- Install configuration: ""
+[43.170s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/library_path.sh
+[43.177s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/library_path.dsv
+[43.177s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_driver_node.so
+[43.178s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_driver_node.so" to ""
+[43.178s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_joy_node.so
+[43.182s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_joy_node.so" to ""
+[43.183s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_driver_main
+[43.189s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_driver_main" to ""
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_joy_main
+[43.189s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_joy_main" to ""
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_emulator
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cfg
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cfg/camera_info.yaml
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch
+[43.189s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/teleop_launch.py
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/emulators_launch.py
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/emulator_launch.py
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/package_run_dependencies/tello_driver
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/parent_prefix_path/tello_driver
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/ament_prefix_path.sh
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/ament_prefix_path.dsv
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/path.sh
+[43.190s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/path.dsv
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.bash
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.sh
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.zsh
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.dsv
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.dsv
+[43.191s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/packages/tello_driver
+[43.192s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/rclcpp_components/tello_driver
+[43.192s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cmake/tello_driverConfig.cmake
+[43.192s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cmake/tello_driverConfig-version.cmake
+[43.192s] -- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.xml
+[43.200s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/root/DockerFiles/drone_ws/install/tello_gazebo:/root/DockerFiles/drone_ws/install/tello_driver:/root/DockerFiles/drone_ws/install/tello_description:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy:/root/DockerFiles/install/tello_camera LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:/root/DockerFiles/drone_ws/install/tello_gazebo/lib:/root/DockerFiles/drone_ws/install/tello_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_driver

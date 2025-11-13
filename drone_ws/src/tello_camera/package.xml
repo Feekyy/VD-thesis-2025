@@ -1,0 +1,16 @@
+<package format="3">
+  <name>tello_camera</name>
+  <version>0.0.1</version>
+  <description>Circle detection from Tello camera stream</description>
+  <maintainer email="dani@example.com">Dani</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

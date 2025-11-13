@@ -1,0 +1,3 @@
+[console_scripts]
+circle_detector = tello_camera.circle_detector:main
+

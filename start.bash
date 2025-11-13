@@ -11,9 +11,11 @@ echo "  build	- Start building the docker"
 echo "  start   - Foxy Docker starter"
 echo "  start2  - Secondary Docker starter"
 echo "  gazebo  - Gazebo simulation starter"
-echo "  camera  - Open the camera feedback in rqt"
+echo "  camera1 - Open the camera feedback in rqt"
+echo "  camera2 - Opening the visualation for the detector node"
 echo "  drone   - Spawning the drone in the simulation"
-echo "  hand1   - Hand movemnt starter in the simulation"
+echo "  detector- Cirdle detector node starter"
+echo "  hand1   - Hand movement starter in the simulation"
 echo "  save    - Save to the harddrive"
 echo "  exit    - Escape the script"
 echo "-----------------------------------"
@@ -44,25 +46,46 @@ case "$CMD" in
 		clear
     	echo "Starting the Gazebo with a preedited testing ground!"
 		source /opt/ros/foxy/setup.bash
-    	ros2 launch gazebo_ros gazebo.launch.py world:=~/DockerFiles/dronefiles/sim/worlds/cube_cam.world
+    	ros2 launch gazebo_ros gazebo.launch.py world:=~/DockerFiles/drone_ws/sim/worlds/donuttest.world
 	;;
 
 	"drone")
+		clear
 		echo "Spawning drone!"
 		source /opt/ros/foxy/setup.bash
-		ros2 run gazebo_ros spawn_entity.py -file ~/DockerFiles/dronefiles/src/tello_ros/tello_description/urdf/tello.urdf -entity tello_drone
+		ros2 run gazebo_ros spawn_entity.py -file ~/DockerFiles/drone_ws/src/tello_ros/tello_description/urdf/tello.urdf -entity tello_drone
 	;;
 
-	"camera")
-		echo "Opeing camera feed"
+	"camera1")
+		clear
+		echo "Opening camera feed"
 		source /opt/ros/foxy/setup.bash
 		rqt
 	;;
 
+	"camera2")
+		clear
+		echo "Opening visualation for the circle dtection"
+		source /opt/ros/foxy/setup.bash
+		cd ~/DockerFiles/drone_ws
+		source install/setup.bash
+		ros2 run tello_camera circle_detector --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true -p debug:=true
+	;;
+
+	"detector")
+		clear
+		echo "Stating the circle detector node with less information output"
+		source /opt/ros/foxy/setup.bash
+		cd ~/DockerFiles/drone_ws
+		source install/setup.bash
+		ros2 run tello_camera circle_detector --ros-args -p image_topic:=/topic_ns/image_raw
+	;;
+
 	"hand1")
 		clear
+		source /opt/ros/foxy/setup.bash
 		echo "Starting hand movemnt in the simulation"
-		cd ~/DockerFiles/dronefiles/src/tello_hand_move
+		cd ~/DockerFiles/drone_ws
 		source install/setup.bash
 		ros2 run tello_hand_move teleop_wasd_altitude --ros-args -p model_name:=tello_drone
 	;;

@@ -1,0 +1,8 @@
+{
+  "package_name": "tello_msgs",
+  "non_idl_tuples": [
+    "/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs:msg/FlightData.msg",
+    "/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs:msg/TelloResponse.msg",
+    "/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs:srv/TelloAction.srv"
+  ]
+}
