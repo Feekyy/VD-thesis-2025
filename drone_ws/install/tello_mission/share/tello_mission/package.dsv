@@ -1,0 +1,6 @@
+source;share/tello_mission/hook/pythonpath.ps1
+source;share/tello_mission/hook/pythonpath.dsv
+source;share/tello_mission/hook/pythonpath.sh
+source;share/tello_mission/hook/ament_prefix_path.ps1
+source;share/tello_mission/hook/ament_prefix_path.dsv
+source;share/tello_mission/hook/ament_prefix_path.sh

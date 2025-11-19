@@ -69,7 +69,7 @@ case "$CMD" in
 		source /opt/ros/foxy/setup.bash
 		cd ~/DockerFiles/drone_ws
 		source install/setup.bash
-		ros2 run tello_camera circle_detector --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true -p debug:=true
+		ros2 run tello_camera tello_camera --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true -p debug:=true
 	;;
 
 	"detector")
@@ -78,7 +78,8 @@ case "$CMD" in
 		source /opt/ros/foxy/setup.bash
 		cd ~/DockerFiles/drone_ws
 		source install/setup.bash
-		ros2 run tello_camera circle_detector --ros-args -p image_topic:=/topic_ns/image_raw
+		ros2 run tello_camera tello_camera --ros-args -p image_topic:=/topic_ns/image_raw
+
 	;;
 
 	"hand1")
@@ -87,7 +88,7 @@ case "$CMD" in
 		echo "Starting hand movemnt in the simulation"
 		cd ~/DockerFiles/drone_ws
 		source install/setup.bash
-		ros2 run tello_hand_move teleop_wasd_altitude --ros-args -p model_name:=tello_drone
+		ros2 run tello_hand_move tello_hand_move --ros-args -p model_name:=tello_drone
 	;;
 
 	"exit")

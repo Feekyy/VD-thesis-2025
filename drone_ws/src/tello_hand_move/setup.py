@@ -11,7 +11,7 @@ setup(
     entry_points={
         'console_scripts': 
         [
-            'teleop_wasd_altitude = tello_hand_move.teleop_wasd_altitude:main',
+            'tello_hand_move = tello_hand_move.tello_hand_move:main',
         ],
     },
 )

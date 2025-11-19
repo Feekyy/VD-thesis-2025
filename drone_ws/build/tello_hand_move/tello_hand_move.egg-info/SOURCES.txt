@@ -8,4 +8,4 @@ setup.py
 ../../build/tello_hand_move/tello_hand_move.egg-info/top_level.txt
 ../../build/tello_hand_move/tello_hand_move.egg-info/zip-safe
 tello_hand_move/__init__.py
-tello_hand_move/teleop_wasd_altitude.py
+tello_hand_move/tello_hand_move.py

@@ -217,10 +217,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='donut_world'>
-      <sim_time>145 136000000</sim_time>
-      <real_time>97 347356330</real_time>
-      <wall_time>1762885187 983206128</wall_time>
-      <iterations>96462</iterations>
+      <sim_time>538 178000000</sim_time>
+      <real_time>409 789210252</real_time>
+      <wall_time>1763510019 505690855</wall_time>
+      <iterations>393042</iterations>
       <model name='donut_blue'>
         <pose>11.4392 -0.027439 1.89268 0.004489 -0 -1.54014</pose>
         <scale>1 1 1</scale>
@@ -232,10 +232,10 @@
         </link>
       </model>
       <model name='donut_green'>
-        <pose>5.01314 3.06501 1.36946 0 -0 1.5863</pose>
+        <pose>6.86425 3.09371 1.36946 0 -0 1.5863</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>5.01314 3.06501 1.36946 0 -0 1.5863</pose>
+          <pose>6.86425 3.09371 1.36946 0 -0 1.5863</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -267,7 +267,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.32304 -32.8743 3.60526 0 0.279643 1.37301</pose>
+        <pose>-14.8336 -1.53322 11.369 -0 0.567643 0.09301</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

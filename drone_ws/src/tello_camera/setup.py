@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'circle_detector = tello_camera.circle_detector:main',
+            'tello_camera = tello_camera.tello_camera:main',
         ],
     },
 )

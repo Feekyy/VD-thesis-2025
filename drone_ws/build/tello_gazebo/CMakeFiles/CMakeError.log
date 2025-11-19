@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_179ae/fast && /usr/bin/make -f CMakeFiles/cmTC_179ae.dir/build.make CMakeFiles/cmTC_179ae.dir/build
+Run Build Command(s):/usr/bin/make cmTC_faff6/fast && /usr/bin/make -f CMakeFiles/cmTC_faff6.dir/build.make CMakeFiles/cmTC_faff6.dir/build
 make[1]: Entering directory '/root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_179ae.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_179ae.dir/src.c.o   -c /root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_179ae
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_179ae.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_179ae.dir/src.c.o  -o cmTC_179ae 
-/usr/bin/ld: CMakeFiles/cmTC_179ae.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_faff6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_faff6.dir/src.c.o   -c /root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_faff6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faff6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_faff6.dir/src.c.o  -o cmTC_faff6 
+/usr/bin/ld: CMakeFiles/cmTC_faff6.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_179ae.dir/build.make:87: cmTC_179ae] Error 1
+make[1]: *** [CMakeFiles/cmTC_faff6.dir/build.make:87: cmTC_faff6] Error 1
 make[1]: Leaving directory '/root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_179ae/fast] Error 2
+make: *** [Makefile:121: cmTC_faff6/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_615be/fast && /usr/bin/make -f CMakeFiles/cmTC_615be.dir/build.make CMakeFiles/cmTC_615be.dir/build
+Run Build Command(s):/usr/bin/make cmTC_37035/fast && /usr/bin/make -f CMakeFiles/cmTC_37035.dir/build.make CMakeFiles/cmTC_37035.dir/build
 make[1]: Entering directory '/root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_615be.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_615be.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_615be
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_615be.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_615be.dir/CheckFunctionExists.c.o  -o cmTC_615be  -lpthreads 
+Building C object CMakeFiles/cmTC_37035.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_37035.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_37035
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37035.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_37035.dir/CheckFunctionExists.c.o  -o cmTC_37035  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_615be.dir/build.make:87: cmTC_615be] Error 1
+make[1]: *** [CMakeFiles/cmTC_37035.dir/build.make:87: cmTC_37035] Error 1
 make[1]: Leaving directory '/root/DockerFiles/drone_ws/build/tello_gazebo/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_615be/fast] Error 2
+make: *** [Makefile:121: cmTC_37035/fast] Error 2
 
 
 

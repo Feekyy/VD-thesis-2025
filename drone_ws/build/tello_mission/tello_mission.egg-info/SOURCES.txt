@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+../../build/tello_mission/tello_mission.egg-info/PKG-INFO
+../../build/tello_mission/tello_mission.egg-info/SOURCES.txt
+../../build/tello_mission/tello_mission.egg-info/dependency_links.txt
+../../build/tello_mission/tello_mission.egg-info/entry_points.txt
+../../build/tello_mission/tello_mission.egg-info/requires.txt
+../../build/tello_mission/tello_mission.egg-info/top_level.txt
+../../build/tello_mission/tello_mission.egg-info/zip-safe
+resource/tello_mission
+tello_mission/__init__.py
+tello_mission/tello_mission.py

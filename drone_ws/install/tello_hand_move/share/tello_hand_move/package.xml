@@ -1,7 +1,7 @@
 <package format="3">
   <name>tello_hand_move</name>
   <version>0.0.1</version>
-  <description>Optional manual teleop for Gazebo</description>
+  <description>Optional manual movement in Gazebo</description>
   <maintainer email="you@example.com">You</maintainer>
   <license>Apache-2.0</license>
 

@@ -10,4 +10,4 @@ setup.py
 ../../build/tello_camera/tello_camera.egg-info/zip-safe
 resource/tello_camera
 tello_camera/__init__.py
-tello_camera/circle_detector.py
+tello_camera/tello_camera.py

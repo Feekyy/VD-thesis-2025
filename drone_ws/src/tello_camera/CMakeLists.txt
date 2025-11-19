@@ -7,7 +7,7 @@ find_package(rclpy REQUIRED)
 ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
-  tello_camera/circle_detector.py
+  tello_camera/tello_camera.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
