@@ -7,7 +7,8 @@ find_package(rclpy REQUIRED)
 ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
-  tello_camera/tello_camera.py
+  tello_camera/tello_camera_contour.py
+  tello_camera/tello_camera_hough.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

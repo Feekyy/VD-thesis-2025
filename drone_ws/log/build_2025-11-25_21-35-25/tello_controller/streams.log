@@ -1,0 +1,19 @@
+[3.167s] Invoking command in '/root/DockerFiles/drone_ws/src/tello_controller': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_controller/prefix_override:/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_controller build --build-base /root/DockerFiles/drone_ws/build/tello_controller/build install --record /root/DockerFiles/drone_ws/build/tello_controller/install.log --single-version-externally-managed
+[3.604s] running egg_info
+[3.606s] writing ../../build/tello_controller/tello_controller.egg-info/PKG-INFO
+[3.611s] writing dependency_links to ../../build/tello_controller/tello_controller.egg-info/dependency_links.txt
+[3.612s] writing requirements to ../../build/tello_controller/tello_controller.egg-info/requires.txt
+[3.612s] writing top-level names to ../../build/tello_controller/tello_controller.egg-info/top_level.txt
+[3.720s] reading manifest file '../../build/tello_controller/tello_controller.egg-info/SOURCES.txt'
+[3.721s] writing manifest file '../../build/tello_controller/tello_controller.egg-info/SOURCES.txt'
+[3.726s] running build
+[3.726s] running build_py
+[3.726s] running install
+[3.726s] running install_lib
+[3.726s] running install_data
+[3.726s] running install_egg_info
+[3.730s] removing '/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller-0.0.1-py3.8.egg-info' (and everything under it)
+[3.731s] Copying ../../build/tello_controller/tello_controller.egg-info to /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller-0.0.1-py3.8.egg-info
+[3.731s] running install_scripts
+[3.768s] writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_controller/install.log'
+[3.880s] Invoked command in '/root/DockerFiles/drone_ws/src/tello_controller' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_controller/prefix_override:/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_controller build --build-base /root/DockerFiles/drone_ws/build/tello_controller/build install --record /root/DockerFiles/drone_ws/build/tello_controller/install.log --single-version-externally-managed

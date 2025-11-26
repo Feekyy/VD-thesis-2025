@@ -1,0 +1,20 @@
+[2.740s] Invoking command in '/root/DockerFiles/drone_ws/src/tello_hand_move': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_hand_move/prefix_override:/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_hand_move build --build-base /root/DockerFiles/drone_ws/build/tello_hand_move/build install --record /root/DockerFiles/drone_ws/build/tello_hand_move/install.log --single-version-externally-managed
+[3.293s] running egg_info
+[3.297s] writing ../../build/tello_hand_move/tello_hand_move.egg-info/PKG-INFO
+[3.297s] writing dependency_links to ../../build/tello_hand_move/tello_hand_move.egg-info/dependency_links.txt
+[3.298s] writing entry points to ../../build/tello_hand_move/tello_hand_move.egg-info/entry_points.txt
+[3.298s] writing requirements to ../../build/tello_hand_move/tello_hand_move.egg-info/requires.txt
+[3.298s] writing top-level names to ../../build/tello_hand_move/tello_hand_move.egg-info/top_level.txt
+[3.376s] reading manifest file '../../build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt'
+[3.381s] writing manifest file '../../build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt'
+[3.381s] running build
+[3.381s] running build_py
+[3.382s] running install
+[3.382s] running install_lib
+[3.385s] running install_egg_info
+[3.386s] removing '/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move-0.0.2-py3.8.egg-info' (and everything under it)
+[3.389s] Copying ../../build/tello_hand_move/tello_hand_move.egg-info to /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move-0.0.2-py3.8.egg-info
+[3.390s] running install_scripts
+[3.449s] Installing tello_hand_move script to /root/DockerFiles/drone_ws/install/tello_hand_move/lib/tello_hand_move
+[3.449s] writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_hand_move/install.log'
+[3.602s] Invoked command in '/root/DockerFiles/drone_ws/src/tello_hand_move' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_hand_move/prefix_override:/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_hand_move build --build-base /root/DockerFiles/drone_ws/build/tello_hand_move/build install --record /root/DockerFiles/drone_ws/build/tello_hand_move/install.log --single-version-externally-managed

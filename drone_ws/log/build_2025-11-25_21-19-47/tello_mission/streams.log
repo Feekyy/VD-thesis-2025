@@ -1,0 +1,37 @@
+[2.207s] Invoking command in '/root/DockerFiles/drone_ws/src/tello_mission': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_mission/prefix_override:/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_mission build --build-base /root/DockerFiles/drone_ws/build/tello_mission/build install --record /root/DockerFiles/drone_ws/build/tello_mission/install.log --single-version-externally-managed
+[2.495s] running egg_info
+[2.495s] creating ../../build/tello_mission/tello_mission.egg-info
+[2.495s] writing ../../build/tello_mission/tello_mission.egg-info/PKG-INFO
+[2.495s] writing dependency_links to ../../build/tello_mission/tello_mission.egg-info/dependency_links.txt
+[2.495s] writing entry points to ../../build/tello_mission/tello_mission.egg-info/entry_points.txt
+[2.495s] writing requirements to ../../build/tello_mission/tello_mission.egg-info/requires.txt
+[2.495s] writing top-level names to ../../build/tello_mission/tello_mission.egg-info/top_level.txt
+[2.496s] writing manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'
+[2.549s] reading manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'
+[2.551s] writing manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'
+[2.551s] running build
+[2.551s] running build_py
+[2.551s] creating /root/DockerFiles/drone_ws/build/tello_mission/build
+[2.551s] creating /root/DockerFiles/drone_ws/build/tello_mission/build/lib
+[2.551s] creating /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission
+[2.551s] copying tello_mission/tello_mission.py -> /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission
+[2.552s] copying tello_mission/__init__.py -> /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission
+[2.552s] running install
+[2.553s] running install_lib
+[2.554s] creating /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission
+[2.554s] copying /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission/tello_mission.py -> /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission
+[2.554s] copying /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission/__init__.py -> /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission
+[2.555s] byte-compiling /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission/tello_mission.py to tello_mission.cpython-38.pyc
+[2.560s] byte-compiling /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission/__init__.py to __init__.cpython-38.pyc
+[2.561s] running install_data
+[2.562s] creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index
+[2.565s] creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index
+[2.570s] creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index/packages
+[2.571s] copying resource/tello_mission -> /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index/packages
+[2.571s] copying package.xml -> /root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission
+[2.571s] running install_egg_info
+[2.572s] Copying ../../build/tello_mission/tello_mission.egg-info to /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission-0.0.1-py3.8.egg-info
+[2.577s] running install_scripts
+[2.605s] Installing tello_mission script to /root/DockerFiles/drone_ws/install/tello_mission/lib/tello_mission
+[2.605s] writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_mission/install.log'
+[2.690s] Invoked command in '/root/DockerFiles/drone_ws/src/tello_mission' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_mission/prefix_override:/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_mission build --build-base /root/DockerFiles/drone_ws/build/tello_mission/build install --record /root/DockerFiles/drone_ws/build/tello_mission/install.log --single-version-externally-managed

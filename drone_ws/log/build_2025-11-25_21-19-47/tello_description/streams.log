@@ -1,0 +1,88 @@
+[0.778s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_description
+[1.504s] -- The C compiler identification is GNU 9.4.0
+[1.505s] -- The CXX compiler identification is GNU 9.4.0
+[1.506s] -- Check for working C compiler: /usr/bin/cc
+[1.506s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.506s] -- Detecting C compiler ABI info
+[1.507s] -- Detecting C compiler ABI info - done
+[1.507s] -- Detecting C compile features
+[1.507s] -- Detecting C compile features - done
+[1.507s] -- Check for working CXX compiler: /usr/bin/c++
+[1.516s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.521s] -- Detecting CXX compiler ABI info
+[1.724s] -- Detecting CXX compiler ABI info - done
+[1.745s] -- Detecting CXX compile features
+[1.746s] -- Detecting CXX compile features - done
+[1.765s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.815s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.816s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.240s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello.urdf
+[2.244s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_1.urdf
+[2.244s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_2.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_3.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_4.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_5.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_6.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_7.urdf
+[2.245s] -- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_8.urdf
+[2.388s] -- Configuring done
+[2.405s] -- Generating done
+[2.407s] -- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_description
+[2.416s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_description
+[2.416s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[2.532s] [35m[1mScanning dependencies of target generate_urdf_6[0m
+[2.555s] [ 11%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_6.urdf[0m
+[2.631s] [ 11%] Built target generate_urdf_6
+[2.663s] [35m[1mScanning dependencies of target generate_urdf_2[0m
+[2.714s] [ 22%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_2.urdf[0m
+[2.789s] [ 22%] Built target generate_urdf_2
+[2.808s] [35m[1mScanning dependencies of target generate_urdf_7[0m
+[2.824s] [ 33%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_7.urdf[0m
+[2.891s] [ 33%] Built target generate_urdf_7
+[2.910s] [35m[1mScanning dependencies of target generate_urdf_5[0m
+[2.936s] [ 44%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_5.urdf[0m
+[3.005s] [ 44%] Built target generate_urdf_5
+[3.028s] [35m[1mScanning dependencies of target generate_urdf_4[0m
+[3.042s] [ 55%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_4.urdf[0m
+[3.119s] [ 55%] Built target generate_urdf_4
+[3.138s] [35m[1mScanning dependencies of target generate_urdf_8[0m
+[3.164s] [ 66%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_8.urdf[0m
+[3.222s] [ 66%] Built target generate_urdf_8
+[3.243s] [35m[1mScanning dependencies of target generate_urdf_3[0m
+[3.263s] [ 77%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_3.urdf[0m
+[3.322s] [ 77%] Built target generate_urdf_3
+[3.332s] [35m[1mScanning dependencies of target generate_urdf_1[0m
+[3.350s] [ 88%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_1.urdf[0m
+[3.403s] [ 88%] Built target generate_urdf_1
+[3.419s] [35m[1mScanning dependencies of target generate_urdf[0m
+[3.439s] [100%] [34m[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello.urdf[0m
+[3.498s] [100%] Built target generate_urdf
+[3.516s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[3.585s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description
+[3.612s] -- Install configuration: ""
+[3.616s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf
+[3.617s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_8.urdf
+[3.617s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_3.urdf
+[3.618s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_1.urdf
+[3.618s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_5.urdf
+[3.618s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_4.urdf
+[3.618s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_6.urdf
+[3.618s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_2.urdf
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_7.urdf
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello.urdf
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/package_run_dependencies/tello_description
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/parent_prefix_path/tello_description
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.sh
+[3.619s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.dsv
+[3.620s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.sh
+[3.620s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.dsv
+[3.621s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.bash
+[3.622s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.sh
+[3.623s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.zsh
+[3.623s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.dsv
+[3.623s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.dsv
+[3.623s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/packages/tello_description
+[3.623s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig.cmake
+[3.624s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig-version.cmake
+[3.625s] -- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.xml
+[3.630s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description

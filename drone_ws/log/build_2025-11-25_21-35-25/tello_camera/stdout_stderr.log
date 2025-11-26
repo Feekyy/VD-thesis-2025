@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/tello_camera/tello_camera.egg-info/PKG-INFO
+writing dependency_links to ../../build/tello_camera/tello_camera.egg-info/dependency_links.txt
+writing entry points to ../../build/tello_camera/tello_camera.egg-info/entry_points.txt
+writing requirements to ../../build/tello_camera/tello_camera.egg-info/requires.txt
+writing top-level names to ../../build/tello_camera/tello_camera.egg-info/top_level.txt
+reading manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'
+writing manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'
+running build
+running build_py
+copying tello_camera/tello_camera.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera
+running install
+running install_lib
+copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/tello_camera.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera
+byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/tello_camera.py to tello_camera.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera-0.0.1-py3.8.egg-info' (and everything under it)
+Copying ../../build/tello_camera/tello_camera.egg-info to /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera-0.0.1-py3.8.egg-info
+running install_scripts
+Installing tello_camera script to /root/DockerFiles/drone_ws/install/tello_camera/lib/tello_camera
+writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_camera/install.log'

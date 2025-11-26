@@ -1,0 +1,4 @@
+Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared

@@ -69,7 +69,7 @@
           <geometry>
             <mesh>
               <uri>file:///root/DockerFiles/donuts/donut_green/meshes/torus.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1.24926 1.24926 1.24926</scale>
             </mesh>
           </geometry>
           <material>
@@ -81,7 +81,7 @@
           <geometry>
             <mesh>
               <uri>file:///root/DockerFiles/donuts/donut_green/meshes/torus.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1.24926 1.24926 1.24926</scale>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -217,25 +217,25 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='donut_world'>
-      <sim_time>538 178000000</sim_time>
-      <real_time>409 789210252</real_time>
-      <wall_time>1763510019 505690855</wall_time>
-      <iterations>393042</iterations>
+      <sim_time>13959 298000000</sim_time>
+      <real_time>979 783456563</real_time>
+      <wall_time>1764104453 646372635</wall_time>
+      <iterations>972397</iterations>
       <model name='donut_blue'>
-        <pose>11.4392 -0.027439 1.89268 0.004489 -0 -1.54014</pose>
+        <pose>8.77423 -0.109163 1.88071 0.004489 -0 -1.54014</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>11.4392 -0.027439 1.89268 0.004489 -0 -1.54014</pose>
+          <pose>8.77423 -0.109163 1.88071 0.004489 -0 -1.54014</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='donut_green'>
-        <pose>6.86425 3.09371 1.36946 0 -0 1.5863</pose>
-        <scale>1 1 1</scale>
+        <pose>6.79468 3.09263 1.36946 0 -0 1.5863</pose>
+        <scale>1.24926 1.24926 1.24926</scale>
         <link name='link'>
-          <pose>6.86425 3.09371 1.36946 0 -0 1.5863</pose>
+          <pose>6.79468 3.09263 1.36946 0 -0 1.5863</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -267,7 +267,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-14.8336 -1.53322 11.369 -0 0.567643 0.09301</pose>
+        <pose>-1.90955 -32.8368 16.5213 0 0.439643 1.67301</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

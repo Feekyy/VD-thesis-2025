@@ -1,0 +1,4 @@
+Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description
+Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description

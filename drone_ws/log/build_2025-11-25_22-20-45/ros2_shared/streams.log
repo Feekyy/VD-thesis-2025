@@ -1,0 +1,28 @@
+[0.161s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[1.707s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[1.803s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+[1.823s] -- Install configuration: ""
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[1.824s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[1.828s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[1.828s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.sh
+[1.829s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[1.829s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.bash
+[1.830s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.sh
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[1.833s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.833s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[1.834s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[1.834s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.xml
+[1.834s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
