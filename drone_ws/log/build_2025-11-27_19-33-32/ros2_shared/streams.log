@@ -1,0 +1,67 @@
+[0.057s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/ros2_shared -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/ros2_shared
+[0.920s] -- The C compiler identification is GNU 9.4.0
+[0.921s] -- The CXX compiler identification is GNU 9.4.0
+[0.921s] -- Check for working C compiler: /usr/bin/cc
+[0.921s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.921s] -- Detecting C compiler ABI info
+[0.921s] -- Detecting C compiler ABI info - done
+[0.921s] -- Detecting C compile features
+[0.921s] -- Detecting C compile features - done
+[0.922s] -- Check for working CXX compiler: /usr/bin/c++
+[0.923s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.923s] -- Detecting CXX compiler ABI info
+[0.923s] -- Detecting CXX compiler ABI info - done
+[0.923s] -- Detecting CXX compile features
+[0.923s] -- Detecting CXX compile features - done
+[0.924s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.924s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.924s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.924s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.924s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.924s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.924s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.924s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.946s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.029s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.030s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.031s] -- Looking for pthread.h
+[1.138s] -- Looking for pthread.h - found
+[1.138s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.233s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.233s] -- Looking for pthread_create in pthreads
+[1.329s] -- Looking for pthread_create in pthreads - not found
+[1.330s] -- Looking for pthread_create in pthread
+[1.543s] -- Looking for pthread_create in pthread - found
+[1.543s] -- Found Threads: TRUE  
+[1.933s] -- Configuring done
+[1.937s] -- Generating done
+[1.938s] -- Build files have been written to: /root/DockerFiles/drone_ws/build/ros2_shared
+[1.951s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/ros2_shared -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/ros2_shared
+[1.953s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[2.037s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[2.061s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+[2.072s] -- Install configuration: ""
+[2.072s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include
+[2.072s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared
+[2.072s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[2.072s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[2.073s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.sh
+[2.074s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[2.074s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.bash
+[2.074s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.sh
+[2.074s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[2.074s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[2.075s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv
+[2.075s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[2.075s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake
+[2.075s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake
+[2.075s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.076s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[2.076s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[2.076s] -- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.xml
+[2.081s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared

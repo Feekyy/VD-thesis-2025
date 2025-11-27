@@ -30,6 +30,7 @@ x : exit
 =======================================
 """
 
+#Reads a single character from stdin in raw mode without line buffering
 def getch():
     fd = sys.stdin.fileno()
     old = termios.tcgetattr(fd)
@@ -40,13 +41,10 @@ def getch():
         termios.tcsetattr(fd, termios.TCSADRAIN, old)
     return ch
 
-
+#Initializes the ROS 2 node and the TelloController for keyboard-based drone control
 class TelloHandMove(Node):
     def __init__(self):
         super().__init__("tele_hand_move")
-
-        self.declare_parameter("simulation", True)
-        self.sim = self.get_parameter("simulation").value
 
         self.controller = TelloController(
             simulation=self.sim,
@@ -54,7 +52,12 @@ class TelloHandMove(Node):
             reference_frame="world",
             cmd_vel_topic="/cmd_vel"
         )
+        
+        self.declare_parameter("simulation", True)
+        self.sim = self.get_parameter("simulation").value
+        print(HELP)
 
+    #Main control loop that reads keyboard input and executes drone movements
     def run(self):
         while rclpy.ok():
             c = getch()
@@ -69,6 +72,7 @@ class TelloHandMove(Node):
             elif c == 'x': break
 
 
+#Entry point: initializes ROS 2, creates the node and starts the control loop
 def main():
     rclpy.init()
     node = TelloHandMove()

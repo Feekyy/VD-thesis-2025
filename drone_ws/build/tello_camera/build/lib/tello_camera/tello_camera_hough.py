@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 import rclpy
-from rclpy.node import Node
+import json
+import cv2
+import numpy as np
 
 from sensor_msgs.msg import Image
 from std_msgs.msg import Bool, Float32, String
-
-import cv2
-import numpy as np
 from cv_bridge import CvBridge, CvBridgeError
-import json
 
 
+#Clamps a value between 0.0 and 1.0
 def clamp01(x):
     return max(0.0, min(1.0, float(x)))
 
-
+#Detects circles in a grayscale image using Hough Circle Transform
 def detect_circles(gray, dp=1.2, min_dist=50, param1=100, param2=40, min_radius=20, max_radius=300):
     circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, dp=dp, minDist=min_dist,
                                param1=param1, param2=param2, minRadius=min_radius, maxRadius=max_radius)
@@ -23,19 +22,15 @@ def detect_circles(gray, dp=1.2, min_dist=50, param1=100, param2=40, min_radius=
     circles = np.uint16(np.around(circles))
     return circles[0, :].tolist()
 
-
+#Calculates color fraction in the ring area of a detected circle
 def color_fraction_in_circle(bgr_img, circle, color_ranges_hsv):
     x, y, r = int(circle[0]), int(circle[1]), int(circle[2])
     h, w = bgr_img.shape[:2]
 
     mask = np.zeros((h, w), dtype=np.uint8)
-    
     ring_width = max(5, int(r * 0.3)) 
-    
     cv2.circle(mask, (x, y), r, 255, thickness=ring_width)
-
     hsv = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2HSV)
-
     best_color = None
     best_fraction = 0.0
 
@@ -59,7 +54,7 @@ def color_fraction_in_circle(bgr_img, circle, color_ranges_hsv):
 
     return best_color, clamp01(best_fraction)
 
-
+#Initializes the ROS 2 node and sets up Hough circle detection parameters
 class TelloCamera(Node):
     def __init__(self):
         super().__init__('tello_camera_hough')
@@ -69,22 +64,18 @@ class TelloCamera(Node):
         self.declare_parameter('activation_threshold', 0.25)
         self.declare_parameter('visualize', True)
         self.declare_parameter('debug', False)
-
         self.image_topic = self.get_parameter('image_topic').get_parameter_value().string_value
         self.expected_max = self.get_parameter('expected_max_circles').get_parameter_value().integer_value
         self.threshold = self.get_parameter('activation_threshold').get_parameter_value().double_value
         self.visualize = self.get_parameter('visualize').get_parameter_value().bool_value
         self.debug = self.get_parameter('debug').get_parameter_value().bool_value
-
-        self.bridge = CvBridge()
-
         self.activation_pub = self.create_publisher(Bool, 'donut_detector/activation', 10)
         self.score_pub = self.create_publisher(Float32, 'donut_detector/activation_degree', 10)
         self.info_pub = self.create_publisher(String, 'donut_detector/info', 10)
         self.circles_pub = self.create_publisher(String, 'donut_detector/circles', 10)
+        self.bridge = CvBridge()
 
-        self.sub = self.create_subscription(Image, self.image_topic, self.image_callback, 10)
-
+        #Define color ranges in HSV
         self.color_ranges_hsv = {
             'red': [
                 ([0, 100, 80], [10, 255, 255]),
@@ -98,8 +89,11 @@ class TelloCamera(Node):
             ],
         }
 
-        self.get_logger().info(f'ImageDetectorNode started (Hough Mode), subscribing to: {self.image_topic}')
+        self.sub = self.create_subscription(Image, self.image_topic, self.image_callback, 10)
 
+        self.get_logger().info(f'Detector started with Hough Mode, subscribing to: {self.image_topic}')
+
+    #Main image processing callback
     def image_callback(self, msg: Image):
         try:
             cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
@@ -110,13 +104,11 @@ class TelloCamera(Node):
         small = cv2.resize(cv_image, (cv_image.shape[1]//1, cv_image.shape[0]//1))
         gray = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
         gray = cv2.medianBlur(gray, 5)
-
         circles = detect_circles(gray)
-        
         scale_x = cv_image.shape[1] / float(small.shape[1])
         scale_y = cv_image.shape[0] / float(small.shape[0])
-
         scaled = []
+
         for c in circles:
             x = int(c[0] * scale_x)
             y = int(c[1] * scale_y)
@@ -129,9 +121,9 @@ class TelloCamera(Node):
         detections = []
         max_color_degree = 0.0
 
+        #Analyze each detected circle's color
         for c in scaled:
             best_color, frac = color_fraction_in_circle(cv_image, c, self.color_ranges_hsv)
-            
             detections.append({
                 'x': c[0],
                 'y': c[1],
@@ -150,6 +142,7 @@ class TelloCamera(Node):
         self.score_pub.publish(Float32(data=float(activation_degree)))
         self.circles_pub.publish(String(data=json.dumps(detections)))
 
+        #Publishing info
         info_msg = {
             'count': count,
             'presence_degree': float(presence_degree),
@@ -159,6 +152,7 @@ class TelloCamera(Node):
         }
         self.info_pub.publish(String(data=str(info_msg)))
 
+        #Visualization
         if self.visualize:
             vis = cv_image.copy()
             for det in detections:
@@ -170,6 +164,7 @@ class TelloCamera(Node):
             cv2.imshow('donut_detector', vis)
             cv2.waitKey(1)
 
+#Entry point: initializes ROS 2, creates the node and starts the main loop
 def main(args=None):
     rclpy.init(args=args)
     node = TelloCamera()

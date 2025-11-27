@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 import rclpy
+import cv2
+import numpy as np
+import json
+
+from typing import Tuple, List
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from std_msgs.msg import Bool, Float32, String
 from cv_bridge import CvBridge, CvBridgeError
-import cv2
-import numpy as np
-import json
-from typing import Tuple, List
 
+#Clamps a value between 0.0 and 1.0
 def clamp01(x):
     return max(0.0, min(1.0, float(x)))
 
+#Fuzzy logic: membership function for ideal donut radius
 def fuzzy_ideal_radius(r: float) -> float:
     if r <= 40:
         return clamp01((r - 10) / 30.0)
@@ -19,12 +22,15 @@ def fuzzy_ideal_radius(r: float) -> float:
         return clamp01((160 - r) / 40.0)
     return 1.0
 
+#Fuzzy logic: membership function for large radius detection
 def fuzzy_large_radius(r: float) -> float:
     return clamp01((r - 80) / 60.0)
 
+#Fuzzy logic: membership function for small radius detection
 def fuzzy_small_radius(r: float) -> float:
     return clamp01((60 - r) / 40.0)
 
+#Fuzzy logic: calculates color strength based on HSV values and expected hue
 def fuzzy_color_strength(mean_hsv: Tuple[float,float,float], expected_hue: float) -> float:
     h, s, v = mean_hsv
     diff = abs(h - expected_hue)
@@ -35,7 +41,7 @@ def fuzzy_color_strength(mean_hsv: Tuple[float,float,float], expected_hue: float
     score_v = clamp01(v / 255.0)
     return clamp01((score_h * 0.6) + (score_s * 0.25) + (score_v * 0.15))
 
-
+#Initializes the ROS 2 node and sets up image processing parameters
 class TelloCameraContour(Node):
     def __init__(self):
         super().__init__('tello_camera_contour')
@@ -43,31 +49,29 @@ class TelloCameraContour(Node):
         self.declare_parameter('visualize', True)
         self.declare_parameter('activation_threshold', 0.12)
         self.declare_parameter('expected_max_circles', 3)
-
         self.image_topic = self.get_parameter('image_topic').get_parameter_value().string_value
         self.visualize = self.get_parameter('visualize').get_parameter_value().bool_value
         self.threshold = self.get_parameter('activation_threshold').get_parameter_value().double_value
         self.expected_max = self.get_parameter('expected_max_circles').get_parameter_value().integer_value
-
-        self.bridge = CvBridge()
-
         self.activation_pub = self.create_publisher(Bool, 'donut_detector/activation', 10)
         self.score_pub = self.create_publisher(Float32, 'donut_detector/activation_degree', 10)
         self.info_pub = self.create_publisher(String, 'donut_detector/info', 10)
         self.circles_pub = self.create_publisher(String, 'donut_detector/circles', 10)
         self.vis_pub = self.create_publisher(Image, 'donut_detector/visualization', 10)
 
+        self.bridge = CvBridge()
+
+        #Define color ranges in HSV space
         self.color_ranges = {
             'red':  ( [0, 100, 70],  [10, 255, 255],   0.0 ),
             'red2': ( [170,100,70], [179, 255, 255],  0.0 ),
             'green':([40, 60, 50],  [85, 255, 255],   60.0),
             'blue': ([90, 60, 40],  [140,255,255],   120.0),
         }
-
-        self.get_logger().info(f"TelloCameraContour started, sub: {self.image_topic}, visualize={self.visualize}")
-
+        self.get_logger().info(f"Contour detection started, sub: {self.image_topic}, visualize={self.visualize}")
         self.sub = self.create_subscription(Image, self.image_topic, self.image_callback, 10)
 
+    #Creates color masks for each color range in HSV space
     def build_color_masks(self, hsv_img):
         masks = {}
         for name, (low, high, hue) in self.color_ranges.items():
@@ -77,6 +81,7 @@ class TelloCameraContour(Node):
             masks[name] = (m, hue, name)
         return masks
 
+    #Analyzes contours in a mask and returns detected circles with confidence scores
     def analyze_mask_contours(self, bgr_img, mask, color_label_hint, expected_hue):
         kernel = np.ones((5,5), np.uint8)
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
@@ -105,6 +110,7 @@ class TelloCameraContour(Node):
             f_color = fuzzy_color_strength((mean_h, mean_s, mean_v), expected_hue)
             confidence = clamp01(0.55 * f_size + 0.45 * f_color)
 
+            #Only consider detections with significant confidence
             detections.append({
                 'x': int(x), 'y': int(y), 'r': int(r),
                 'area': float(area),
@@ -114,6 +120,7 @@ class TelloCameraContour(Node):
             })
         return detections
 
+    #Main image processing callback
     def image_callback(self, msg: Image):
         try:
             cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
@@ -123,6 +130,7 @@ class TelloCameraContour(Node):
 
         hsv = cv2.cvtColor(cv_img, cv2.COLOR_BGR2HSV)
         masks = self.build_color_masks(hsv)
+        #Special handling for red
         red_mask = None
         if 'red' in masks and 'red2' in masks:
             red_mask = cv2.bitwise_or(masks['red'][0], masks['red2'][0])
@@ -130,12 +138,14 @@ class TelloCameraContour(Node):
             masks['red'] = (red_mask, masks['red'][1], 'red')
         all_detections = []
 
+        #Analyze each color mask for contours
         for name, (mask, hue, label) in masks.items():
             dets = self.analyze_mask_contours(cv_img, mask, label, hue)
             for d in dets:
                 d['color'] = label
             all_detections += dets
 
+        #Select best detection per color
         best_by_color = {}
         for d in all_detections:
             c = d['color']
@@ -148,6 +158,7 @@ class TelloCameraContour(Node):
                 'color': c, 'fraction': d['confidence'], 'area': d['area']
             })
 
+        #Calculate overall presence degree
         best_conf = 0.0
         total_area_ratio = 0.0
         img_area = cv_img.shape[0] * cv_img.shape[1]
@@ -159,6 +170,7 @@ class TelloCameraContour(Node):
 
         activated = presence_degree >= self.threshold
 
+        #Publish results
         self.activation_pub.publish(Bool(data=bool(activated)))
         self.score_pub.publish(Float32(data=float(presence_degree)))
         self.info_pub.publish(String(data=json.dumps({
@@ -168,6 +180,7 @@ class TelloCameraContour(Node):
         })))
         self.circles_pub.publish(String(data=json.dumps(publish_list)))
 
+        #Visualization
         if self.visualize:
             vis = cv_img.copy()
             for d in publish_list:
@@ -205,15 +218,16 @@ class TelloCameraContour(Node):
                 cv2.imshow('donut_detector_fuzzy', vis)
                 cv2.waitKey(1)
             except Exception as e:
-                self.get_logger().debug(f"cv2.imshow failed (likely headless): {e}")
+                self.get_logger().debug(f"cv2.imshow failed: {e}")
             try:
                 self.vis_pub.publish(self.bridge.cv2_to_imgmsg(vis, encoding='bgr8'))
             except CvBridgeError as e:
                 self.get_logger().warn(f"vis publish failed: {e}")
 
+#Entry point: initializes ROS 2, creates the node and starts the main loop
 def main(args=None):
     rclpy.init(args=args)
-    node = TelloCameraFuzzy()
+    node = TelloCameraContour()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

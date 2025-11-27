@@ -1,0 +1,1261 @@
+[0.000000] (-) TimerEvent: {}
+[0.000266] (ros2_shared) JobQueued: {'identifier': 'ros2_shared', 'dependencies': OrderedDict()}
+[0.000305] (tello_camera) JobQueued: {'identifier': 'tello_camera', 'dependencies': OrderedDict()}
+[0.000588] (tello_controller) JobQueued: {'identifier': 'tello_controller', 'dependencies': OrderedDict()}
+[0.000606] (tello_description) JobQueued: {'identifier': 'tello_description', 'dependencies': OrderedDict()}
+[0.000621] (tello_hand_move) JobQueued: {'identifier': 'tello_hand_move', 'dependencies': OrderedDict()}
+[0.000636] (tello_mission) JobQueued: {'identifier': 'tello_mission', 'dependencies': OrderedDict()}
+[0.000650] (tello_msgs) JobQueued: {'identifier': 'tello_msgs', 'dependencies': OrderedDict()}
+[0.000664] (tello_driver) JobQueued: {'identifier': 'tello_driver', 'dependencies': OrderedDict([('ros2_shared', '/root/DockerFiles/drone_ws/install/ros2_shared'), ('tello_msgs', '/root/DockerFiles/drone_ws/install/tello_msgs')])}
+[0.000683] (tello_gazebo) JobQueued: {'identifier': 'tello_gazebo', 'dependencies': OrderedDict([('tello_msgs', '/root/DockerFiles/drone_ws/install/tello_msgs')])}
+[0.000699] (tello_msgs) JobStarted: {'identifier': 'tello_msgs'}
+[0.011174] (ros2_shared) JobStarted: {'identifier': 'ros2_shared'}
+[0.017844] (tello_camera) JobStarted: {'identifier': 'tello_camera'}
+[0.028389] (tello_controller) JobStarted: {'identifier': 'tello_controller'}
+[0.035238] (tello_description) JobStarted: {'identifier': 'tello_description'}
+[0.042109] (tello_hand_move) JobStarted: {'identifier': 'tello_hand_move'}
+[0.051631] (tello_mission) JobStarted: {'identifier': 'tello_mission'}
+[0.062868] (tello_msgs) JobProgress: {'identifier': 'tello_msgs', 'progress': 'cmake'}
+[0.063126] (tello_msgs) Command: {'cmd': ['/usr/bin/cmake', '/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs', '-DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_msgs', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.067514] (ros2_shared) JobProgress: {'identifier': 'ros2_shared', 'progress': 'cmake'}
+[0.067769] (ros2_shared) Command: {'cmd': ['/usr/bin/cmake', '/root/DockerFiles/drone_ws/src/ros2_shared', '-DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/ros2_shared'], 'cwd': '/root/DockerFiles/drone_ws/build/ros2_shared', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/ros2_shared'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099832] (-) TimerEvent: {}
+[0.200205] (-) TimerEvent: {}
+[0.300543] (-) TimerEvent: {}
+[0.401040] (-) TimerEvent: {}
+[0.481958] (tello_description) JobProgress: {'identifier': 'tello_description', 'progress': 'cmake'}
+[0.482455] (tello_description) Command: {'cmd': ['/usr/bin/cmake', '/root/DockerFiles/drone_ws/src/tello_ros/tello_description', '-DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_description'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_description', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.501171] (-) TimerEvent: {}
+[0.601512] (-) TimerEvent: {}
+[0.701827] (-) TimerEvent: {}
+[0.802204] (-) TimerEvent: {}
+[0.902552] (-) TimerEvent: {}
+[0.929840] (tello_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.930924] (tello_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.931180] (tello_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.931463] (tello_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.931532] (tello_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.931591] (tello_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.931647] (tello_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.931701] (tello_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.931754] (tello_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.931809] (tello_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.931861] (tello_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.931915] (tello_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.931967] (tello_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.932019] (tello_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.932072] (tello_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.932195] (tello_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.932253] (tello_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.932306] (tello_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.932389] (tello_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.932445] (tello_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.932498] (tello_msgs) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.932552] (tello_msgs) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.932604] (tello_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.932659] (ros2_shared) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.932978] (ros2_shared) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.933576] (ros2_shared) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.933707] (ros2_shared) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.933797] (ros2_shared) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.933893] (ros2_shared) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.933960] (ros2_shared) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.934015] (ros2_shared) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.934069] (ros2_shared) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.935251] (ros2_shared) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.935477] (ros2_shared) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.935878] (ros2_shared) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.935991] (ros2_shared) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.936114] (ros2_shared) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.936221] (ros2_shared) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.936326] (ros2_shared) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.936430] (ros2_shared) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.936533] (ros2_shared) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.936635] (ros2_shared) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.936736] (ros2_shared) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.936838] (ros2_shared) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.936940] (ros2_shared) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.937045] (tello_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.937496] (tello_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.937631] (tello_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.937736] (tello_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.937838] (tello_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.937937] (tello_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.938037] (tello_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.938234] (tello_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.938572] (tello_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.938674] (tello_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.938777] (tello_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.938937] (tello_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.939036] (tello_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.939150] (tello_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.939253] (tello_description) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.953234] (tello_msgs) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[0.957826] (ros2_shared) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.963218] (tello_description) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.963468] (tello_description) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.002674] (-) TimerEvent: {}
+[1.028468] (tello_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.041353] (ros2_shared) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.042759] (ros2_shared) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.043607] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.102814] (-) TimerEvent: {}
+[1.150856] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.151038] (ros2_shared) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.206145] (-) TimerEvent: {}
+[1.228381] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello.urdf\n'}
+[1.228588] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_1.urdf\n'}
+[1.228711] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_2.urdf\n'}
+[1.228783] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_3.urdf\n'}
+[1.228837] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_4.urdf\n'}
+[1.228887] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_5.urdf\n'}
+[1.228945] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_6.urdf\n'}
+[1.229006] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_7.urdf\n'}
+[1.229098] (tello_description) StdoutLine: {'line': b'-- creating rules for /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_8.urdf\n'}
+[1.245222] (ros2_shared) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.245430] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.266192] (tello_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.306437] (-) TimerEvent: {}
+[1.311152] (tello_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.318193] (tello_description) StdoutLine: {'line': b'-- Generating done\n'}
+[1.322161] (tello_description) StdoutLine: {'line': b'-- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_description\n'}
+[1.327661] (tello_description) CommandEnded: {'returncode': 0}
+[1.338893] (tello_description) JobProgress: {'identifier': 'tello_description', 'progress': 'build'}
+[1.339779] (tello_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/DockerFiles/drone_ws/build/tello_description', '--', '-j12', '-l12'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_description', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.341041] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.342050] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.396648] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_1\x1b[0m\n'}
+[1.397900] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_3\x1b[0m\n'}
+[1.408137] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf\x1b[0m\n'}
+[1.408354] (-) TimerEvent: {}
+[1.408692] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_6\x1b[0m\n'}
+[1.413812] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_5\x1b[0m\n'}
+[1.414048] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_8\x1b[0m\n'}
+[1.415911] (tello_description) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_3.urdf\x1b[0m\n'}
+[1.416867] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_4\x1b[0m\n'}
+[1.418625] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_7\x1b[0m\n'}
+[1.419133] (tello_description) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_1.urdf\x1b[0m\n'}
+[1.430656] (tello_description) StdoutLine: {'line': b'[ 33%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_6.urdf\x1b[0m\n'}
+[1.445794] (tello_description) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_4.urdf\x1b[0m\n'}
+[1.446346] (tello_description) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello.urdf\x1b[0m\n'}
+[1.454303] (tello_description) StdoutLine: {'line': b'[ 66%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_5.urdf\x1b[0m\n'}
+[1.457219] (tello_description) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target generate_urdf_2\x1b[0m\n'}
+[1.457460] (tello_description) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_8.urdf\x1b[0m\n'}
+[1.458522] (tello_description) StdoutLine: {'line': b'[ 88%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_7.urdf\x1b[0m\n'}
+[1.497650] (tello_description) StdoutLine: {'line': b'[ 88%] Built target generate_urdf_3\n'}
+[1.507606] (tello_camera) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/tello_camera', 'build', '--build-base', '/root/DockerFiles/drone_ws/build/tello_camera/build', 'install', '--record', '/root/DockerFiles/drone_ws/build/tello_camera/install.log', '--single-version-externally-managed'], 'cwd': '/root/DockerFiles/drone_ws/src/tello_camera', 'env': {'HOSTNAME': 'vdani-H410M-H-V2', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/root/DockerFiles', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'PWD': '/root/DockerFiles/drone_ws/build/tello_camera', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/DockerFiles/drone_ws/build/tello_camera/prefix_override:/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1'}, 'shell': False}
+[1.515103] (-) TimerEvent: {}
+[1.515402] (tello_description) StdoutLine: {'line': b'[100%] \x1b[34m\x1b[1mGenerate /root/DockerFiles/drone_ws/build/tello_description/urdf/tello_2.urdf\x1b[0m\n'}
+[1.538036] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_1\n'}
+[1.555220] (ros2_shared) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.555451] (ros2_shared) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.568306] (tello_mission) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/tello_mission', 'build', '--build-base', '/root/DockerFiles/drone_ws/build/tello_mission/build', 'install', '--record', '/root/DockerFiles/drone_ws/build/tello_mission/install.log', '--single-version-externally-managed'], 'cwd': '/root/DockerFiles/drone_ws/src/tello_mission', 'env': {'HOSTNAME': 'vdani-H410M-H-V2', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/root/DockerFiles', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'PWD': '/root/DockerFiles/drone_ws/build/tello_mission', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/DockerFiles/drone_ws/build/tello_mission/prefix_override:/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1'}, 'shell': False}
+[1.569834] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf\n'}
+[1.570034] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_6\n'}
+[1.570167] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_5\n'}
+[1.574798] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_4\n'}
+[1.587375] (tello_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/tello_controller', 'build', '--build-base', '/root/DockerFiles/drone_ws/build/tello_controller/build', 'install', '--record', '/root/DockerFiles/drone_ws/build/tello_controller/install.log', '--single-version-externally-managed'], 'cwd': '/root/DockerFiles/drone_ws/src/tello_controller', 'env': {'HOSTNAME': 'vdani-H410M-H-V2', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/root/DockerFiles', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'PWD': '/root/DockerFiles/drone_ws/build/tello_controller', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/DockerFiles/drone_ws/build/tello_controller/prefix_override:/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1'}, 'shell': False}
+[1.598257] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_7\n'}
+[1.598510] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_2\n'}
+[1.608615] (tello_description) StdoutLine: {'line': b'[100%] Built target generate_urdf_8\n'}
+[1.615199] (-) TimerEvent: {}
+[1.650514] (tello_description) CommandEnded: {'returncode': 0}
+[1.654266] (tello_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.657284] (tello_hand_move) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/tello_hand_move', 'build', '--build-base', '/root/DockerFiles/drone_ws/build/tello_hand_move/build', 'install', '--record', '/root/DockerFiles/drone_ws/build/tello_hand_move/install.log', '--single-version-externally-managed'], 'cwd': '/root/DockerFiles/drone_ws/src/tello_hand_move', 'env': {'HOSTNAME': 'vdani-H410M-H-V2', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/root/DockerFiles', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'PWD': '/root/DockerFiles/drone_ws/build/tello_hand_move', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/DockerFiles/drone_ws/build/tello_hand_move/prefix_override:/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1'}, 'shell': False}
+[1.710431] (tello_description) JobProgress: {'identifier': 'tello_description', 'progress': 'install'}
+[1.715301] (-) TimerEvent: {}
+[1.724523] (tello_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/DockerFiles/drone_ws/build/tello_description'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_description', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.741735] (tello_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.742167] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf\n'}
+[1.742308] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_8.urdf\n'}
+[1.742415] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_3.urdf\n'}
+[1.742565] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_1.urdf\n'}
+[1.742701] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_5.urdf\n'}
+[1.742820] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_4.urdf\n'}
+[1.744354] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_6.urdf\n'}
+[1.744468] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_2.urdf\n'}
+[1.744607] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_7.urdf\n'}
+[1.744703] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello.urdf\n'}
+[1.744806] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/package_run_dependencies/tello_description\n'}
+[1.744957] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/parent_prefix_path/tello_description\n'}
+[1.745054] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.sh\n'}
+[1.745184] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.dsv\n'}
+[1.745280] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.sh\n'}
+[1.745369] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.dsv\n'}
+[1.745460] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.bash\n'}
+[1.745736] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.sh\n'}
+[1.745839] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.zsh\n'}
+[1.749119] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.dsv\n'}
+[1.749805] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.dsv\n'}
+[1.749954] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/packages/tello_description\n'}
+[1.750070] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig.cmake\n'}
+[1.751567] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig-version.cmake\n'}
+[1.751728] (tello_description) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.xml\n'}
+[1.751866] (tello_description) CommandEnded: {'returncode': 0}
+[1.795847] (tello_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.815443] (-) TimerEvent: {}
+[1.843211] (tello_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.844633] (tello_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.855470] (tello_camera) StdoutLine: {'line': b'running egg_info\n'}
+[1.855731] (tello_camera) StdoutLine: {'line': b'creating ../../build/tello_camera/tello_camera.egg-info\n'}
+[1.855844] (tello_camera) StdoutLine: {'line': b'writing ../../build/tello_camera/tello_camera.egg-info/PKG-INFO\n'}
+[1.855935] (tello_camera) StdoutLine: {'line': b'writing dependency_links to ../../build/tello_camera/tello_camera.egg-info/dependency_links.txt\n'}
+[1.857218] (tello_camera) StdoutLine: {'line': b'writing entry points to ../../build/tello_camera/tello_camera.egg-info/entry_points.txt\n'}
+[1.857492] (tello_camera) StdoutLine: {'line': b'writing requirements to ../../build/tello_camera/tello_camera.egg-info/requires.txt\n'}
+[1.857608] (tello_camera) StdoutLine: {'line': b'writing top-level names to ../../build/tello_camera/tello_camera.egg-info/top_level.txt\n'}
+[1.859363] (tello_camera) StdoutLine: {'line': b"writing manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'\n"}
+[1.891402] (tello_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.892023] (tello_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.892153] (tello_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.897428] (tello_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.897639] (tello_controller) StdoutLine: {'line': b'running egg_info\n'}
+[1.897803] (tello_controller) StdoutLine: {'line': b'creating ../../build/tello_controller/tello_controller.egg-info\n'}
+[1.897898] (tello_controller) StdoutLine: {'line': b'writing ../../build/tello_controller/tello_controller.egg-info/PKG-INFO\n'}
+[1.897985] (tello_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/tello_controller/tello_controller.egg-info/dependency_links.txt\n'}
+[1.898071] (tello_mission) StdoutLine: {'line': b'running egg_info\n'}
+[1.898214] (tello_mission) StdoutLine: {'line': b'creating ../../build/tello_mission/tello_mission.egg-info\n'}
+[1.898301] (tello_mission) StdoutLine: {'line': b'writing ../../build/tello_mission/tello_mission.egg-info/PKG-INFO\n'}
+[1.898389] (tello_mission) StdoutLine: {'line': b'writing dependency_links to ../../build/tello_mission/tello_mission.egg-info/dependency_links.txt\n'}
+[1.898490] (tello_mission) StdoutLine: {'line': b'writing entry points to ../../build/tello_mission/tello_mission.egg-info/entry_points.txt\n'}
+[1.898585] (tello_mission) StdoutLine: {'line': b'writing requirements to ../../build/tello_mission/tello_mission.egg-info/requires.txt\n'}
+[1.902174] (tello_mission) StdoutLine: {'line': b'writing top-level names to ../../build/tello_mission/tello_mission.egg-info/top_level.txt\n'}
+[1.902353] (tello_controller) StdoutLine: {'line': b'writing requirements to ../../build/tello_controller/tello_controller.egg-info/requires.txt\n'}
+[1.902480] (tello_controller) StdoutLine: {'line': b'writing top-level names to ../../build/tello_controller/tello_controller.egg-info/top_level.txt\n'}
+[1.902588] (tello_controller) StdoutLine: {'line': b"writing manifest file '../../build/tello_controller/tello_controller.egg-info/SOURCES.txt'\n"}
+[1.902760] (tello_mission) StdoutLine: {'line': b"writing manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'\n"}
+[1.911494] (tello_description) JobEnded: {'identifier': 'tello_description', 'rc': 0}
+[1.915520] (-) TimerEvent: {}
+[1.926627] (tello_camera) StdoutLine: {'line': b"reading manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'\n"}
+[1.927729] (tello_camera) StdoutLine: {'line': b"writing manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'\n"}
+[1.928004] (tello_camera) StdoutLine: {'line': b'running build\n'}
+[1.928137] (tello_camera) StdoutLine: {'line': b'running build_py\n'}
+[1.928294] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_camera/build\n'}
+[1.928433] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_camera/build/lib\n'}
+[1.928678] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera\n'}
+[1.928793] (tello_camera) StdoutLine: {'line': b'copying tello_camera/tello_camera_hough.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera\n'}
+[1.928903] (tello_camera) StdoutLine: {'line': b'copying tello_camera/__init__.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera\n'}
+[1.929049] (tello_camera) StdoutLine: {'line': b'copying tello_camera/tello_camera_contour.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera\n'}
+[1.929185] (tello_camera) StdoutLine: {'line': b'running install\n'}
+[1.930711] (tello_camera) StdoutLine: {'line': b'running install_lib\n'}
+[1.932147] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera\n'}
+[1.932420] (tello_camera) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/tello_camera_hough.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera\n'}
+[1.932553] (tello_camera) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/__init__.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera\n'}
+[1.932778] (tello_camera) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/tello_camera_contour.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera\n'}
+[1.933321] (tello_camera) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/tello_camera_hough.py to tello_camera_hough.cpython-38.pyc\n'}
+[1.937906] (tello_camera) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/__init__.py to __init__.cpython-38.pyc\n'}
+[1.938105] (tello_camera) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/tello_camera_contour.py to tello_camera_contour.cpython-38.pyc\n'}
+[1.939691] (tello_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.941100] (tello_camera) StdoutLine: {'line': b'running install_data\n'}
+[1.941750] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index\n'}
+[1.941960] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index\n'}
+[1.942106] (tello_camera) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index/packages\n'}
+[1.942219] (tello_camera) StdoutLine: {'line': b'copying resource/tello_camera -> /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index/packages\n'}
+[1.942387] (tello_camera) StdoutLine: {'line': b'copying package.xml -> /root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera\n'}
+[1.942507] (tello_camera) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.944338] (tello_camera) StdoutLine: {'line': b'Copying ../../build/tello_camera/tello_camera.egg-info to /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera-1.0.0-py3.8.egg-info\n'}
+[1.945191] (ros2_shared) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.945506] (tello_camera) StdoutLine: {'line': b'running install_scripts\n'}
+[1.948191] (tello_controller) StdoutLine: {'line': b"reading manifest file '../../build/tello_controller/tello_controller.egg-info/SOURCES.txt'\n"}
+[1.949118] (ros2_shared) StdoutLine: {'line': b'-- Generating done\n'}
+[1.949393] (tello_controller) StdoutLine: {'line': b"writing manifest file '../../build/tello_controller/tello_controller.egg-info/SOURCES.txt'\n"}
+[1.949573] (tello_controller) StdoutLine: {'line': b'running build\n'}
+[1.949727] (tello_controller) StdoutLine: {'line': b'running build_py\n'}
+[1.949835] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_controller/build\n'}
+[1.949929] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_controller/build/lib\n'}
+[1.950026] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_controller/build/lib/tello_controller\n'}
+[1.950141] (tello_controller) StdoutLine: {'line': b'copying tello_controller/tello_controller.py -> /root/DockerFiles/drone_ws/build/tello_controller/build/lib/tello_controller\n'}
+[1.950246] (tello_controller) StdoutLine: {'line': b'copying tello_controller/__init__.py -> /root/DockerFiles/drone_ws/build/tello_controller/build/lib/tello_controller\n'}
+[1.950344] (tello_controller) StdoutLine: {'line': b'running install\n'}
+[1.950590] (ros2_shared) StdoutLine: {'line': b'-- Build files have been written to: /root/DockerFiles/drone_ws/build/ros2_shared\n'}
+[1.950856] (tello_controller) StdoutLine: {'line': b'running install_lib\n'}
+[1.952342] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller\n'}
+[1.952608] (tello_controller) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_controller/build/lib/tello_controller/tello_controller.py -> /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller\n'}
+[1.952777] (tello_controller) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_controller/build/lib/tello_controller/__init__.py -> /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller\n'}
+[1.953240] (tello_mission) StdoutLine: {'line': b"reading manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'\n"}
+[1.953422] (tello_controller) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller/tello_controller.py to tello_controller.cpython-38.pyc\n'}
+[1.953879] (tello_mission) StdoutLine: {'line': b"writing manifest file '../../build/tello_mission/tello_mission.egg-info/SOURCES.txt'\n"}
+[1.954091] (tello_mission) StdoutLine: {'line': b'running build\n'}
+[1.954300] (tello_mission) StdoutLine: {'line': b'running build_py\n'}
+[1.954452] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_mission/build\n'}
+[1.954607] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_mission/build/lib\n'}
+[1.954714] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission\n'}
+[1.954814] (tello_mission) StdoutLine: {'line': b'copying tello_mission/tello_mission.py -> /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission\n'}
+[1.954917] (tello_mission) StdoutLine: {'line': b'copying tello_mission/__init__.py -> /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission\n'}
+[1.955016] (tello_mission) StdoutLine: {'line': b'running install\n'}
+[1.955430] (tello_mission) StdoutLine: {'line': b'running install_lib\n'}
+[1.956738] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission\n'}
+[1.956980] (tello_mission) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission/tello_mission.py -> /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission\n'}
+[1.957151] (tello_mission) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_mission/build/lib/tello_mission/__init__.py -> /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission\n'}
+[1.957302] (tello_controller) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller/__init__.py to __init__.cpython-38.pyc\n'}
+[1.957475] (tello_controller) StdoutLine: {'line': b'running install_data\n'}
+[1.957615] (tello_mission) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission/tello_mission.py to tello_mission.cpython-38.pyc\n'}
+[1.958028] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_controller/share/ament_index\n'}
+[1.958188] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_controller/share/ament_index/resource_index\n'}
+[1.958366] (tello_controller) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_controller/share/ament_index/resource_index/packages\n'}
+[1.958593] (tello_controller) StdoutLine: {'line': b'copying resource/tello_controller -> /root/DockerFiles/drone_ws/install/tello_controller/share/ament_index/resource_index/packages\n'}
+[1.958715] (tello_controller) StdoutLine: {'line': b'copying package.xml -> /root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller\n'}
+[1.959010] (tello_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.963182] (ros2_shared) CommandEnded: {'returncode': 0}
+[1.964790] (ros2_shared) JobProgress: {'identifier': 'ros2_shared', 'progress': 'build'}
+[1.964852] (ros2_shared) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/DockerFiles/drone_ws/build/ros2_shared', '--', '-j12', '-l12'], 'cwd': '/root/DockerFiles/drone_ws/build/ros2_shared', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/ros2_shared'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.965673] (tello_controller) StdoutLine: {'line': b'Copying ../../build/tello_controller/tello_controller.egg-info to /root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages/tello_controller-0.0.1-py3.8.egg-info\n'}
+[1.966549] (tello_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[1.966717] (tello_mission) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission/__init__.py to __init__.cpython-38.pyc\n'}
+[1.966837] (tello_mission) StdoutLine: {'line': b'running install_data\n'}
+[1.966931] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index\n'}
+[1.967019] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index\n'}
+[1.967120] (tello_mission) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index/packages\n'}
+[1.967217] (tello_mission) StdoutLine: {'line': b'copying resource/tello_mission -> /root/DockerFiles/drone_ws/install/tello_mission/share/ament_index/resource_index/packages\n'}
+[1.967314] (tello_mission) StdoutLine: {'line': b'copying package.xml -> /root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission\n'}
+[1.967408] (tello_mission) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.967496] (tello_mission) StdoutLine: {'line': b'Copying ../../build/tello_mission/tello_mission.egg-info to /root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages/tello_mission-0.0.1-py3.8.egg-info\n'}
+[1.967586] (tello_mission) StdoutLine: {'line': b'running install_scripts\n'}
+[1.970795] (tello_camera) StdoutLine: {'line': b'Installing tello_camera_contour script to /root/DockerFiles/drone_ws/install/tello_camera/lib/tello_camera\n'}
+[1.971171] (tello_camera) StdoutLine: {'line': b'Installing tello_camera_hough script to /root/DockerFiles/drone_ws/install/tello_camera/lib/tello_camera\n'}
+[1.971370] (tello_camera) StdoutLine: {'line': b"writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_camera/install.log'\n"}
+[1.978733] (tello_hand_move) StdoutLine: {'line': b'running egg_info\n'}
+[1.979767] (tello_hand_move) StdoutLine: {'line': b'creating ../../build/tello_hand_move/tello_hand_move.egg-info\n'}
+[1.980033] (tello_hand_move) StdoutLine: {'line': b'writing ../../build/tello_hand_move/tello_hand_move.egg-info/PKG-INFO\n'}
+[1.980649] (tello_hand_move) StdoutLine: {'line': b'writing dependency_links to ../../build/tello_hand_move/tello_hand_move.egg-info/dependency_links.txt\n'}
+[1.980833] (tello_hand_move) StdoutLine: {'line': b'writing entry points to ../../build/tello_hand_move/tello_hand_move.egg-info/entry_points.txt\n'}
+[1.980999] (tello_hand_move) StdoutLine: {'line': b'writing requirements to ../../build/tello_hand_move/tello_hand_move.egg-info/requires.txt\n'}
+[1.981122] (tello_hand_move) StdoutLine: {'line': b'writing top-level names to ../../build/tello_hand_move/tello_hand_move.egg-info/top_level.txt\n'}
+[1.984142] (tello_hand_move) StdoutLine: {'line': b"writing manifest file '../../build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt'\n"}
+[1.987608] (tello_controller) StdoutLine: {'line': b"writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_controller/install.log'\n"}
+[1.995863] (tello_mission) StdoutLine: {'line': b'Installing tello_mission script to /root/DockerFiles/drone_ws/install/tello_mission/lib/tello_mission\n'}
+[1.996666] (tello_mission) StdoutLine: {'line': b"writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_mission/install.log'\n"}
+[2.015621] (-) TimerEvent: {}
+[2.024466] (tello_camera) CommandEnded: {'returncode': 0}
+[2.032132] (tello_hand_move) StdoutLine: {'line': b"reading manifest file '../../build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt'\n"}
+[2.032800] (tello_hand_move) StdoutLine: {'line': b"writing manifest file '../../build/tello_hand_move/tello_hand_move.egg-info/SOURCES.txt'\n"}
+[2.033047] (tello_hand_move) StdoutLine: {'line': b'running build\n'}
+[2.033239] (tello_hand_move) StdoutLine: {'line': b'running build_py\n'}
+[2.033503] (tello_hand_move) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_hand_move/build\n'}
+[2.033645] (tello_hand_move) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib\n'}
+[2.033820] (tello_hand_move) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib/tello_hand_move\n'}
+[2.034117] (tello_hand_move) StdoutLine: {'line': b'copying tello_hand_move/__init__.py -> /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib/tello_hand_move\n'}
+[2.036668] (tello_hand_move) StdoutLine: {'line': b'copying tello_hand_move/tello_hand_move.py -> /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib/tello_hand_move\n'}
+[2.037105] (tello_hand_move) StdoutLine: {'line': b'running install\n'}
+[2.037219] (tello_camera) JobEnded: {'identifier': 'tello_camera', 'rc': 0}
+[2.037809] (tello_hand_move) StdoutLine: {'line': b'running install_lib\n'}
+[2.037986] (tello_controller) CommandEnded: {'returncode': 0}
+[2.038306] (tello_hand_move) StdoutLine: {'line': b'creating /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move\n'}
+[2.038454] (tello_hand_move) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib/tello_hand_move/__init__.py -> /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move\n'}
+[2.038578] (tello_hand_move) StdoutLine: {'line': b'copying /root/DockerFiles/drone_ws/build/tello_hand_move/build/lib/tello_hand_move/tello_hand_move.py -> /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move\n'}
+[2.038678] (tello_hand_move) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move/__init__.py to __init__.cpython-38.pyc\n'}
+[2.039044] (tello_hand_move) StdoutLine: {'line': b'byte-compiling /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move/tello_hand_move.py to tello_hand_move.cpython-38.pyc\n'}
+[2.039248] (tello_hand_move) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.041690] (tello_hand_move) StdoutLine: {'line': b'Copying ../../build/tello_hand_move/tello_hand_move.egg-info to /root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages/tello_hand_move-0.0.2-py3.8.egg-info\n'}
+[2.041991] (tello_hand_move) StdoutLine: {'line': b'running install_scripts\n'}
+[2.042058] (tello_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.046680] (tello_controller) JobEnded: {'identifier': 'tello_controller', 'rc': 0}
+[2.049564] (ros2_shared) CommandEnded: {'returncode': 0}
+[2.055599] (tello_mission) CommandEnded: {'returncode': 0}
+[2.062561] (tello_hand_move) StdoutLine: {'line': b'Installing tello_hand_move script to /root/DockerFiles/drone_ws/install/tello_hand_move/lib/tello_hand_move\n'}
+[2.062940] (tello_hand_move) StdoutLine: {'line': b"writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_hand_move/install.log'\n"}
+[2.064395] (tello_mission) JobEnded: {'identifier': 'tello_mission', 'rc': 0}
+[2.071110] (ros2_shared) JobProgress: {'identifier': 'ros2_shared', 'progress': 'install'}
+[2.071602] (ros2_shared) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/DockerFiles/drone_ws/build/ros2_shared'], 'cwd': '/root/DockerFiles/drone_ws/build/ros2_shared', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/ros2_shared'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[2.084424] (ros2_shared) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.084759] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include\n'}
+[2.084922] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared\n'}
+[2.085013] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp\n'}
+[2.085107] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp\n'}
+[2.085262] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp\n'}
+[2.085373] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared\n'}
+[2.085508] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared\n'}
+[2.085730] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh\n'}
+[2.085923] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv\n'}
+[2.086134] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.sh\n'}
+[2.086333] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv\n'}
+[2.086501] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.bash\n'}
+[2.086694] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.sh\n'}
+[2.086857] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh\n'}
+[2.087051] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv\n'}
+[2.087247] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv\n'}
+[2.087483] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared\n'}
+[2.087723] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake\n'}
+[2.087907] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.088088] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.088278] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake\n'}
+[2.088424] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake\n'}
+[2.088633] (ros2_shared) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.xml\n'}
+[2.091023] (ros2_shared) CommandEnded: {'returncode': 0}
+[2.100754] (tello_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[2.104087] (tello_msgs) StdoutLine: {'line': b'-- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_msgs\n'}
+[2.108519] (tello_hand_move) CommandEnded: {'returncode': 0}
+[2.115737] (-) TimerEvent: {}
+[2.116675] (tello_hand_move) JobEnded: {'identifier': 'tello_hand_move', 'rc': 0}
+[2.117836] (tello_msgs) CommandEnded: {'returncode': 0}
+[2.118163] (tello_msgs) JobProgress: {'identifier': 'tello_msgs', 'progress': 'build'}
+[2.118450] (tello_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/DockerFiles/drone_ws/build/tello_msgs', '--', '-j12', '-l12'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_msgs', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[2.135905] (ros2_shared) JobEnded: {'identifier': 'ros2_shared', 'rc': 0}
+[2.162793] (tello_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.163036] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__cpp\x1b[0m\n'}
+[2.174657] (tello_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.215824] (-) TimerEvent: {}
+[2.316048] (-) TimerEvent: {}
+[2.416293] (-) TimerEvent: {}
+[2.516521] (-) TimerEvent: {}
+[2.616777] (-) TimerEvent: {}
+[2.717030] (-) TimerEvent: {}
+[2.768530] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_generator_c\x1b[0m\n'}
+[2.780566] (tello_msgs) StdoutLine: {'line': b'[  4%] Built target tello_msgs__cpp\n'}
+[2.782494] (tello_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/srv/detail/tello_action__functions.c.o\x1b[0m\n'}
+[2.782702] (tello_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/tello_response__functions.c.o\x1b[0m\n'}
+[2.782773] (tello_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/flight_data__functions.c.o\x1b[0m\n'}
+[2.793129] (tello_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.793362] (tello_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.793475] (tello_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.817146] (-) TimerEvent: {}
+[2.846521] (tello_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libtello_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.884377] (tello_msgs) StdoutLine: {'line': b'[ 19%] Built target tello_msgs__rosidl_generator_c\n'}
+[2.895302] (tello_msgs) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.897436] (tello_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.917247] (-) TimerEvent: {}
+[3.017537] (-) TimerEvent: {}
+[3.117815] (-) TimerEvent: {}
+[3.218138] (-) TimerEvent: {}
+[3.319281] (-) TimerEvent: {}
+[3.351873] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[3.366038] (tello_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/flight_data__type_support.cpp.o\x1b[0m\n'}
+[3.366548] (tello_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/tello_response__type_support.cpp.o\x1b[0m\n'}
+[3.368231] (tello_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/srv/tello_action__type_support.cpp.o\x1b[0m\n'}
+[3.421197] (-) TimerEvent: {}
+[3.499731] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[3.499940] (tello_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/srv/detail/tello_action__type_support.cpp.o\x1b[0m\n'}
+[3.500057] (tello_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/tello_response__type_support.cpp.o\x1b[0m\n'}
+[3.507152] (tello_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/flight_data__type_support.cpp.o\x1b[0m\n'}
+[3.511401] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[3.521311] (-) TimerEvent: {}
+[3.548228] (tello_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/flight_data__type_support.cpp.o\x1b[0m\n'}
+[3.553222] (tello_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/tello_response__type_support.cpp.o\x1b[0m\n'}
+[3.554171] (tello_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/srv/tello_action__type_support.cpp.o\x1b[0m\n'}
+[3.621412] (-) TimerEvent: {}
+[3.626135] (tello_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.634354] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[3.657488] (tello_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/tello_response__type_support.c.o\x1b[0m\n'}
+[3.657798] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[3.669464] (tello_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/srv/detail/tello_action__type_support.c.o\x1b[0m\n'}
+[3.669705] (tello_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/flight_data__type_support.c.o\x1b[0m\n'}
+[3.700030] (tello_msgs) StdoutLine: {'line': b'[ 51%] Built target tello_msgs__rosidl_typesupport_c\n'}
+[3.706309] (tello_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/flight_data__type_support.cpp.o\x1b[0m\n'}
+[3.718750] (tello_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/tello_response__type_support.cpp.o\x1b[0m\n'}
+[3.719062] (tello_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/srv/detail/dds_fastrtps/tello_action__type_support.cpp.o\x1b[0m\n'}
+[3.722141] (-) TimerEvent: {}
+[3.747272] (tello_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking C shared library libtello_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.801741] (tello_msgs) StdoutLine: {'line': b'[ 59%] Built target tello_msgs__rosidl_typesupport_introspection_c\n'}
+[3.822246] (-) TimerEvent: {}
+[3.843219] (tello_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.886513] (tello_msgs) StdoutLine: {'line': b'[ 61%] Built target tello_msgs__rosidl_typesupport_cpp\n'}
+[3.922357] (-) TimerEvent: {}
+[3.933598] (tello_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.006954] (tello_msgs) StdoutLine: {'line': b'[ 63%] Built target tello_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.022456] (-) TimerEvent: {}
+[4.122739] (-) TimerEvent: {}
+[4.223021] (-) TimerEvent: {}
+[4.245913] (tello_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.323149] (-) TimerEvent: {}
+[4.325480] (tello_msgs) StdoutLine: {'line': b'[ 65%] Built target tello_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.335335] (tello_msgs) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.423237] (-) TimerEvent: {}
+[4.523508] (-) TimerEvent: {}
+[4.623794] (-) TimerEvent: {}
+[4.724066] (-) TimerEvent: {}
+[4.824355] (-) TimerEvent: {}
+[4.843917] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[4.863868] (tello_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/tello_response__type_support_c.cpp.o\x1b[0m\n'}
+[4.864082] (tello_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/flight_data__type_support_c.cpp.o\x1b[0m\n'}
+[4.866603] (tello_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/srv/detail/tello_action__type_support_c.cpp.o\x1b[0m\n'}
+[4.924451] (-) TimerEvent: {}
+[5.024720] (-) TimerEvent: {}
+[5.124977] (-) TimerEvent: {}
+[5.216795] (tello_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.225085] (-) TimerEvent: {}
+[5.294683] (tello_msgs) StdoutLine: {'line': b'[ 76%] Built target tello_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.304111] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs\x1b[0m\n'}
+[5.314169] (tello_msgs) StdoutLine: {'line': b'[ 76%] Built target tello_msgs\n'}
+[5.323451] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__py\x1b[0m\n'}
+[5.325105] (-) TimerEvent: {}
+[5.333855] (tello_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.425204] (-) TimerEvent: {}
+[5.525445] (-) TimerEvent: {}
+[5.625672] (-) TimerEvent: {}
+[5.725902] (-) TimerEvent: {}
+[5.826123] (-) TimerEvent: {}
+[5.926416] (-) TimerEvent: {}
+[6.026764] (-) TimerEvent: {}
+[6.127118] (-) TimerEvent: {}
+[6.227365] (-) TimerEvent: {}
+[6.327617] (-) TimerEvent: {}
+[6.408777] (tello_msgs) StdoutLine: {'line': b'[ 78%] Built target tello_msgs__py\n'}
+[6.418224] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__python\x1b[0m\n'}
+[6.427725] (-) TimerEvent: {}
+[6.438623] (tello_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/srv/_tello_action_s.c.o\x1b[0m\n'}
+[6.438794] (tello_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_tello_response_s.c.o\x1b[0m\n'}
+[6.438861] (tello_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_flight_data_s.c.o\x1b[0m\n'}
+[6.527812] (-) TimerEvent: {}
+[6.535600] (tello_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tello_msgs/libtello_msgs__python.so\x1b[0m\n'}
+[6.574664] (tello_msgs) StdoutLine: {'line': b'[ 87%] Built target tello_msgs__python\n'}
+[6.583929] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[6.584137] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[6.584274] (tello_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[6.600973] (tello_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.601201] (tello_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.605733] (tello_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.627906] (-) TimerEvent: {}
+[6.685368] (tello_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.685534] (tello_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.699850] (tello_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.722460] (tello_msgs) StdoutLine: {'line': b'[100%] Built target tello_msgs__rosidl_typesupport_c__pyext\n'}
+[6.722723] (tello_msgs) StdoutLine: {'line': b'[100%] Built target tello_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[6.727995] (-) TimerEvent: {}
+[6.767734] (tello_msgs) StdoutLine: {'line': b'[100%] Built target tello_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.779652] (tello_msgs) CommandEnded: {'returncode': 0}
+[6.828104] (-) TimerEvent: {}
+[6.844418] (tello_msgs) JobProgress: {'identifier': 'tello_msgs', 'progress': 'install'}
+[6.844731] (tello_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/DockerFiles/drone_ws/build/tello_msgs'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_msgs', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[6.855734] (tello_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.855959] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/rosidl_interfaces/tello_msgs\n'}
+[6.856047] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.856160] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.856236] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.856297] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__struct.h\n'}
+[6.856368] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__struct.h\n'}
+[6.856438] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__functions.h\n'}
+[6.856509] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__functions.c\n'}
+[6.856602] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__functions.c\n'}
+[6.856702] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.h\n'}
+[6.856792] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__functions.h\n'}
+[6.856886] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.h\n'}
+[6.856980] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.857071] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/tello_response.h\n'}
+[6.857172] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/flight_data.h\n'}
+[6.857256] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.857334] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.857403] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__struct.h\n'}
+[6.857471] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__functions.h\n'}
+[6.857556] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.h\n'}
+[6.857646] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__functions.c\n'}
+[6.857745] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/tello_action.h\n'}
+[6.857917] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/library_path.sh\n'}
+[6.858061] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/library_path.dsv\n'}
+[6.858261] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so\n'}
+[6.858556] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so" to ""\n'}
+[6.858650] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.858765] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.858892] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.859030] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_c.h\n'}
+[6.859176] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_c.h\n'}
+[6.859298] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.859399] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.859454] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.859511] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_c.h\n'}
+[6.859562] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[6.859702] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.859794] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.859890] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.860013] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.860110] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.860187] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/dds_fastrtps\n'}
+[6.860261] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.860333] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.860402] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.860483] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.860534] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/dds_fastrtps\n'}
+[6.860587] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.860662] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.860983] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.861055] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.861146] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.861224] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.861296] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_c.h\n'}
+[6.861372] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.c\n'}
+[6.861446] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_c.h\n'}
+[6.861534] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.c\n'}
+[6.861640] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.861729] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.861811] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.861868] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.c\n'}
+[6.861940] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_c.h\n'}
+[6.862100] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so\n'}
+[6.862397] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.862494] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so\n'}
+[6.862807] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so" to ""\n'}
+[6.862884] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.862960] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.863040] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.863121] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.hpp\n'}
+[6.863177] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__struct.hpp\n'}
+[6.863246] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__struct.hpp\n'}
+[6.863321] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__traits.hpp\n'}
+[6.863396] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__builder.hpp\n'}
+[6.863488] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.hpp\n'}
+[6.863586] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__traits.hpp\n'}
+[6.863681] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__builder.hpp\n'}
+[6.863839] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.863968] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/tello_response.hpp\n'}
+[6.864093] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/flight_data.hpp\n'}
+[6.864215] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.864329] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.864429] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__struct.hpp\n'}
+[6.864518] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__builder.hpp\n'}
+[6.864606] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__traits.hpp\n'}
+[6.864663] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.hpp\n'}
+[6.864740] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/tello_action.hpp\n'}
+[6.864830] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs\n'}
+[6.864981] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg\n'}
+[6.865103] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail\n'}
+[6.865176] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.cpp\n'}
+[6.865278] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.865338] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.865422] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.cpp\n'}
+[6.865497] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv\n'}
+[6.865588] (tello_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail\n'}
+[6.865674] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.865731] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.cpp\n'}
+[6.865836] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[6.866174] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.866290] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so\n'}
+[6.866597] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[6.866681] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/pythonpath.sh\n'}
+[6.866792] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/pythonpath.dsv\n'}
+[6.866974] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/__init__.py\n'}
+[6.894259] (tello_msgs) StdoutLine: {'line': b"Compiling '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/__init__.py'...\n"}
+[6.898799] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg\n'}
+[6.898974] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_tello_response.py\n'}
+[6.899066] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/__init__.py\n'}
+[6.899186] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_tello_response_s.c\n'}
+[6.899311] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_flight_data_s.c\n'}
+[6.899447] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_flight_data.py\n'}
+[6.899651] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv\n'}
+[6.899741] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/__init__.py\n'}
+[6.899876] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/_tello_action.py\n'}
+[6.900012] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/_tello_action_s.c\n'}
+[6.900362] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[6.900838] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[6.901053] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[6.901480] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[6.901637] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[6.901988] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[6.902083] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__python.so\n'}
+[6.902374] (tello_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__python.so" to ""\n'}
+[6.902465] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/FlightData.idl\n'}
+[6.902589] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/TelloResponse.idl\n'}
+[6.902748] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction.idl\n'}
+[6.902873] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/FlightData.msg\n'}
+[6.902994] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/TelloResponse.msg\n'}
+[6.903121] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction.srv\n'}
+[6.903238] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction_Request.msg\n'}
+[6.903356] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction_Response.msg\n'}
+[6.903518] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/package_run_dependencies/tello_msgs\n'}
+[6.903675] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/parent_prefix_path/tello_msgs\n'}
+[6.903853] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.sh\n'}
+[6.903979] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.dsv\n'}
+[6.904064] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/path.sh\n'}
+[6.904239] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/path.dsv\n'}
+[6.904356] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.bash\n'}
+[6.904441] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.sh\n'}
+[6.904548] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.zsh\n'}
+[6.904662] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.dsv\n'}
+[6.904778] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.dsv\n'}
+[6.904930] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/packages/tello_msgs\n'}
+[6.905124] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cExport.cmake\n'}
+[6.905338] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.905484] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.905680] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.905901] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport.cmake\n'}
+[6.906105] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.906276] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cppExport.cmake\n'}
+[6.906450] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.906582] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.906742] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[6.906872] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.907005] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[6.907135] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.907256] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.907381] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.907502] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.907622] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.907745] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.907864] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig.cmake\n'}
+[6.907955] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig-version.cmake\n'}
+[6.908072] (tello_msgs) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.xml\n'}
+[6.910454] (tello_msgs) CommandEnded: {'returncode': 0}
+[6.928145] (-) TimerEvent: {}
+[7.008270] (tello_msgs) JobEnded: {'identifier': 'tello_msgs', 'rc': 0}
+[7.012483] (tello_driver) JobStarted: {'identifier': 'tello_driver'}
+[7.017532] (tello_gazebo) JobStarted: {'identifier': 'tello_gazebo'}
+[7.026889] (tello_driver) JobProgress: {'identifier': 'tello_driver', 'progress': 'cmake'}
+[7.027436] (tello_driver) Command: {'cmd': ['/usr/bin/cmake', '/root/DockerFiles/drone_ws/src/tello_ros/tello_driver', '-DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_driver'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_driver', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_driver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy')]), 'shell': False}
+[7.030527] (-) TimerEvent: {}
+[7.032087] (tello_gazebo) JobProgress: {'identifier': 'tello_gazebo', 'progress': 'cmake'}
+[7.032450] (tello_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo', '-DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_gazebo'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_gazebo', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy')]), 'shell': False}
+[7.083349] (tello_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[7.084507] (tello_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[7.130630] (-) TimerEvent: {}
+[7.131134] (tello_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[7.135622] (tello_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[7.139045] (tello_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[7.144358] (tello_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[7.198604] (tello_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[7.199738] (tello_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.206898] (tello_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[7.207618] (tello_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.230726] (-) TimerEvent: {}
+[7.262688] (tello_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.268399] (tello_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.272899] (tello_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.273251] (tello_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.275473] (tello_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[7.279391] (tello_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.279770] (tello_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.283233] (tello_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[7.330824] (-) TimerEvent: {}
+[7.351801] (tello_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[7.352741] (tello_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.364053] (tello_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[7.365060] (tello_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.429578] (tello_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.430899] (-) TimerEvent: {}
+[7.437096] (tello_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.439913] (tello_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.440398] (tello_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.442654] (tello_driver) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[7.447587] (tello_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.448007] (tello_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.450018] (tello_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[7.465562] (tello_driver) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[7.465790] (tello_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[7.472330] (tello_gazebo) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[7.472489] (tello_gazebo) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[7.530985] (-) TimerEvent: {}
+[7.631233] (-) TimerEvent: {}
+[7.637700] (tello_driver) StdoutLine: {'line': b'-- Found camera_calibration_parsers: 2.4.0 (/opt/ros/foxy/share/camera_calibration_parsers/cmake)\n'}
+[7.653626] (tello_gazebo) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[7.657745] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[7.673994] (tello_gazebo) StdoutLine: {'line': b'--   Found bullet, version 2.88\n'}
+[7.688141] (tello_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.698962] (tello_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[7.731326] (-) TimerEvent: {}
+[7.781962] (tello_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[7.798678] (tello_gazebo) StdoutLine: {'line': b'-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") \n'}
+[7.810371] (tello_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[7.831425] (-) TimerEvent: {}
+[7.856547] (tello_gazebo) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") \n'}
+[7.888117] (tello_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.914394] (tello_gazebo) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.0.0") \n'}
+[7.931523] (-) TimerEvent: {}
+[7.936777] (tello_gazebo) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[7.942227] (tello_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[7.943673] (tello_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.944595] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[8.008729] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[8.008937] (tello_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[8.031618] (-) TimerEvent: {}
+[8.080843] (tello_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[8.081055] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[8.131704] (-) TimerEvent: {}
+[8.135196] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[8.135385] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[8.200674] (tello_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[8.202060] (tello_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.216917] (tello_gazebo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[8.231796] (-) TimerEvent: {}
+[8.235309] (tello_gazebo) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") \n'}
+[8.239825] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.13.0\n'}
+[8.246772] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[8.248399] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[8.248887] (tello_gazebo) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[8.252965] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[8.268331] (tello_gazebo) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[8.307746] (tello_gazebo) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[8.313190] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[8.322565] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[8.326723] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[8.326882] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[8.330380] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[8.330517] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[8.331857] (-) TimerEvent: {}
+[8.334690] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[8.334868] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[8.338204] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[8.338318] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[8.342262] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[8.342448] (tello_gazebo) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[8.347774] (tello_gazebo) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[8.431972] (-) TimerEvent: {}
+[8.439098] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.13.0\n'}
+[8.440998] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.3.0\n'}
+[8.441478] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[8.463313] (tello_gazebo) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") \n'}
+[8.478956] (tello_gazebo) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[8.481329] (tello_driver) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'\n"}
+[8.483931] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[8.486217] (tello_driver) StdoutLine: {'line': b'-- Found class_loader: 2.0.3 (/opt/ros/foxy/share/class_loader/cmake)\n'}
+[8.492137] (tello_driver) StdoutLine: {'line': b'-- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)\n'}
+[8.501954] (tello_gazebo) StdoutLine: {'line': b'--   Found libzmq , version 4.3.2\n'}
+[8.523682] (tello_driver) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.2.0") \n'}
+[8.525335] (tello_driver) StdoutLine: {'line': b'-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[8.532108] (-) TimerEvent: {}
+[8.550097] (tello_gazebo) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[8.554962] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[8.571672] (tello_gazebo) StdoutLine: {'line': b'--   Found uuid, version 2.34.0\n'}
+[8.588775] (tello_driver) StdoutLine: {'line': b'-- Found ros2_shared: 0.1.0 (/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake)\n'}
+[8.592883] (tello_driver) StdoutLine: {'line': b'-- Found tello_msgs: 0.1.0 (/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake)\n'}
+[8.617812] (tello_gazebo) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[8.619780] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[8.620201] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[8.632178] (-) TimerEvent: {}
+[8.640438] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.13.0\n'}
+[8.645304] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[8.662914] (tello_gazebo) StdoutLine: {'line': b'--   Found tinyxml2, version 6.2.0\n'}
+[8.707607] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[8.709673] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.2\n'}
+[8.710177] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[8.710472] (tello_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[8.711382] (tello_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[8.712780] (tello_gazebo) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[8.721450] (tello_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[8.723268] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.2\n'}
+[8.723716] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[8.723975] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.13.0\n'}
+[8.726775] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.6.0\n'}
+[8.727203] (tello_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[8.732284] (-) TimerEvent: {}
+[8.808014] (tello_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.816068] (tello_gazebo) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  \n'}
+[8.823610] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[8.832367] (-) TimerEvent: {}
+[8.842242] (tello_gazebo) StdoutLine: {'line': b'--   Found jsoncpp, version 1.7.4\n'}
+[8.872314] (tello_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[8.873844] (tello_driver) StdoutLine: {'line': b'-- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_driver\n'}
+[8.883479] (tello_driver) CommandEnded: {'returncode': 0}
+[8.884041] (tello_driver) JobProgress: {'identifier': 'tello_driver', 'progress': 'build'}
+[8.884351] (tello_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/DockerFiles/drone_ws/build/tello_driver', '--', '-j12', '-l12'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_driver', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_driver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy')]), 'shell': False}
+[8.887050] (tello_gazebo) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[8.892589] (tello_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[8.911356] (tello_gazebo) StdoutLine: {'line': b'--   Found libzip, version 1.5.1\n'}
+[8.926729] (tello_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_driver_main\x1b[0m\n'}
+[8.926949] (tello_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_joy_main\x1b[0m\n'}
+[8.927599] (tello_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_emulator\x1b[0m\n'}
+[8.927964] (tello_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_driver_node\x1b[0m\n'}
+[8.929523] (tello_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target tello_joy_node\x1b[0m\n'}
+[8.932471] (-) TimerEvent: {}
+[8.937731] (tello_driver) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/tello_emulator.dir/src/tello_emulator.cpp.o\x1b[0m\n'}
+[8.962157] (tello_gazebo) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[8.962592] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.2\n'}
+[8.963074] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.13.0\n'}
+[8.963488] (tello_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[8.967331] (tello_gazebo) StdoutLine: {'line': b'-- Found gazebo_dev: 3.5.3 (/opt/ros/foxy/share/gazebo_dev/cmake)\n'}
+[8.968368] (tello_gazebo) StdoutLine: {'line': b'-- Gazebo version: 11.11\n'}
+[8.971090] (tello_gazebo) StdoutLine: {'line': b'-- Found gazebo_ros: 3.5.3 (/opt/ros/foxy/share/gazebo_ros/cmake)\n'}
+[8.975228] (tello_driver) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_main.cpp.o\x1b[0m\n'}
+[8.979785] (tello_driver) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/tello_joy_main.dir/src/tello_joy_node.cpp.o\x1b[0m\n'}
+[8.994874] (tello_driver) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/tello_joy_node.dir/src/tello_joy_node.cpp.o\x1b[0m\n'}
+[9.032573] (-) TimerEvent: {}
+[9.034091] (tello_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.038093] (tello_driver) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_socket.cpp.o\x1b[0m\n'}
+[9.044322] (tello_driver) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/command_socket.cpp.o\x1b[0m\n'}
+[9.045541] (tello_driver) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/state_socket.cpp.o\x1b[0m\n'}
+[9.045731] (tello_gazebo) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[9.058128] (tello_driver) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/tello_driver_node.cpp.o\x1b[0m\n'}
+[9.058563] (tello_driver) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/src/video_socket.cpp.o\x1b[0m\n'}
+[9.058691] (tello_driver) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_node.dir/h264decoder/h264decoder.cpp.o\x1b[0m\n'}
+[9.075330] (tello_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_main.cpp.o\x1b[0m\n'}
+[9.097667] (tello_driver) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_driver_node.cpp.o\x1b[0m\n'}
+[9.132679] (-) TimerEvent: {}
+[9.233089] (-) TimerEvent: {}
+[9.334139] (-) TimerEvent: {}
+[9.353198] (tello_gazebo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[9.434251] (-) TimerEvent: {}
+[9.436001] (tello_gazebo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[9.534351] (-) TimerEvent: {}
+[9.636155] (-) TimerEvent: {}
+[9.672714] (tello_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.702600] (tello_driver) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/tello_socket.cpp.o\x1b[0m\n'}
+[9.736266] (-) TimerEvent: {}
+[9.805288] (tello_gazebo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[9.809198] (tello_gazebo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[9.810872] (tello_gazebo) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[9.836385] (-) TimerEvent: {}
+[9.936729] (-) TimerEvent: {}
+[10.038137] (-) TimerEvent: {}
+[10.134395] (tello_gazebo) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[10.138234] (-) TimerEvent: {}
+[10.214848] (tello_gazebo) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[10.239133] (-) TimerEvent: {}
+[10.339625] (-) TimerEvent: {}
+[10.378165] (tello_gazebo) StdoutLine: {'line': b'-- Found tello_msgs: 0.1.0 (/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake)\n'}
+[10.439737] (-) TimerEvent: {}
+[10.542132] (-) TimerEvent: {}
+[10.631645] (tello_gazebo) StdoutLine: {'line': b'-- Configuring done\n'}
+[10.645147] (-) TimerEvent: {}
+[10.677745] (tello_gazebo) StdoutLine: {'line': b'-- Generating done\n'}
+[10.694782] (tello_gazebo) StdoutLine: {'line': b'-- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_gazebo\n'}
+[10.725832] (tello_gazebo) CommandEnded: {'returncode': 0}
+[10.727103] (tello_gazebo) JobProgress: {'identifier': 'tello_gazebo', 'progress': 'build'}
+[10.727183] (tello_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/DockerFiles/drone_ws/build/tello_gazebo', '--', '-j12', '-l12'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_gazebo', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy')]), 'shell': False}
+[10.745275] (-) TimerEvent: {}
+[10.820598] (tello_gazebo) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target TelloPlugin\x1b[0m\n'}
+[10.845375] (-) TimerEvent: {}
+[10.945842] (-) TimerEvent: {}
+[11.046344] (-) TimerEvent: {}
+[11.147256] (-) TimerEvent: {}
+[11.156221] (tello_gazebo) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/TelloPlugin.dir/src/tello_plugin.cpp.o\x1b[0m\n'}
+[11.257983] (-) TimerEvent: {}
+[11.360158] (-) TimerEvent: {}
+[11.438785] (tello_driver) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX executable tello_emulator\x1b[0m\n'}
+[11.461341] (-) TimerEvent: {}
+[11.561910] (-) TimerEvent: {}
+[11.662317] (-) TimerEvent: {}
+[11.746415] (tello_driver) StdoutLine: {'line': b'[ 63%] Built target tello_emulator\n'}
+[11.774948] (-) TimerEvent: {}
+[11.779177] (tello_driver) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/command_socket.cpp.o\x1b[0m\n'}
+[11.875057] (-) TimerEvent: {}
+[11.975396] (-) TimerEvent: {}
+[12.075722] (-) TimerEvent: {}
+[12.176060] (-) TimerEvent: {}
+[12.276425] (-) TimerEvent: {}
+[12.376770] (-) TimerEvent: {}
+[12.397748] (tello_driver) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/state_socket.cpp.o\x1b[0m\n'}
+[12.479140] (-) TimerEvent: {}
+[12.579484] (-) TimerEvent: {}
+[12.679872] (-) TimerEvent: {}
+[12.780261] (-) TimerEvent: {}
+[12.880657] (-) TimerEvent: {}
+[12.981058] (-) TimerEvent: {}
+[13.085137] (-) TimerEvent: {}
+[13.185454] (-) TimerEvent: {}
+[13.285774] (-) TimerEvent: {}
+[13.386119] (-) TimerEvent: {}
+[13.487144] (-) TimerEvent: {}
+[13.588705] (-) TimerEvent: {}
+[13.689910] (-) TimerEvent: {}
+[13.791148] (-) TimerEvent: {}
+[13.893145] (-) TimerEvent: {}
+[13.998404] (-) TimerEvent: {}
+[14.098775] (-) TimerEvent: {}
+[14.199146] (-) TimerEvent: {}
+[14.299585] (-) TimerEvent: {}
+[14.399993] (-) TimerEvent: {}
+[14.500526] (-) TimerEvent: {}
+[14.605337] (-) TimerEvent: {}
+[14.708058] (-) TimerEvent: {}
+[14.808800] (-) TimerEvent: {}
+[14.909151] (-) TimerEvent: {}
+[15.006973] (tello_driver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/src/video_socket.cpp.o\x1b[0m\n'}
+[15.009260] (-) TimerEvent: {}
+[15.110399] (-) TimerEvent: {}
+[15.212423] (-) TimerEvent: {}
+[15.318712] (-) TimerEvent: {}
+[15.422165] (-) TimerEvent: {}
+[15.471314] (tello_driver) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/tello_driver_main.dir/h264decoder/h264decoder.cpp.o\x1b[0m\n'}
+[15.522266] (-) TimerEvent: {}
+[15.623050] (-) TimerEvent: {}
+[15.723648] (-) TimerEvent: {}
+[15.824342] (-) TimerEvent: {}
+[15.928203] (-) TimerEvent: {}
+[16.028577] (-) TimerEvent: {}
+[16.129143] (-) TimerEvent: {}
+[16.230369] (-) TimerEvent: {}
+[16.330712] (-) TimerEvent: {}
+[16.442520] (-) TimerEvent: {}
+[16.551052] (-) TimerEvent: {}
+[16.654131] (-) TimerEvent: {}
+[16.755159] (-) TimerEvent: {}
+[16.855522] (-) TimerEvent: {}
+[16.955820] (-) TimerEvent: {}
+[17.057128] (-) TimerEvent: {}
+[17.157422] (-) TimerEvent: {}
+[17.257752] (-) TimerEvent: {}
+[17.358105] (-) TimerEvent: {}
+[17.460151] (-) TimerEvent: {}
+[17.560500] (-) TimerEvent: {}
+[17.660908] (-) TimerEvent: {}
+[17.761229] (-) TimerEvent: {}
+[17.861880] (-) TimerEvent: {}
+[17.965839] (-) TimerEvent: {}
+[18.067149] (-) TimerEvent: {}
+[18.167500] (-) TimerEvent: {}
+[18.267848] (-) TimerEvent: {}
+[18.368841] (-) TimerEvent: {}
+[18.469154] (-) TimerEvent: {}
+[18.569442] (-) TimerEvent: {}
+[18.669799] (-) TimerEvent: {}
+[18.770152] (-) TimerEvent: {}
+[18.870519] (-) TimerEvent: {}
+[18.925776] (tello_driver) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX shared library libtello_joy_node.so\x1b[0m\n'}
+[18.971144] (-) TimerEvent: {}
+[19.037638] (tello_driver) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable tello_joy_main\x1b[0m\n'}
+[19.071238] (-) TimerEvent: {}
+[19.171519] (-) TimerEvent: {}
+[19.271789] (-) TimerEvent: {}
+[19.372093] (-) TimerEvent: {}
+[19.403202] (tello_driver) StdoutLine: {'line': b'[ 90%] Built target tello_joy_node\n'}
+[19.472142] (-) TimerEvent: {}
+[19.534848] (tello_driver) StdoutLine: {'line': b'[ 90%] Built target tello_joy_main\n'}
+[19.572253] (-) TimerEvent: {}
+[19.672595] (-) TimerEvent: {}
+[19.772932] (-) TimerEvent: {}
+[19.873220] (-) TimerEvent: {}
+[19.973487] (-) TimerEvent: {}
+[20.073774] (-) TimerEvent: {}
+[20.174036] (-) TimerEvent: {}
+[20.274354] (-) TimerEvent: {}
+[20.374715] (-) TimerEvent: {}
+[20.475001] (-) TimerEvent: {}
+[20.575342] (-) TimerEvent: {}
+[20.675694] (-) TimerEvent: {}
+[20.776026] (-) TimerEvent: {}
+[20.876335] (-) TimerEvent: {}
+[20.968992] (tello_driver) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable tello_driver_main\x1b[0m\n'}
+[20.976419] (-) TimerEvent: {}
+[21.076711] (-) TimerEvent: {}
+[21.177070] (-) TimerEvent: {}
+[21.277437] (-) TimerEvent: {}
+[21.377756] (-) TimerEvent: {}
+[21.478132] (-) TimerEvent: {}
+[21.578443] (-) TimerEvent: {}
+[21.678782] (-) TimerEvent: {}
+[21.779098] (-) TimerEvent: {}
+[21.879423] (-) TimerEvent: {}
+[21.943180] (tello_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libtello_driver_node.so\x1b[0m\n'}
+[21.979535] (-) TimerEvent: {}
+[22.079858] (-) TimerEvent: {}
+[22.170793] (tello_driver) StdoutLine: {'line': b'[100%] Built target tello_driver_main\n'}
+[22.179967] (-) TimerEvent: {}
+[22.280271] (-) TimerEvent: {}
+[22.380584] (-) TimerEvent: {}
+[22.480841] (-) TimerEvent: {}
+[22.581112] (-) TimerEvent: {}
+[22.660334] (tello_driver) StdoutLine: {'line': b'[100%] Built target tello_driver_node\n'}
+[22.670843] (tello_driver) CommandEnded: {'returncode': 0}
+[22.681229] (-) TimerEvent: {}
+[22.705609] (tello_driver) JobProgress: {'identifier': 'tello_driver', 'progress': 'install'}
+[22.705906] (tello_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/DockerFiles/drone_ws/build/tello_driver'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_driver', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_driver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy')]), 'shell': False}
+[22.717508] (tello_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.717730] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/library_path.sh\n'}
+[22.717820] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/library_path.dsv\n'}
+[22.717942] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_driver_node.so\n'}
+[22.723650] (tello_driver) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_driver_node.so" to ""\n'}
+[22.723814] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_joy_node.so\n'}
+[22.727317] (tello_driver) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/libtello_joy_node.so" to ""\n'}
+[22.727513] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_driver_main\n'}
+[22.731221] (tello_driver) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_driver_main" to ""\n'}
+[22.731386] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_joy_main\n'}
+[22.733038] (tello_driver) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_joy_main" to ""\n'}
+[22.733157] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/lib/tello_driver/tello_emulator\n'}
+[22.733398] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cfg\n'}
+[22.733475] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cfg/camera_info.yaml\n'}
+[22.733558] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch\n'}
+[22.733650] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/teleop_launch.py\n'}
+[22.733754] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/emulators_launch.py\n'}
+[22.733871] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/launch/emulator_launch.py\n'}
+[22.734010] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/package_run_dependencies/tello_driver\n'}
+[22.734201] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/parent_prefix_path/tello_driver\n'}
+[22.734349] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/ament_prefix_path.sh\n'}
+[22.734495] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/ament_prefix_path.dsv\n'}
+[22.734640] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/path.sh\n'}
+[22.734780] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/environment/path.dsv\n'}
+[22.734912] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.bash\n'}
+[22.735045] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.sh\n'}
+[22.735182] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.zsh\n'}
+[22.735314] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/local_setup.dsv\n'}
+[22.735444] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.dsv\n'}
+[22.735606] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/packages/tello_driver\n'}
+[22.735770] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/ament_index/resource_index/rclcpp_components/tello_driver\n'}
+[22.735932] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cmake/tello_driverConfig.cmake\n'}
+[22.736037] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/cmake/tello_driverConfig-version.cmake\n'}
+[22.736189] (tello_driver) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.xml\n'}
+[22.737727] (tello_driver) CommandEnded: {'returncode': 0}
+[22.781331] (-) TimerEvent: {}
+[22.800177] (tello_driver) JobEnded: {'identifier': 'tello_driver', 'rc': 0}
+[22.881405] (-) TimerEvent: {}
+[22.981650] (-) TimerEvent: {}
+[23.081948] (-) TimerEvent: {}
+[23.182203] (-) TimerEvent: {}
+[23.282450] (-) TimerEvent: {}
+[23.382684] (-) TimerEvent: {}
+[23.482938] (-) TimerEvent: {}
+[23.583198] (-) TimerEvent: {}
+[23.683434] (-) TimerEvent: {}
+[23.783674] (-) TimerEvent: {}
+[23.883907] (-) TimerEvent: {}
+[23.984160] (-) TimerEvent: {}
+[24.084405] (-) TimerEvent: {}
+[24.184653] (-) TimerEvent: {}
+[24.284880] (-) TimerEvent: {}
+[24.385126] (-) TimerEvent: {}
+[24.485361] (-) TimerEvent: {}
+[24.585595] (-) TimerEvent: {}
+[24.685823] (-) TimerEvent: {}
+[24.786074] (-) TimerEvent: {}
+[24.886316] (-) TimerEvent: {}
+[24.986558] (-) TimerEvent: {}
+[25.086793] (-) TimerEvent: {}
+[25.187045] (-) TimerEvent: {}
+[25.287307] (-) TimerEvent: {}
+[25.387535] (-) TimerEvent: {}
+[25.487763] (-) TimerEvent: {}
+[25.587999] (-) TimerEvent: {}
+[25.688240] (-) TimerEvent: {}
+[25.788475] (-) TimerEvent: {}
+[25.888713] (-) TimerEvent: {}
+[25.988955] (-) TimerEvent: {}
+[26.089229] (-) TimerEvent: {}
+[26.189464] (-) TimerEvent: {}
+[26.289703] (-) TimerEvent: {}
+[26.389947] (-) TimerEvent: {}
+[26.490170] (-) TimerEvent: {}
+[26.590399] (-) TimerEvent: {}
+[26.690642] (-) TimerEvent: {}
+[26.790883] (-) TimerEvent: {}
+[26.891129] (-) TimerEvent: {}
+[26.991362] (-) TimerEvent: {}
+[27.091596] (-) TimerEvent: {}
+[27.191834] (-) TimerEvent: {}
+[27.292157] (-) TimerEvent: {}
+[27.392503] (-) TimerEvent: {}
+[27.492771] (-) TimerEvent: {}
+[27.593007] (-) TimerEvent: {}
+[27.693275] (-) TimerEvent: {}
+[27.793512] (-) TimerEvent: {}
+[27.893771] (-) TimerEvent: {}
+[27.994016] (-) TimerEvent: {}
+[28.094280] (-) TimerEvent: {}
+[28.194547] (-) TimerEvent: {}
+[28.294797] (-) TimerEvent: {}
+[28.395064] (-) TimerEvent: {}
+[28.495337] (-) TimerEvent: {}
+[28.595597] (-) TimerEvent: {}
+[28.695895] (-) TimerEvent: {}
+[28.796135] (-) TimerEvent: {}
+[28.896400] (-) TimerEvent: {}
+[28.996664] (-) TimerEvent: {}
+[29.096914] (-) TimerEvent: {}
+[29.197137] (-) TimerEvent: {}
+[29.297412] (-) TimerEvent: {}
+[29.397643] (-) TimerEvent: {}
+[29.497888] (-) TimerEvent: {}
+[29.598155] (-) TimerEvent: {}
+[29.698400] (-) TimerEvent: {}
+[29.798640] (-) TimerEvent: {}
+[29.898920] (-) TimerEvent: {}
+[29.989300] (tello_gazebo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libTelloPlugin.so\x1b[0m\n'}
+[29.999049] (-) TimerEvent: {}
+[30.099344] (-) TimerEvent: {}
+[30.199581] (-) TimerEvent: {}
+[30.299840] (-) TimerEvent: {}
+[30.400122] (-) TimerEvent: {}
+[30.500364] (-) TimerEvent: {}
+[30.592539] (tello_gazebo) StdoutLine: {'line': b'[100%] Built target TelloPlugin\n'}
+[30.600461] (-) TimerEvent: {}
+[30.603034] (tello_gazebo) CommandEnded: {'returncode': 0}
+[30.623960] (tello_gazebo) JobProgress: {'identifier': 'tello_gazebo', 'progress': 'install'}
+[30.624573] (tello_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/DockerFiles/drone_ws/build/tello_gazebo'], 'cwd': '/root/DockerFiles/drone_ws/build/tello_gazebo', 'env': OrderedDict([('HOSTNAME', 'vdani-H410M-H-V2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/DockerFiles'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy'), ('PWD', '/root/DockerFiles/drone_ws/build/tello_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy')]), 'shell': False}
+[30.634886] (tello_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[30.635103] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/lib/libTelloPlugin.so\n'}
+[30.638268] (tello_gazebo) StdoutLine: {'line': b'-- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_gazebo/lib/libTelloPlugin.so" to ""\n'}
+[30.638397] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models\n'}
+[30.638511] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5\n'}
+[30.638619] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials\n'}
+[30.638685] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/textures\n'}
+[30.638771] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/textures/aruco_mark_5.svg\n'}
+[30.638849] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/textures/aruco_mark_5.png\n'}
+[30.638940] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/scripts\n'}
+[30.639049] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/materials/scripts/marker_5.material\n'}
+[30.639198] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/model.config\n'}
+[30.639312] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_5/model.sdf\n'}
+[30.639417] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4\n'}
+[30.639537] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials\n'}
+[30.639624] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/textures\n'}
+[30.639696] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/textures/aruco_mark_4.png\n'}
+[30.639751] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/textures/aruco_mark_4.svg\n'}
+[30.639827] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/scripts\n'}
+[30.639882] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/materials/scripts/marker_4.material\n'}
+[30.639955] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/model.config\n'}
+[30.640025] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_4/model.sdf\n'}
+[30.640098] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0\n'}
+[30.640179] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials\n'}
+[30.640254] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/textures\n'}
+[30.640328] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/textures/aruco_mark_0.png\n'}
+[30.640412] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/textures/aruco_mark_0.svg\n'}
+[30.640498] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/scripts\n'}
+[30.640567] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/materials/scripts/marker_0.material\n'}
+[30.640646] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/model.config\n'}
+[30.640730] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_0/model.sdf\n'}
+[30.640811] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2\n'}
+[30.640882] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials\n'}
+[30.640950] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/textures\n'}
+[30.641018] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/textures/aruco_mark_2.png\n'}
+[30.641093] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/textures/aruco_mark_2.svg\n'}
+[30.641162] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/scripts\n'}
+[30.641231] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/materials/scripts/marker_2.material\n'}
+[30.641306] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/model.config\n'}
+[30.641427] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_2/model.sdf\n'}
+[30.641536] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1\n'}
+[30.641693] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials\n'}
+[30.641829] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/textures\n'}
+[30.641918] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/textures/aruco_mark_1.svg\n'}
+[30.641994] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/textures/aruco_mark_1.png\n'}
+[30.642067] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/scripts\n'}
+[30.642148] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/materials/scripts/marker_1.material\n'}
+[30.642205] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/model.config\n'}
+[30.642291] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_1/model.sdf\n'}
+[30.642383] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7\n'}
+[30.642440] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials\n'}
+[30.642509] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/textures\n'}
+[30.642564] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/textures/aruco_mark_7.svg\n'}
+[30.642631] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/textures/aruco_mark_7.png\n'}
+[30.642702] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/scripts\n'}
+[30.642782] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/materials/scripts/marker_7.material\n'}
+[30.642881] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/model.config\n'}
+[30.642953] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_7/model.sdf\n'}
+[30.643022] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6\n'}
+[30.643099] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials\n'}
+[30.643181] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/textures\n'}
+[30.643236] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/textures/aruco_mark_6.png\n'}
+[30.643301] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/textures/aruco_mark_6.svg\n'}
+[30.643381] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/scripts\n'}
+[30.643473] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/materials/scripts/marker_6.material\n'}
+[30.643545] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/model.config\n'}
+[30.643622] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_6/model.sdf\n'}
+[30.643693] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3\n'}
+[30.643762] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials\n'}
+[30.643833] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/textures\n'}
+[30.643900] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/textures/aruco_mark_3.png\n'}
+[30.643971] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/textures/aruco_mark_3.svg\n'}
+[30.644038] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/scripts\n'}
+[30.644116] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/materials/scripts/marker_3.material\n'}
+[30.644184] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/model.config\n'}
+[30.644258] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/models/marker_3/model.sdf\n'}
+[30.644347] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds\n'}
+[30.644423] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/f2_map.yaml\n'}
+[30.644498] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/build_world.py\n'}
+[30.644576] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/fiducial.world\n'}
+[30.644661] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/simple.world\n'}
+[30.644764] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/fiducial_map.yaml\n'}
+[30.644848] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/worlds/f2.world\n'}
+[30.644930] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/launch\n'}
+[30.645001] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/launch/vlam_launch.py\n'}
+[30.645082] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/launch/simple_launch.py\n'}
+[30.645298] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/lib/tello_gazebo/inject_entity.py\n'}
+[30.645502] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/ament_index/resource_index/package_run_dependencies/tello_gazebo\n'}
+[30.645692] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/ament_index/resource_index/parent_prefix_path/tello_gazebo\n'}
+[30.645879] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/environment/ament_prefix_path.sh\n'}
+[30.646013] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/environment/ament_prefix_path.dsv\n'}
+[30.646152] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/environment/path.sh\n'}
+[30.646284] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/environment/path.dsv\n'}
+[30.646406] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/local_setup.bash\n'}
+[30.646550] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/local_setup.sh\n'}
+[30.646699] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/local_setup.zsh\n'}
+[30.646858] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/local_setup.dsv\n'}
+[30.647003] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.dsv\n'}
+[30.647210] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/ament_index/resource_index/packages/tello_gazebo\n'}
+[30.647347] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/cmake/tello_gazeboConfig.cmake\n'}
+[30.647438] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/cmake/tello_gazeboConfig-version.cmake\n'}
+[30.647557] (tello_gazebo) StdoutLine: {'line': b'-- Installing: /root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.xml\n'}
+[30.649303] (tello_gazebo) CommandEnded: {'returncode': 0}
+[30.695451] (tello_gazebo) JobEnded: {'identifier': 'tello_gazebo', 'rc': 0}
+[30.696339] (-) EventReactorShutdown: {}

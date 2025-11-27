@@ -1,1 +1,0 @@
-[0.199s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12

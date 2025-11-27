@@ -1,0 +1,688 @@
+[0.289s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.289s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71758a1bef40>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71758a1bef40>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71758a14b580>)
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.317s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.317s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.317s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.318s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/DockerFiles/drone_ws'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'ros'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['cmake', 'python']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim) by extension 'python_setup_py'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim/build) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim/build) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim/build) ignored
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(sim/install) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/install) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/install) ignored
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/log) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/log) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/log) ignored
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'ros'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['cmake', 'python']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'cmake'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'python'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extensions ['python_setup_py']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(sim/worlds) by extension 'python_setup_py'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_shared) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_shared' with type 'ros.ament_cmake' and name 'ros2_shared'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_camera) by extension 'ros'
+[0.344s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_camera' with type 'ros.ament_python' and name 'tello_camera'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extension 'ignore_ament_install'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_controller) by extension 'ros'
+[0.344s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_controller' with type 'ros.ament_python' and name 'tello_controller'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extensions ['ros']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_hand_move) by extension 'ros'
+[0.345s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_hand_move' with type 'ros.ament_python' and name 'tello_hand_move'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extension 'ignore_ament_install'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extensions ['colcon_pkg']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extension 'colcon_pkg'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extensions ['colcon_meta']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extension 'colcon_meta'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extensions ['ros']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_mission) by extension 'ros'
+[0.346s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_mission' with type 'ros.ament_python' and name 'tello_mission'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['colcon_pkg']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'colcon_pkg'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['colcon_meta']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'colcon_meta'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['ros']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'ros'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['cmake', 'python']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'cmake'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'python'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extensions ['python_setup_py']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros) by extension 'python_setup_py'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extensions ['colcon_pkg']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extension 'colcon_pkg'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extensions ['colcon_meta']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extension 'colcon_meta'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extensions ['ros']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_description) by extension 'ros'
+[0.348s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_ros/tello_description' with type 'ros.ament_cmake' and name 'tello_description'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extension 'colcon_pkg'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extensions ['colcon_meta']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extension 'colcon_meta'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_driver) by extension 'ros'
+[0.349s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_ros/tello_driver' with type 'ros.ament_cmake' and name 'tello_driver'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_gazebo) by extension 'ros'
+[0.351s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_ros/tello_gazebo' with type 'ros.ament_cmake' and name 'tello_gazebo'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/tello_ros/tello_msgs) by extension 'ros'
+[0.352s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tello_ros/tello_msgs' with type 'ros.ament_cmake' and name 'tello_msgs'
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'ros2_shared' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_shared' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/ros2_shared', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/ros2_shared', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/ros2_shared', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'tello_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'tello_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_camera', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_camera', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'tello_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'tello_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_controller', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_controller', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'tello_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_description', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_ros/tello_description', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_hand_move' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'tello_hand_move' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_hand_move', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_hand_move', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_hand_move', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_clean_first' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'cmake_force_configure' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'ament_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'catkin_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_mission' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.377s] DEBUG:colcon.colcon_core.verb:Building package 'tello_mission' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_mission', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_mission', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_mission', 'symlink_install': False, 'test_result_base': None}
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_target' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.378s] DEBUG:colcon.colcon_core.verb:Building package 'tello_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_msgs', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_target' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.379s] DEBUG:colcon.colcon_core.verb:Building package 'tello_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_driver', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_ros/tello_driver', 'symlink_install': False, 'test_result_base': None}
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.379s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.380s] Level 5:colcon.colcon_core.verb:set package 'tello_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.380s] DEBUG:colcon.colcon_core.verb:Building package 'tello_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/DockerFiles/drone_ws/build/tello_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/DockerFiles/drone_ws/install/tello_gazebo', 'merge_install': False, 'path': '/root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.380s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.383s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.384s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs' with build type 'ament_cmake'
+[0.384s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_msgs'
+[0.388s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.388s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.388s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.394s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/DockerFiles/drone_ws/src/ros2_shared' with build type 'ament_cmake'
+[0.394s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/DockerFiles/drone_ws/src/ros2_shared'
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.401s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_camera' with build type 'ament_python'
+[0.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_camera', 'ament_prefix_path')
+[0.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/ament_prefix_path.ps1'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/ament_prefix_path.dsv'
+[0.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/ament_prefix_path.sh'
+[0.405s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.405s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.410s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_controller' with build type 'ament_python'
+[0.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_controller', 'ament_prefix_path')
+[0.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/ament_prefix_path.ps1'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/ament_prefix_path.dsv'
+[0.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/ament_prefix_path.sh'
+[0.414s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.418s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_description' with build type 'ament_cmake'
+[0.418s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_description'
+[0.420s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.420s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.425s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_hand_move' with build type 'ament_python'
+[0.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_hand_move', 'ament_prefix_path')
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/ament_prefix_path.ps1'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/ament_prefix_path.dsv'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/ament_prefix_path.sh'
+[0.430s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.430s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.435s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_mission' with build type 'ament_python'
+[0.435s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_mission', 'ament_prefix_path')
+[0.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/ament_prefix_path.ps1'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/ament_prefix_path.dsv'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/ament_prefix_path.sh'
+[0.439s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.439s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+[0.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/ros2_shared -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/ros2_shared
+[0.651s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/DockerFiles/drone_ws/src/tello_camera'
+[0.652s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.858s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/DockerFiles/drone_ws/src/tello_controller'
+[0.859s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.859s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_description
+[1.078s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'tello_hand_move' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[1.079s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'tello_hand_move' doesn't explicitly install the 'package.xml' file (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[1.079s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/DockerFiles/drone_ws/src/tello_hand_move'
+[1.082s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.082s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.302s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/DockerFiles/drone_ws/src/tello_mission'
+[1.304s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.304s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_description -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_description
+[1.724s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[1.898s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/src/tello_camera': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_camera/prefix_override:/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_camera build --build-base /root/DockerFiles/drone_ws/build/tello_camera/build install --record /root/DockerFiles/drone_ws/build/tello_camera/install.log --single-version-externally-managed
+[1.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/src/tello_mission': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_mission/prefix_override:/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_mission build --build-base /root/DockerFiles/drone_ws/build/tello_mission/build install --record /root/DockerFiles/drone_ws/build/tello_mission/install.log --single-version-externally-managed
+[1.972s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/src/tello_controller': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_controller/prefix_override:/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_controller build --build-base /root/DockerFiles/drone_ws/build/tello_controller/build install --record /root/DockerFiles/drone_ws/build/tello_controller/install.log --single-version-externally-managed
+[2.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[2.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/src/tello_hand_move': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_hand_move/prefix_override:/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_hand_move build --build-base /root/DockerFiles/drone_ws/build/tello_hand_move/build install --record /root/DockerFiles/drone_ws/build/tello_hand_move/install.log --single-version-externally-managed
+[2.109s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description
+[2.134s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_description)
+[2.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description' for CMake module files
+[2.164s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description' for CMake config files
+[2.164s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_description', 'cmake_prefix_path')
+[2.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.ps1'
+[2.168s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.dsv'
+[2.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.sh'
+[2.169s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/bin'
+[2.169s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/lib/pkgconfig/tello_description.pc'
+[2.170s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/lib/python3.8/site-packages'
+[2.171s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/bin'
+[2.173s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.ps1'
+[2.174s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.dsv'
+[2.175s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.sh'
+[2.176s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.bash'
+[2.179s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.zsh'
+[2.181s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_description/share/colcon-core/packages/tello_description)
+[2.267s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_description)
+[2.273s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description' for CMake module files
+[2.276s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description' for CMake config files
+[2.282s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_description', 'cmake_prefix_path')
+[2.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.ps1'
+[2.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.dsv'
+[2.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/hook/cmake_prefix_path.sh'
+[2.288s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/bin'
+[2.288s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/lib/pkgconfig/tello_description.pc'
+[2.288s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/lib/python3.8/site-packages'
+[2.288s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_description/bin'
+[2.291s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.ps1'
+[2.291s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.dsv'
+[2.292s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.sh'
+[2.293s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.bash'
+[2.293s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.zsh'
+[2.294s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_description/share/colcon-core/packages/tello_description)
+[2.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/ros2_shared -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/ros2_shared
+[2.349s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[2.407s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera' for CMake module files
+[2.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/src/tello_camera' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_camera/prefix_override:/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_camera build --build-base /root/DockerFiles/drone_ws/build/tello_camera/build install --record /root/DockerFiles/drone_ws/build/tello_camera/install.log --single-version-externally-managed
+[2.408s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera' for CMake config files
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera/lib'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera/bin'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera/lib/pkgconfig/tello_camera.pc'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages'
+[2.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_camera', 'pythonpath')
+[2.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/pythonpath.ps1'
+[2.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/pythonpath.dsv'
+[2.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/hook/pythonpath.sh'
+[2.412s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_camera/bin'
+[2.412s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_camera)
+[2.414s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/package.ps1'
+[2.415s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/package.dsv'
+[2.415s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/package.sh'
+[2.415s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/package.bash'
+[2.416s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera/package.zsh'
+[2.417s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_camera/share/colcon-core/packages/tello_camera)
+[2.420s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller' for CMake module files
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller' for CMake config files
+[2.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/src/tello_controller' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_controller/prefix_override:/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_controller build --build-base /root/DockerFiles/drone_ws/build/tello_controller/build install --record /root/DockerFiles/drone_ws/build/tello_controller/install.log --single-version-externally-managed
+[2.423s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller/lib'
+[2.423s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller/bin'
+[2.423s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller/lib/pkgconfig/tello_controller.pc'
+[2.423s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller/lib/python3.8/site-packages'
+[2.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_controller', 'pythonpath')
+[2.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/pythonpath.ps1'
+[2.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/pythonpath.dsv'
+[2.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/hook/pythonpath.sh'
+[2.426s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_controller/bin'
+[2.426s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_controller)
+[2.428s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/package.ps1'
+[2.428s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/package.dsv'
+[2.429s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/package.sh'
+[2.429s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/package.bash'
+[2.429s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_controller/share/tello_controller/package.zsh'
+[2.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_controller/share/colcon-core/packages/tello_controller)
+[2.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[2.439s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission' for CMake module files
+[2.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/src/tello_mission' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_mission/prefix_override:/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_mission build --build-base /root/DockerFiles/drone_ws/build/tello_mission/build install --record /root/DockerFiles/drone_ws/build/tello_mission/install.log --single-version-externally-managed
+[2.440s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission' for CMake config files
+[2.440s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission/lib'
+[2.440s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission/bin'
+[2.440s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission/lib/pkgconfig/tello_mission.pc'
+[2.440s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission/lib/python3.8/site-packages'
+[2.441s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_mission', 'pythonpath')
+[2.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/pythonpath.ps1'
+[2.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/pythonpath.dsv'
+[2.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/hook/pythonpath.sh'
+[2.443s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_mission/bin'
+[2.443s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_mission)
+[2.445s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/package.ps1'
+[2.445s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/package.dsv'
+[2.446s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/package.sh'
+[2.446s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/package.bash'
+[2.447s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_mission/share/tello_mission/package.zsh'
+[2.447s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_mission/share/colcon-core/packages/tello_mission)
+[2.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+[2.474s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_shared)
+[2.476s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared' for CMake module files
+[2.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+[2.477s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared' for CMake config files
+[2.477s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_shared', 'cmake_prefix_path')
+[2.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.ps1'
+[2.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.dsv'
+[2.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.sh'
+[2.480s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/bin'
+[2.480s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/lib/pkgconfig/ros2_shared.pc'
+[2.480s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/lib/python3.8/site-packages'
+[2.481s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/bin'
+[2.482s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.ps1'
+[2.483s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv'
+[2.483s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.sh'
+[2.484s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.bash'
+[2.484s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.zsh'
+[2.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/ros2_shared/share/colcon-core/packages/ros2_shared)
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move' for CMake module files
+[2.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/src/tello_hand_move' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_hand_move/prefix_override:/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_hand_move build --build-base /root/DockerFiles/drone_ws/build/tello_hand_move/build install --record /root/DockerFiles/drone_ws/build/tello_hand_move/install.log --single-version-externally-managed
+[2.492s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move' for CMake config files
+[2.493s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move/lib'
+[2.493s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move/bin'
+[2.493s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move/lib/pkgconfig/tello_hand_move.pc'
+[2.493s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move/lib/python3.8/site-packages'
+[2.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_hand_move', 'pythonpath')
+[2.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/pythonpath.ps1'
+[2.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/pythonpath.dsv'
+[2.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/hook/pythonpath.sh'
+[2.496s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_hand_move/bin'
+[2.496s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_hand_move)
+[2.497s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/package.ps1'
+[2.498s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/package.dsv'
+[2.498s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/package.sh'
+[2.499s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/package.bash'
+[2.499s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_hand_move/share/tello_hand_move/package.zsh'
+[2.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_hand_move/share/colcon-core/packages/tello_hand_move)
+[2.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+[2.504s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+[2.509s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_shared)
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared' for CMake module files
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared' for CMake config files
+[2.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_shared', 'cmake_prefix_path')
+[2.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.ps1'
+[2.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.dsv'
+[2.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/hook/cmake_prefix_path.sh'
+[2.515s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/bin'
+[2.515s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/lib/pkgconfig/ros2_shared.pc'
+[2.515s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/lib/python3.8/site-packages'
+[2.515s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/ros2_shared/bin'
+[2.516s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.ps1'
+[2.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv'
+[2.517s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.sh'
+[2.518s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.bash'
+[2.518s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.zsh'
+[2.519s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/ros2_shared/share/colcon-core/packages/ros2_shared)
+[7.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+[7.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs
+[7.293s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_msgs)
+[7.296s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs' for CMake module files
+[7.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs
+[7.297s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs' for CMake config files
+[7.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'cmake_prefix_path')
+[7.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.ps1'
+[7.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.dsv'
+[7.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.sh'
+[7.300s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib'
+[7.300s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'ld_library_path_lib')
+[7.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.ps1'
+[7.301s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.dsv'
+[7.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.sh'
+[7.302s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/bin'
+[7.302s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib/pkgconfig/tello_msgs.pc'
+[7.302s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages'
+[7.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'pythonpath')
+[7.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.ps1'
+[7.304s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.dsv'
+[7.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.sh'
+[7.304s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/bin'
+[7.306s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.ps1'
+[7.306s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.dsv'
+[7.307s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.sh'
+[7.307s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.bash'
+[7.307s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.zsh'
+[7.308s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_msgs/share/colcon-core/packages/tello_msgs)
+[7.375s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_msgs)
+[7.378s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs' for CMake module files
+[7.379s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs' for CMake config files
+[7.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'cmake_prefix_path')
+[7.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.ps1'
+[7.382s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.dsv'
+[7.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/cmake_prefix_path.sh'
+[7.382s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib'
+[7.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'ld_library_path_lib')
+[7.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.ps1'
+[7.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.dsv'
+[7.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/ld_library_path_lib.sh'
+[7.385s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/bin'
+[7.385s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib/pkgconfig/tello_msgs.pc'
+[7.385s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages'
+[7.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_msgs', 'pythonpath')
+[7.386s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.ps1'
+[7.386s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.dsv'
+[7.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/hook/pythonpath.sh'
+[7.387s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_msgs/bin'
+[7.388s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.ps1'
+[7.389s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.dsv'
+[7.390s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.sh'
+[7.390s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.bash'
+[7.390s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.zsh'
+[7.391s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_msgs/share/colcon-core/packages/tello_msgs)
+[7.391s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_driver' with build type 'ament_cmake'
+[7.392s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_driver'
+[7.394s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.394s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.401s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo' with build type 'ament_cmake'
+[7.401s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo'
+[7.402s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.402s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_driver
+[7.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_gazebo': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_gazebo
+[9.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_driver -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_driver
+[9.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_driver -- -j12 -l12
+[11.110s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_gazebo
+[11.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_gazebo': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_gazebo -- -j12 -l12
+[23.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_driver -- -j12 -l12
+[23.091s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_driver': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_driver
+[23.121s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_driver)
+[23.123s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver' for CMake module files
+[23.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_driver' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/root/DockerFiles/drone_ws/install/ros2_shared:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_driver
+[23.124s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver' for CMake config files
+[23.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'cmake_prefix_path')
+[23.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.ps1'
+[23.126s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.dsv'
+[23.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.sh'
+[23.127s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib'
+[23.127s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'ld_library_path_lib')
+[23.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.ps1'
+[23.129s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.dsv'
+[23.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.sh'
+[23.129s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/bin'
+[23.129s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib/pkgconfig/tello_driver.pc'
+[23.130s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib/python3.8/site-packages'
+[23.130s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/bin'
+[23.131s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.ps1'
+[23.132s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.dsv'
+[23.132s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.sh'
+[23.132s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.bash'
+[23.133s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.zsh'
+[23.133s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_driver/share/colcon-core/packages/tello_driver)
+[23.170s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_driver)
+[23.172s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver' for CMake module files
+[23.172s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver' for CMake config files
+[23.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'cmake_prefix_path')
+[23.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.ps1'
+[23.175s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.dsv'
+[23.176s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/cmake_prefix_path.sh'
+[23.177s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib'
+[23.177s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_driver', 'ld_library_path_lib')
+[23.178s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.ps1'
+[23.179s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.dsv'
+[23.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/hook/ld_library_path_lib.sh'
+[23.179s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/bin'
+[23.179s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib/pkgconfig/tello_driver.pc'
+[23.179s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/lib/python3.8/site-packages'
+[23.180s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_driver/bin'
+[23.181s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.ps1'
+[23.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.dsv'
+[23.182s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.sh'
+[23.182s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.bash'
+[23.183s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_driver/share/tello_driver/package.zsh'
+[23.183s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_driver/share/colcon-core/packages/tello_driver)
+[30.986s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_gazebo -- -j12 -l12
+[31.010s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/DockerFiles/drone_ws/build/tello_gazebo': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_gazebo
+[31.032s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_gazebo)
+[31.034s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo' for CMake module files
+[31.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/DockerFiles/drone_ws/build/tello_gazebo' returned '0': AMENT_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/DockerFiles/drone_ws/install/tello_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_gazebo
+[31.035s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo' for CMake config files
+[31.036s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'cmake_prefix_path')
+[31.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.ps1'
+[31.037s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.dsv'
+[31.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.sh'
+[31.038s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib'
+[31.038s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'ld_library_path_lib')
+[31.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.ps1'
+[31.040s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.dsv'
+[31.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.sh'
+[31.040s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/bin'
+[31.040s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib/pkgconfig/tello_gazebo.pc'
+[31.041s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib/python3.8/site-packages'
+[31.041s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/bin'
+[31.042s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.ps1'
+[31.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.dsv'
+[31.043s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.sh'
+[31.043s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.bash'
+[31.043s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.zsh'
+[31.044s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_gazebo/share/colcon-core/packages/tello_gazebo)
+[31.067s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tello_gazebo)
+[31.069s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo' for CMake module files
+[31.069s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo' for CMake config files
+[31.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'cmake_prefix_path')
+[31.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.ps1'
+[31.072s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.dsv'
+[31.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/cmake_prefix_path.sh'
+[31.072s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib'
+[31.072s] Level 1:colcon.colcon_core.shell:create_environment_hook('tello_gazebo', 'ld_library_path_lib')
+[31.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.ps1'
+[31.074s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.dsv'
+[31.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/hook/ld_library_path_lib.sh'
+[31.074s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/bin'
+[31.075s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib/pkgconfig/tello_gazebo.pc'
+[31.075s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/lib/python3.8/site-packages'
+[31.075s] Level 1:colcon.colcon_core.environment:checking '/root/DockerFiles/drone_ws/install/tello_gazebo/bin'
+[31.076s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.ps1'
+[31.077s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.dsv'
+[31.077s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.sh'
+[31.078s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.bash'
+[31.078s] INFO:colcon.colcon_core.shell:Creating package script '/root/DockerFiles/drone_ws/install/tello_gazebo/share/tello_gazebo/package.zsh'
+[31.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/DockerFiles/drone_ws/install/tello_gazebo/share/colcon-core/packages/tello_gazebo)
+[31.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[31.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[31.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[31.079s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[31.085s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[31.085s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[31.085s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[31.085s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[31.087s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[31.087s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[31.089s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/DockerFiles/drone_ws/install/local_setup.ps1'
+[31.089s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/DockerFiles/drone_ws/install/_local_setup_util_ps1.py'
+[31.090s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/DockerFiles/drone_ws/install/setup.ps1'
+[31.091s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/DockerFiles/drone_ws/install/local_setup.sh'
+[31.092s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/DockerFiles/drone_ws/install/_local_setup_util_sh.py'
+[31.092s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/DockerFiles/drone_ws/install/setup.sh'
+[31.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/DockerFiles/drone_ws/install/local_setup.bash'
+[31.094s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/DockerFiles/drone_ws/install/setup.bash'
+[31.095s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/DockerFiles/drone_ws/install/local_setup.zsh'
+[31.095s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/DockerFiles/drone_ws/install/setup.zsh'

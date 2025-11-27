@@ -1,0 +1,41 @@
+[1.495s] Invoking command in '/root/DockerFiles/drone_ws/src/tello_camera': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_camera/prefix_override:/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_camera build --build-base /root/DockerFiles/drone_ws/build/tello_camera/build install --record /root/DockerFiles/drone_ws/build/tello_camera/install.log --single-version-externally-managed
+[1.836s] running egg_info
+[1.836s] creating ../../build/tello_camera/tello_camera.egg-info
+[1.837s] writing ../../build/tello_camera/tello_camera.egg-info/PKG-INFO
+[1.837s] writing dependency_links to ../../build/tello_camera/tello_camera.egg-info/dependency_links.txt
+[1.838s] writing entry points to ../../build/tello_camera/tello_camera.egg-info/entry_points.txt
+[1.838s] writing requirements to ../../build/tello_camera/tello_camera.egg-info/requires.txt
+[1.838s] writing top-level names to ../../build/tello_camera/tello_camera.egg-info/top_level.txt
+[1.840s] writing manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'
+[1.907s] reading manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'
+[1.909s] writing manifest file '../../build/tello_camera/tello_camera.egg-info/SOURCES.txt'
+[1.909s] running build
+[1.909s] running build_py
+[1.909s] creating /root/DockerFiles/drone_ws/build/tello_camera/build
+[1.909s] creating /root/DockerFiles/drone_ws/build/tello_camera/build/lib
+[1.909s] creating /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera
+[1.910s] copying tello_camera/tello_camera_hough.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera
+[1.910s] copying tello_camera/__init__.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera
+[1.910s] copying tello_camera/tello_camera_contour.py -> /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera
+[1.910s] running install
+[1.912s] running install_lib
+[1.913s] creating /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera
+[1.913s] copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/tello_camera_hough.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera
+[1.913s] copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/__init__.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera
+[1.914s] copying /root/DockerFiles/drone_ws/build/tello_camera/build/lib/tello_camera/tello_camera_contour.py -> /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera
+[1.914s] byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/tello_camera_hough.py to tello_camera_hough.cpython-38.pyc
+[1.919s] byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/__init__.py to __init__.cpython-38.pyc
+[1.919s] byte-compiling /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera/tello_camera_contour.py to tello_camera_contour.cpython-38.pyc
+[1.922s] running install_data
+[1.922s] creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index
+[1.923s] creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index
+[1.923s] creating /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index/packages
+[1.923s] copying resource/tello_camera -> /root/DockerFiles/drone_ws/install/tello_camera/share/ament_index/resource_index/packages
+[1.923s] copying package.xml -> /root/DockerFiles/drone_ws/install/tello_camera/share/tello_camera
+[1.923s] running install_egg_info
+[1.925s] Copying ../../build/tello_camera/tello_camera.egg-info to /root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages/tello_camera-1.0.0-py3.8.egg-info
+[1.926s] running install_scripts
+[1.952s] Installing tello_camera_contour script to /root/DockerFiles/drone_ws/install/tello_camera/lib/tello_camera
+[1.952s] Installing tello_camera_hough script to /root/DockerFiles/drone_ws/install/tello_camera/lib/tello_camera
+[1.952s] writing list of installed files to '/root/DockerFiles/drone_ws/build/tello_camera/install.log'
+[2.005s] Invoked command in '/root/DockerFiles/drone_ws/src/tello_camera' returned '0': PYTHONPATH=/root/DockerFiles/drone_ws/build/tello_camera/prefix_override:/root/DockerFiles/drone_ws/install/tello_camera/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tello_camera build --build-base /root/DockerFiles/drone_ws/build/tello_camera/build install --record /root/DockerFiles/drone_ws/build/tello_camera/install.log --single-version-externally-managed
