@@ -5,12 +5,14 @@ import tty
 import rclpy
 import transforms3d.euler as tfe
 import math
+
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from gazebo_msgs.srv import GetEntityState, SetEntityState
 from gazebo_msgs.msg import EntityState
 from geometry_msgs.msg import Pose, Twist as TwistMsg
 
+#Initializes the TelloController with simulation mode and movement parameters
 class TelloController(Node):
     def __init__(self,
                  simulation=True,
@@ -23,19 +25,16 @@ class TelloController(Node):
         self.cmd_vel_topic = cmd_vel_topic
         self.model_name = model_name
         self.reference_frame = reference_frame
-
         self.declare_parameter('min_z', -10.0)
         self.declare_parameter('max_z', 100.0)
         self.declare_parameter('lin_speed', 0.1)
         self.declare_parameter('yaw_speed', 0.05)
         self.declare_parameter('dz_step', 0.1)
-
         self.min_z = self.get_parameter('min_z').value
         self.max_z = self.get_parameter('max_z').value
         self.lin_speed = self.get_parameter('lin_speed').value
         self.yaw_speed = self.get_parameter('yaw_speed').value
         self.dz_step = self.get_parameter('dz_step').value
-
         self.pub_cmd = self.create_publisher(Twist, self.cmd_vel_topic, 10)
 
         if self.simulation:
@@ -45,15 +44,17 @@ class TelloController(Node):
             self.cli_set.wait_for_service()
 
         self.get_logger().info(
-            f"TelloController started (simulation={self.simulation}, model={self.model_name})"
+            f"Controller started (simulation={self.simulation}, model={self.model_name})"
         )
 
+    #Logs current controller settings and speed parameters
     def _print_status(self):
         self.get_logger().info(
             f"Speeds: lin={self.lin_speed:.2f} m/s, yaw={self.yaw_speed:.2f} rad/s, Δz={self.dz_step:.2f} m | "
             f"model='{self.model_name}', frame='{self.reference_frame}'"
         )
 
+    #Publishes a velocity command to the drone via Twist message
     def send_cmd(self, vx=0.0, vy=0.0, vz=0.0, wz=0.0):
         msg = Twist()
         msg.linear.x = float(vx)
@@ -62,6 +63,7 @@ class TelloController(Node):
         msg.angular.z = float(wz)
         self.pub_cmd.publish(msg)
 
+    #Moves the drone forward/backward
     def step_x(self, dx: float):
         if self.simulation:
             req_g = GetEntityState.Request()
@@ -86,7 +88,7 @@ class TelloController(Node):
 
             dx_world = math.cos(yaw) * dx_body - math.sin(yaw) * dy_body
             dy_world = math.sin(yaw) * dx_body + math.cos(yaw) * dy_body
-            
+        
             pose.position.x += dx_world
             pose.position.y += dy_world
 
@@ -107,6 +109,7 @@ class TelloController(Node):
             self.send_cmd(vx, 0.0, 0.0, 0.0)
             self.get_logger().info(f"Sent forward velocity: {vx:.2f} m/s")
 
+    #Moves the drone left/right
     def step_y(self, dy: float):
         if self.simulation:
             req_g = GetEntityState.Request()
@@ -153,7 +156,7 @@ class TelloController(Node):
             self.send_cmd(0.0, vy, 0.0, 0.0)
             self.get_logger().info(f"Sent lateral velocity: {vy:.2f} m/s")
 
-
+    #Moves the drone up/down
     def step_z(self, dz: float):
         if self.simulation:
             req_g = GetEntityState.Request()
@@ -183,6 +186,7 @@ class TelloController(Node):
             self.send_cmd(0.0, 0.0, vz, 0.0)
             self.get_logger().info(f"Sent vertical velocity: {vz:.2f} m/s")
 
+    #Rotates the drone
     def step_yaw(self, dyaw: float):
         if self.simulation:
             req_g = GetEntityState.Request()
@@ -221,21 +225,3 @@ class TelloController(Node):
         else:
             self.send_cmd(0.0, 0.0, 0.0, dyaw)
             self.get_logger().info(f"Sent yaw velocity: {dyaw:.2f} rad/s")
-
-    def get_current_z(self):
-        if not self.simulation:
-            self.get_logger().warn("get_current_z not implemented for real Tello.")
-            return 1.0
-            
-        req_g = GetEntityState.Request()
-        req_g.name = self.model_name
-        req_g.reference_frame = self.reference_frame
-        
-        fut_g = self.cli_get.call_async(req_g)
-        rclpy.spin_until_future_complete(self, fut_g)
-        
-        if fut_g.result() and fut_g.result().success:
-            return fut_g.result().state.pose.position.z
-        
-        self.get_logger().error("Failed to get Z position from Gazebo.")
-        return 1.0

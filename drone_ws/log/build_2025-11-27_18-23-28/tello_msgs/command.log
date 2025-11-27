@@ -1,0 +1,6 @@
+Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs
+Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs

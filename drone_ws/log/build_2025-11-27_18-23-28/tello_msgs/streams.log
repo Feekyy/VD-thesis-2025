@@ -1,0 +1,285 @@
+[0.202s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+[1.845s] -- The C compiler identification is GNU 9.4.0
+[1.845s] -- The CXX compiler identification is GNU 9.4.0
+[1.845s] -- Check for working C compiler: /usr/bin/cc
+[1.846s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.846s] -- Detecting C compiler ABI info
+[1.846s] -- Detecting C compiler ABI info - done
+[1.846s] -- Detecting C compile features
+[1.846s] -- Detecting C compile features - done
+[1.848s] -- Check for working CXX compiler: /usr/bin/c++
+[1.848s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.848s] -- Detecting CXX compiler ABI info
+[1.848s] -- Detecting CXX compiler ABI info - done
+[1.848s] -- Detecting CXX compile features
+[1.848s] -- Detecting CXX compile features - done
+[1.848s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.848s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.848s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.970s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.984s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.013s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.364s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.468s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.714s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.950s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[3.306s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.794s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[4.181s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.303s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.351s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[4.355s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[4.427s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[4.427s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.427s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[4.427s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[4.458s] -- Found PythonExtra: .so  
+[4.613s] -- Configuring done
+[4.724s] -- Generating done
+[4.724s] -- Build files have been written to: /root/DockerFiles/drone_ws/build/tello_msgs
+[4.750s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/DockerFiles/drone_ws/src/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/root/DockerFiles/drone_ws/install/tello_msgs
+[4.750s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+[4.870s] [35m[1mScanning dependencies of target tello_msgs__cpp[0m
+[4.926s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.249s] [  2%] Built target tello_msgs__cpp
+[6.272s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.600s] [35m[1mScanning dependencies of target tello_msgs__rosidl_generator_c[0m
+[7.672s] [  6%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/flight_data__functions.c.o[0m
+[7.784s] [  8%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/srv/detail/tello_action__functions.c.o[0m
+[7.876s] [ 10%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_generator_c.dir/rosidl_generator_c/tello_msgs/msg/detail/tello_response__functions.c.o[0m
+[7.972s] [ 12%] [32m[1mLinking C shared library libtello_msgs__rosidl_generator_c.so[0m
+[8.048s] [ 12%] Built target tello_msgs__rosidl_generator_c
+[8.069s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[9.197s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_cpp[0m
+[9.238s] [ 17%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/flight_data__type_support.cpp.o[0m
+[9.761s] [ 19%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/srv/detail/tello_action__type_support.cpp.o[0m
+[10.227s] [ 21%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tello_msgs/msg/detail/tello_response__type_support.cpp.o[0m
+[10.640s] [ 23%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[10.767s] [ 23%] Built target tello_msgs__rosidl_typesupport_introspection_cpp
+[10.786s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[11.718s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_c[0m
+[11.766s] [ 27%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/flight_data__type_support.cpp.o[0m
+[11.831s] [ 29%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/srv/tello_action__type_support.cpp.o[0m
+[11.896s] [ 31%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/tello_msgs/msg/tello_response__type_support.cpp.o[0m
+[11.949s] [ 34%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_c.so[0m
+[12.021s] [ 34%] Built target tello_msgs__rosidl_typesupport_c
+[12.043s] [ 36%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[13.070s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_c[0m
+[13.115s] [ 38%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/flight_data__type_support.c.o[0m
+[13.182s] [ 40%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/srv/detail/tello_action__type_support.c.o[0m
+[13.247s] [ 42%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tello_msgs/msg/detail/tello_response__type_support.c.o[0m
+[13.313s] [ 44%] [32m[1mLinking C shared library libtello_msgs__rosidl_typesupport_introspection_c.so[0m
+[13.387s] [ 44%] Built target tello_msgs__rosidl_typesupport_introspection_c
+[13.406s] [ 46%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[14.566s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[14.621s] [ 48%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/flight_data__type_support.cpp.o[0m
+[15.336s] [ 51%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/srv/detail/dds_fastrtps/tello_action__type_support.cpp.o[0m
+[15.994s] [ 53%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tello_msgs/msg/detail/dds_fastrtps/tello_response__type_support.cpp.o[0m
+[16.663s] [ 55%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.855s] [ 55%] Built target tello_msgs__rosidl_typesupport_fastrtps_cpp
+[16.882s] [ 57%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[17.779s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_cpp[0m
+[17.805s] [ 59%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/flight_data__type_support.cpp.o[0m
+[18.238s] [ 61%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/srv/tello_action__type_support.cpp.o[0m
+[18.656s] [ 63%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tello_msgs/msg/tello_response__type_support.cpp.o[0m
+[19.071s] [ 65%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_cpp.so[0m
+[19.153s] [ 65%] Built target tello_msgs__rosidl_typesupport_cpp
+[19.176s] [ 68%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[20.343s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_c[0m
+[20.374s] [ 70%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/flight_data__type_support_c.cpp.o[0m
+[20.939s] [ 72%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/srv/detail/tello_action__type_support_c.cpp.o[0m
+[21.537s] [ 74%] [32mBuilding CXX object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tello_msgs/msg/detail/tello_response__type_support_c.cpp.o[0m
+[22.073s] [ 76%] [32m[1mLinking CXX shared library libtello_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[22.285s] [ 76%] Built target tello_msgs__rosidl_typesupport_fastrtps_c
+[22.307s] [35m[1mScanning dependencies of target tello_msgs[0m
+[22.325s] [ 76%] Built target tello_msgs
+[22.342s] [35m[1mScanning dependencies of target tello_msgs__py[0m
+[22.367s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[24.673s] [ 78%] Built target tello_msgs__py
+[24.696s] [35m[1mScanning dependencies of target tello_msgs__python[0m
+[24.828s] [ 80%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_flight_data_s.c.o[0m
+[25.059s] [ 82%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/srv/_tello_action_s.c.o[0m
+[25.225s] [ 85%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_tello_response_s.c.o[0m
+[25.435s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/libtello_msgs__python.so[0m
+[25.519s] [ 87%] Built target tello_msgs__python
+[25.558s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_c__pyext[0m
+[25.590s] [ 89%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[25.788s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[25.849s] [ 91%] Built target tello_msgs__rosidl_typesupport_c__pyext
+[25.867s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[25.918s] [ 93%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[26.102s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[26.191s] [ 95%] Built target tello_msgs__rosidl_typesupport_introspection_c__pyext
+[26.222s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[26.263s] [ 97%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[26.463s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[26.600s] [100%] Built target tello_msgs__rosidl_typesupport_fastrtps_c__pyext
+[26.630s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+[26.869s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs
+[26.892s] -- Install configuration: ""
+[26.892s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/rosidl_interfaces/tello_msgs
+[26.892s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__struct.h
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__struct.h
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__functions.h
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__functions.c
+[26.893s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__functions.c
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__functions.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_generator_c__visibility_control.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/tello_response.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/flight_data.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__struct.h
+[26.894s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__functions.h
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.h
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__functions.c
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/tello_action.h
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/library_path.sh
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/library_path.dsv
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so
+[26.895s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_generator_c.so" to ""
+[26.895s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.895s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.895s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.895s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_c.h
+[26.896s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_c.h
+[26.896s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[26.896s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.896s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.896s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_c.h
+[26.896s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so
+[26.900s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[26.903s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.903s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.903s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.903s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_fastrtps_cpp.hpp
+[26.903s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/dds_fastrtps
+[26.903s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_fastrtps_cpp.hpp
+[26.903s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[26.903s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.903s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.904s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/dds_fastrtps
+[26.904s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_fastrtps_cpp.hpp
+[26.904s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so
+[26.904s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[26.905s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.905s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.905s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.905s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_c.h
+[26.905s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.c
+[26.905s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_c.h
+[26.905s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.c
+[26.910s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[26.910s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.912s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.912s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.c
+[26.913s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_c.h
+[26.913s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so
+[26.915s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_c.so" to ""
+[26.915s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so
+[26.916s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_c.so" to ""
+[26.916s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.917s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.917s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.917s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.hpp
+[26.917s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__struct.hpp
+[26.917s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__struct.hpp
+[26.917s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__traits.hpp
+[26.918s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__builder.hpp
+[26.918s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.hpp
+[26.918s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__traits.hpp
+[26.919s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__builder.hpp
+[26.919s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[26.919s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/tello_response.hpp
+[26.920s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/flight_data.hpp
+[26.920s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.921s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.921s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__struct.hpp
+[26.921s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__builder.hpp
+[26.921s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__traits.hpp
+[26.921s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.hpp
+[26.921s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/tello_action.hpp
+[26.921s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs
+[26.922s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg
+[26.922s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail
+[26.922s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__type_support.cpp
+[26.922s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__rosidl_typesupport_introspection_cpp.hpp
+[26.922s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/flight_data__rosidl_typesupport_introspection_cpp.hpp
+[26.922s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/msg/detail/tello_response__type_support.cpp
+[26.923s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv
+[26.923s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail
+[26.923s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__rosidl_typesupport_introspection_cpp.hpp
+[26.923s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/include/tello_msgs/srv/detail/tello_action__type_support.cpp
+[26.923s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so
+[26.927s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[26.927s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so
+[26.927s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__rosidl_typesupport_cpp.so" to ""
+[26.927s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/pythonpath.sh
+[26.927s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/pythonpath.dsv
+[26.927s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/__init__.py
+[26.999s] Compiling '/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/__init__.py'...
+[27.006s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg
+[27.008s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_tello_response.py
+[27.008s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/__init__.py
+[27.008s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_tello_response_s.c
+[27.008s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_flight_data_s.c
+[27.009s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/msg/_flight_data.py
+[27.009s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv
+[27.009s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/__init__.py
+[27.009s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/_tello_action.py
+[27.010s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/srv/_tello_action_s.c
+[27.011s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[27.013s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[27.013s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[27.015s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[27.015s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[27.015s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/python3.8/site-packages/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[27.015s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__python.so
+[27.016s] -- Set runtime path of "/root/DockerFiles/drone_ws/install/tello_msgs/lib/libtello_msgs__python.so" to ""
+[27.016s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/FlightData.idl
+[27.016s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/TelloResponse.idl
+[27.016s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction.idl
+[27.017s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/FlightData.msg
+[27.017s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/msg/TelloResponse.msg
+[27.017s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction.srv
+[27.017s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction_Request.msg
+[27.017s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/srv/TelloAction_Response.msg
+[27.018s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/package_run_dependencies/tello_msgs
+[27.018s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/parent_prefix_path/tello_msgs
+[27.018s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.sh
+[27.018s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/ament_prefix_path.dsv
+[27.022s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/path.sh
+[27.022s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/environment/path.dsv
+[27.022s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.bash
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.sh
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.zsh
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/local_setup.dsv
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.dsv
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/ament_index/resource_index/packages/tello_msgs
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cExport.cmake
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cExport-noconfig.cmake
+[27.023s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_generator_cppExport.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake-extras.cmake
+[27.024s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.038s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[27.038s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[27.038s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.038s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[27.039s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[27.039s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig.cmake
+[27.039s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/cmake/tello_msgsConfig-version.cmake
+[27.039s] -- Installing: /root/DockerFiles/drone_ws/install/tello_msgs/share/tello_msgs/package.xml
+[27.039s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_msgs

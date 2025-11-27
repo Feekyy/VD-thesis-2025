@@ -31,6 +31,8 @@ RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 
 WORKDIR /root/DockerFiles
 
+RUN colcon build
+
 SHELL ["/bin/bash", "-lc"]
 ENV RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ENV DISPLAY=:0

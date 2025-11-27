@@ -1,0 +1,11 @@
+[0.199s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_msgs -- -j12 -l12
+[1.496s] [  2%] Built target tello_msgs__cpp
+[1.497s] [ 12%] Built target tello_msgs__rosidl_generator_c
+[1.497s] [ 23%] Built target tello_msgs__rosidl_typesupport_introspection_cpp
+[1.497s] [ 34%] Built target tello_msgs__rosidl_typesupport_c
+[1.497s] [ 44%] Built target tello_msgs__rosidl_typesupport_introspection_c
+[1.497s] [ 55%] Built target tello_msgs__rosidl_typesupport_fastrtps_cpp
+[1.504s] [ 65%] Built target tello_msgs__rosidl_typesupport_cpp
+[1.504s] make[2]: *** [CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/build.make:225: CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/depend] Interrupt
+[1.504s] make[1]: *** [CMakeFiles/Makefile2:387: CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c.dir/all] Interrupt
+[1.504s] make: *** [Makefile:141: all] Interrupt

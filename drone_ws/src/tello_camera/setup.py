@@ -4,7 +4,7 @@ package_name = 'tello_camera'
 
 setup(
     name=package_name,
-    version='final',
+    version='1.0.0',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',

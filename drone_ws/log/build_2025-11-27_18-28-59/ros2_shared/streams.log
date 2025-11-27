@@ -1,0 +1,28 @@
+[0.156s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[1.796s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/ros2_shared -- -j12 -l12
+[1.934s] Invoking command in '/root/DockerFiles/drone_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
+[1.960s] -- Install configuration: ""
+[1.961s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[1.962s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.sh
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.bash
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.sh
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[1.964s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.dsv
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_shared_targetsExport.cmake
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_targets-extras.cmake
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[1.966s] -- Up-to-date: /root/DockerFiles/drone_ws/install/ros2_shared/share/ros2_shared/package.xml
+[1.970s] Invoked command in '/root/DockerFiles/drone_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/ros2_shared
