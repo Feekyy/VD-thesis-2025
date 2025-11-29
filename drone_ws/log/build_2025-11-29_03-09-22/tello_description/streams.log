@@ -1,0 +1,39 @@
+[0.633s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[0.898s] [ 11%] Built target generate_urdf_6
+[0.898s] [ 22%] Built target generate_urdf_2
+[0.898s] [ 33%] Built target generate_urdf_7
+[0.898s] [ 44%] Built target generate_urdf_5
+[0.899s] [ 55%] Built target generate_urdf_4
+[0.899s] [ 66%] Built target generate_urdf_8
+[0.899s] [ 77%] Built target generate_urdf_3
+[0.901s] [ 88%] Built target generate_urdf_1
+[0.930s] [100%] Built target generate_urdf
+[1.161s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --build /root/DockerFiles/drone_ws/build/tello_description -- -j12 -l12
+[1.221s] Invoking command in '/root/DockerFiles/drone_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description
+[1.243s] -- Install configuration: ""
+[1.245s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf
+[1.245s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_8.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_3.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_1.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_5.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_4.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_6.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_2.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello_7.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/urdf/tello.urdf
+[1.246s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/package_run_dependencies/tello_description
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/parent_prefix_path/tello_description
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.sh
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.dsv
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.sh
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/environment/path.dsv
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.bash
+[1.247s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.sh
+[1.248s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.zsh
+[1.248s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/local_setup.dsv
+[1.248s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.dsv
+[1.248s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/ament_index/resource_index/packages/tello_description
+[1.249s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig.cmake
+[1.250s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig-version.cmake
+[1.250s] -- Up-to-date: /root/DockerFiles/drone_ws/install/tello_description/share/tello_description/package.xml
+[1.256s] Invoked command in '/root/DockerFiles/drone_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/DockerFiles/drone_ws/install/tello_mission:/root/DockerFiles/drone_ws/install/tello_hand_move:/root/DockerFiles/drone_ws/install/tello_controller:/root/DockerFiles/drone_ws/install/tello_camera:/opt/ros/foxy /usr/bin/cmake --install /root/DockerFiles/drone_ws/build/tello_description

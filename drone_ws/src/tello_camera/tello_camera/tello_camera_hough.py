@@ -4,6 +4,7 @@ import json
 import cv2
 import numpy as np
 
+from rclpy.node import Node
 from sensor_msgs.msg import Image
 from std_msgs.msg import Bool, Float32, String
 from cv_bridge import CvBridge, CvBridgeError
@@ -55,7 +56,7 @@ def color_fraction_in_circle(bgr_img, circle, color_ranges_hsv):
     return best_color, clamp01(best_fraction)
 
 #Initializes the ROS 2 node and sets up Hough circle detection parameters
-class TelloCamera(Node):
+class TelloCameraHough(Node):
     def __init__(self):
         super().__init__('tello_camera_hough')
 
@@ -167,7 +168,7 @@ class TelloCamera(Node):
 #Entry point: initializes ROS 2, creates the node and starts the main loop
 def main(args=None):
     rclpy.init(args=args)
-    node = TelloCamera()
+    node = TelloCameraHough()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

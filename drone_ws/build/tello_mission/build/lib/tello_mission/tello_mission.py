@@ -87,12 +87,6 @@ class TelloMission(Node):
         
         self.control()
 
-    #Compute squared distance from image center for a detection
-    def center_distance_sq(self, c):
-        dx = c.get("x", self.img_center_x) - self.img_center_x
-        dy = c.get("y", self.img_center_y) - self.img_center_y
-        return dx*dx + dy*dy
-
     #Main control logic
     def control(self):
         #If finished the sequence, hover
@@ -229,7 +223,7 @@ class TelloMission(Node):
 #Entry point: initializes ROS 2, creates the node and starts the main loop
 def main(args=None):
     rclpy.init(args=args)
-    node = MissionNode()
+    node = TelloMission()
     rclpy.spin(node)
     rclpy.shutdown()
 
