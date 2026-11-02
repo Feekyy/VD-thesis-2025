@@ -20,7 +20,6 @@ class TelloController(Node):
                  model_name='tello_drone',
                  reference_frame='world'):
         super().__init__('tello_controller')
-
         self.simulation = simulation
         self.cmd_vel_topic = cmd_vel_topic
         self.model_name = model_name
@@ -36,13 +35,11 @@ class TelloController(Node):
         self.yaw_speed = self.get_parameter('yaw_speed').value
         self.dz_step = self.get_parameter('dz_step').value
         self.pub_cmd = self.create_publisher(Twist, self.cmd_vel_topic, 10)
-
         if self.simulation:
             self.cli_get = self.create_client(GetEntityState, '/gazebo/get_entity_state')
             self.cli_set = self.create_client(SetEntityState, '/gazebo/set_entity_state')
             self.cli_get.wait_for_service()
             self.cli_set.wait_for_service()
-
         self.get_logger().info(
             f"Controller started (simulation={self.simulation}, model={self.model_name})"
         )
@@ -71,11 +68,11 @@ class TelloController(Node):
             req_g.reference_frame = self.reference_frame
             fut_g = self.cli_get.call_async(req_g)
             rclpy.spin_until_future_complete(self, fut_g)
-
+            
             if not fut_g.result() or not fut_g.result().success:
                 self.get_logger().error("GetEntityState unsuccessful.")
                 return
-
+            
             pose: Pose = fut_g.result().state.pose
             twist: TwistMsg = fut_g.result().state.twist
             q = pose.orientation
@@ -108,12 +105,16 @@ class TelloController(Node):
             if not fut_s.result() or not fut_s.result().success:
                 self.get_logger().error("SetEntityState unsuccessful.")
         else:
+
             #One Twist with every axis, so the commands don't overwrite each other
             vx = math.copysign(self.lin_speed, dx) if dx != 0 else 0.0
             vy = math.copysign(self.lin_speed, dy) if dy != 0 else 0.0
             vz = math.copysign(self.lin_speed, dz) if dz != 0 else 0.0
             self.send_cmd(vx, vy, vz, dyaw)
-            self.get_logger().info(f"Sent velocity: vx={vx:.2f}, vy={vy:.2f}, vz={vz:.2f} m/s, yaw={dyaw:.2f} rad/s")
+            self.get_logger().info
+            (
+                f"Sent velocity: vx={vx:.2f}, vy={vy:.2f}, vz={vz:.2f} m/s, yaw={dyaw:.2f} rad/s"
+            )
 
     #Moves the drone forward/backward
     def step_x(self, dx: float):

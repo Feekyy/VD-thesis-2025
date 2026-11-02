@@ -142,7 +142,10 @@ class TelloMission(Node):
 
             #If we recently saw a very close target, force pass-through
             if self.last_known_radius > 200:
-                self.get_logger().info(f"Target lost but close (r={self.last_known_radius:.1f}). Forcing pass-through.")
+                self.get_logger().info
+                (
+                    f"Target lost but close (r={self.last_known_radius:.1f}). Forcing pass-through."
+                )
                 self.controller.send_cmd(0.0, 0.0, 0.0, 0.0)
                 self.pass_counter = self.pass_steps
                 self.last_known_radius = 0.0
@@ -194,7 +197,10 @@ class TelloMission(Node):
             self.reset_alignment()
             self.pass_counter = self.pass_steps
             self.last_known_radius = 0.0
-            self.get_logger().info(f"{target_color} donut: close enough (r={r:.1f}), starting pass-through.")
+            self.get_logger().info
+            (
+                f"{target_color} donut: close enough (r={r:.1f}), starting pass-through."
+            )
             return
         
         #Compute image-plane errors and desired corrections
@@ -215,17 +221,23 @@ class TelloMission(Node):
             self.align_counter = self.align_counter + 1 if aligned else 0
             if self.align_counter >= self.align_frames_required:
                 self.approaching = True
-                self.get_logger().info(f"Aligned with {target_color} torus, starting approach.")
+                self.get_logger().info
+                (
+                    f"Aligned with {target_color} torus, starting approach."
+                )
             else:
-                self.get_logger().info(
+                self.get_logger().info
+                (
                     f"Aligning to {target_color} torus: dx={error_x:.0f}, dy={error_y:.0f} "
                     f"({self.align_counter}/{self.align_frames_required})"
                 )
+
         #Approach phase: if the donut drifts too far from the center, stop and realign
         elif abs(error_x) > self.realign_tol or abs(error_y) > self.realign_tol:
             self.reset_alignment()
             step_x = 0.0
             self.get_logger().info(f"Lost alignment (dx={error_x:.0f}, dy={error_y:.0f}). Stopping to realign.")
+
         #If well-aligned, go at max forward speed; otherwise take smaller corrective steps
         elif aligned:
             step_x = self.max_step_x
@@ -243,8 +255,8 @@ class TelloMission(Node):
 
         #Send the motion command to the controller (all axes in one step)
         self.controller.step(step_x, step_y, step_z, step_yaw)
-
-        self.get_logger().info(
+        self.get_logger().info
+        (
             f"Tracking {target_color}: dx={step_x:.2f}, yaw={step_yaw:.3f}, r={r:.1f}"
         )
 
