@@ -46,15 +46,16 @@ class TelloHandMove(Node):
     def __init__(self):
         super().__init__("tele_hand_move")
 
+        #Parameters (must be read before the controller is created)
+        self.declare_parameter("simulation", True)
+        self.sim = self.get_parameter("simulation").value
+
         self.controller = TelloController(
             simulation=self.sim,
             model_name="tello_drone",
             reference_frame="world",
             cmd_vel_topic="/cmd_vel"
         )
-        
-        self.declare_parameter("simulation", True)
-        self.sim = self.get_parameter("simulation").value
         print(HELP)
 
     #Main control loop that reads keyboard input and executes drone movements

@@ -1,4 +1,0 @@
-[console_scripts]
-tello_camera_contour = tello_camera.tello_camera_contour:main
-tello_camera_hough = tello_camera.tello_camera_hough:main
-

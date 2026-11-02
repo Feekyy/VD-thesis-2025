@@ -1,3 +1,0 @@
-[console_scripts]
-tello_mission = tello_mission.tello_mission:main
-

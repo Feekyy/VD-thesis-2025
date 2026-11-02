@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 import json
+import math
 import numpy as np
 
 from rclpy.node import Node
@@ -12,6 +13,10 @@ class TelloMission(Node):
     def __init__(self):
         super().__init__("tello_mission")
 
+        #Parameters (must be read before the controller is created)
+        self.declare_parameter("simulation", True)
+        self.sim = self.get_parameter("simulation").value
+
         self.controller = TelloController(
             simulation=self.sim,
             model_name="tello_drone",
@@ -19,9 +24,7 @@ class TelloMission(Node):
             cmd_vel_topic="/cmd_vel"
         )
 
-        #Parameters and subscriptions
-        self.declare_parameter("simulation", True)
-        self.sim = self.get_parameter("simulation").value
+        #Subscriptions
         self.create_subscription(Bool, "donut_detector/activation", self.cb_activation, 10)
         self.create_subscription(Float32, "donut_detector/activation_degree", self.cb_degree, 10)
         self.create_subscription(String, "donut_detector/circles", self.cb_circles, 10)
@@ -61,6 +64,19 @@ class TelloMission(Node):
         self.search_height_dir = 1.0
         self.rotation_steps = 0
         self.rotation_duration = 20
+        self.rotation_yaw_step = math.pi / self.rotation_duration
+
+        #Alignment before approach: hover and turn onto the donut first, then fly towards it
+        self.align_tol = 30
+        self.realign_tol = 80
+        self.align_frames_required = 10
+        self.align_counter = 0
+        self.approaching = False
+
+    #Forget the alignment state (target lost or pass-through started)
+    def reset_alignment(self):
+        self.align_counter = 0
+        self.approaching = False
 
     #Update activation flag from detector
     def cb_activation(self, msg):
@@ -99,7 +115,7 @@ class TelloMission(Node):
 
         #Handle in-progress rotation step (180-degree rotation)
         if self.rotation_steps > 0:
-            self.controller.step_yaw(0.5)
+            self.controller.step(dyaw=self.rotation_yaw_step)
             self.rotation_steps -= 1
             self.get_logger().info(f"Rotating 180 degrees... remaining: {self.rotation_steps}")
             if self.rotation_steps == 0:
@@ -108,11 +124,8 @@ class TelloMission(Node):
 
         #Handle pass-through phase where drone just moves forward
         if self.pass_counter > 0:
-            self.controller.step_x(0.18)
-            self.controller.step_y(0.0)
-            self.controller.step_z(0.0)
-            self.controller.step_yaw(0.0)
-            
+            self.controller.step(dx=0.18)
+
             self.pass_counter -= 1
             if self.pass_counter == 0:
                 self.get_logger().info(f"Completed {target_color} torus, finished pass-through.")
@@ -125,6 +138,8 @@ class TelloMission(Node):
         
         #If no detections, perform search behaviour
         if len(target_circles) == 0:
+            self.reset_alignment()
+
             #If we recently saw a very close target, force pass-through
             if self.last_known_radius > 200:
                 self.get_logger().info(f"Target lost but close (r={self.last_known_radius:.1f}). Forcing pass-through.")
@@ -134,6 +149,7 @@ class TelloMission(Node):
                 return
 
             #Switch between rotate and forward search states
+            step_z = 0.0
             if self.search_step_duration <= 0:
                 if self.search_state == 'rotate':
                     self.search_state = 'forward'
@@ -144,9 +160,8 @@ class TelloMission(Node):
                     self.search_step_duration = self.search_rotation_duration
                     self.get_logger().info("Search: Target lost. Rotating.")
                     self.search_height_dir *= -1.0
-                    dz = self.search_height_step * self.search_height_dir
-                    self.controller.step_z(dz)
-                    self.get_logger().info(f"Search: Adjusting height by {dz:.2f} m.")
+                    step_z = self.search_height_step * self.search_height_dir
+                    self.get_logger().info(f"Search: Adjusting height by {step_z:.2f} m.")
 
             self.search_step_duration -= 1
             step_x = 0.0
@@ -156,10 +171,7 @@ class TelloMission(Node):
                 step_yaw = self.search_yaw_rate 
             elif self.search_state == 'forward':
                 step_x = self.search_forward_speed 
-            self.controller.step_x(step_x)
-            self.controller.step_y(0.0)
-            self.controller.step_z(0.0) 
-            self.controller.step_yaw(step_yaw)
+            self.controller.step(dx=step_x, dz=step_z, dyaw=step_yaw)
             self.last_known_radius = 0.0
             return
 
@@ -179,6 +191,7 @@ class TelloMission(Node):
         #If close enough, initiate pass-through
         if r >= self.radius_threshold_max:
             self.controller.send_cmd(0.0, 0.0, 0.0, 0.0)
+            self.reset_alignment()
             self.pass_counter = self.pass_steps
             self.last_known_radius = 0.0
             self.get_logger().info(f"{target_color} donut: close enough (r={r:.1f}), starting pass-through.")
@@ -194,9 +207,27 @@ class TelloMission(Node):
         if r > 180:
             step_x_min = self.forward_step
             
+        aligned = abs(error_x) < self.align_tol and abs(error_y) < self.align_tol
+
+        #Alignment phase: hover in place, only turn and change height until the donut stays centered
+        if not self.approaching:
+            step_x = 0.0
+            self.align_counter = self.align_counter + 1 if aligned else 0
+            if self.align_counter >= self.align_frames_required:
+                self.approaching = True
+                self.get_logger().info(f"Aligned with {target_color} torus, starting approach.")
+            else:
+                self.get_logger().info(
+                    f"Aligning to {target_color} torus: dx={error_x:.0f}, dy={error_y:.0f} "
+                    f"({self.align_counter}/{self.align_frames_required})"
+                )
+        #Approach phase: if the donut drifts too far from the center, stop and realign
+        elif abs(error_x) > self.realign_tol or abs(error_y) > self.realign_tol:
+            self.reset_alignment()
+            step_x = 0.0
+            self.get_logger().info(f"Lost alignment (dx={error_x:.0f}, dy={error_y:.0f}). Stopping to realign.")
         #If well-aligned, go at max forward speed; otherwise take smaller corrective steps
-        ALIGN_TOL = 30
-        if abs(error_x) < ALIGN_TOL and abs(error_y) < ALIGN_TOL:
+        elif aligned:
             step_x = self.max_step_x
             step_yaw = 0.0
             self.get_logger().info(f"Aligned. Moving towards {target_color} torus. Speed: {step_x:.2f} m/s (MAX SPEED)")
@@ -210,11 +241,8 @@ class TelloMission(Node):
         step_z = float(np.clip(step_z, -self.max_step_z, self.max_step_z))
         step_yaw = float(np.clip(step_yaw, -0.15, 0.15)) 
 
-        #Send motion commands to the controller
-        self.controller.step_x(step_x)
-        self.controller.step_y(step_y)
-        self.controller.step_z(step_z)
-        self.controller.step_yaw(step_yaw)
+        #Send the motion command to the controller (all axes in one step)
+        self.controller.step(step_x, step_y, step_z, step_yaw)
 
         self.get_logger().info(
             f"Tracking {target_color}: dx={step_x:.2f}, yaw={step_yaw:.3f}, r={r:.1f}"

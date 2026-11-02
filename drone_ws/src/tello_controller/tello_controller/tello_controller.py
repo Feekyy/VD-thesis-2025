@@ -63,8 +63,8 @@ class TelloController(Node):
         msg.angular.z = float(wz)
         self.pub_cmd.publish(msg)
 
-    #Moves the drone forward/backward
-    def step_x(self, dx: float):
+    #Moves the drone on every axis at once (body frame: x forward, y left, z up, yaw rotation)
+    def step(self, dx=0.0, dy=0.0, dz=0.0, dyaw=0.0):
         if self.simulation:
             req_g = GetEntityState.Request()
             req_g.name = self.model_name
@@ -79,133 +79,17 @@ class TelloController(Node):
             pose: Pose = fut_g.result().state.pose
             twist: TwistMsg = fut_g.result().state.twist
             q = pose.orientation
-            q_w, q_x, q_y, q_z = q.w, q.x, q.y, q.z
-            current_roll, current_pitch, current_yaw = tfe.quat2euler([q_w, q_x, q_y, q_z], axes='sxyz')
-            yaw = current_yaw
-            
-            dx_body = dx
-            dy_body = 0.0
+            current_roll, current_pitch, current_yaw = tfe.quat2euler([q.w, q.x, q.y, q.z], axes='sxyz')
 
-            dx_world = math.cos(yaw) * dx_body - math.sin(yaw) * dy_body
-            dy_world = math.sin(yaw) * dx_body + math.cos(yaw) * dy_body
-        
-            pose.position.x += dx_world
-            pose.position.y += dy_world
-
-            req_s = SetEntityState.Request()
-            req_s.state = EntityState()
-            req_s.state.name = self.model_name
-            req_s.state.reference_frame = self.reference_frame
-            req_s.state.pose = pose
-            req_s.state.twist = twist
-
-            fut_s = self.cli_set.call_async(req_s)
-            rclpy.spin_until_future_complete(self, fut_s)
-
-            if not fut_s.result() or not fut_s.result().success:
-                self.get_logger().error("SetEntityState unsuccessful.")
-        else:
-            vx = dx / abs(dx) * self.lin_speed if dx != 0 else 0.0
-            self.send_cmd(vx, 0.0, 0.0, 0.0)
-            self.get_logger().info(f"Sent forward velocity: {vx:.2f} m/s")
-
-    #Moves the drone left/right
-    def step_y(self, dy: float):
-        if self.simulation:
-            req_g = GetEntityState.Request()
-            req_g.name = self.model_name
-            req_g.reference_frame = self.reference_frame
-            fut_g = self.cli_get.call_async(req_g)
-            rclpy.spin_until_future_complete(self, fut_g)
-
-            if not fut_g.result() or not fut_g.result().success:
-                self.get_logger().error("GetEntityState unsuccessful.")
-                return
-
-            pose: Pose = fut_g.result().state.pose
-            twist: TwistMsg = fut_g.result().state.twist
-
-            q = pose.orientation
-            q_w, q_x, q_y, q_z = q.w, q.x, q.y, q.z
-            current_roll, current_pitch, current_yaw = tfe.quat2euler([q_w, q_x, q_y, q_z], axes='sxyz')
-            yaw = current_yaw
-
-            dx_body = 0.0
-            dy_body = dy
-
-            dx_world = math.cos(yaw) * dx_body - math.sin(yaw) * dy_body
-            dy_world = math.sin(yaw) * dx_body + math.cos(yaw) * dy_body
+            #Body frame -> world frame, so the drone always moves relative to its own heading
+            dx_world = math.cos(current_yaw) * dx - math.sin(current_yaw) * dy
+            dy_world = math.sin(current_yaw) * dx + math.cos(current_yaw) * dy
 
             pose.position.x += dx_world
             pose.position.y += dy_world
-            
-            req_s = SetEntityState.Request()
-            req_s.state = EntityState()
-            req_s.state.name = self.model_name
-            req_s.state.reference_frame = self.reference_frame
-            req_s.state.pose = pose
-            req_s.state.twist = twist
+            pose.position.z = max(self.min_z, min(self.max_z, pose.position.z + dz))
 
-            fut_s = self.cli_set.call_async(req_s)
-            rclpy.spin_until_future_complete(self, fut_s)
-
-            if not fut_s.result() or not fut_s.result().success:
-                self.get_logger().error("SetEntityState unsuccessful.")
-        else:
-            vy = dy / abs(dy) * self.lin_speed if dy != 0 else 0.0
-            self.send_cmd(0.0, vy, 0.0, 0.0)
-            self.get_logger().info(f"Sent lateral velocity: {vy:.2f} m/s")
-
-    #Moves the drone up/down
-    def step_z(self, dz: float):
-        if self.simulation:
-            req_g = GetEntityState.Request()
-            req_g.name = self.model_name
-            req_g.reference_frame = self.reference_frame
-            fut_g = self.cli_get.call_async(req_g)
-            rclpy.spin_until_future_complete(self, fut_g)
-            if not fut_g.result() or not fut_g.result().success:
-                self.get_logger().error("GetEntityState unsuccessful.")
-                return
-            pose: Pose = fut_g.result().state.pose
-            twist: TwistMsg = fut_g.result().state.twist
-            new_z = max(self.min_z, min(self.max_z, pose.position.z + dz))
-            pose.position.z = new_z
-            req_s = SetEntityState.Request()
-            req_s.state = EntityState()
-            req_s.state.name = self.model_name
-            req_s.state.reference_frame = self.reference_frame
-            req_s.state.pose = pose
-            req_s.state.twist = twist
-            fut_s = self.cli_set.call_async(req_s)
-            rclpy.spin_until_future_complete(self, fut_s)
-            if not fut_s.result() or not fut_s.result().success:
-                self.get_logger().error("SetEntityState unsuccessful.")
-        else:
-            vz = dz / abs(dz) * self.lin_speed if dz != 0 else 0.0
-            self.send_cmd(0.0, 0.0, vz, 0.0)
-            self.get_logger().info(f"Sent vertical velocity: {vz:.2f} m/s")
-
-    #Rotates the drone
-    def step_yaw(self, dyaw: float):
-        if self.simulation:
-            req_g = GetEntityState.Request()
-            req_g.name = self.model_name
-            req_g.reference_frame = self.reference_frame
-            fut_g = self.cli_get.call_async(req_g)
-            rclpy.spin_until_future_complete(self, fut_g)
-            if not fut_g.result() or not fut_g.result().success:
-                self.get_logger().error("GetEntityState unsuccessful.")
-                return
-
-            pose = fut_g.result().state.pose
-            twist = fut_g.result().state.twist
-
-            q = pose.orientation
-            current_euler = tfe.quat2euler([q.w, q.x, q.y, q.z], axes='sxyz')
-            new_yaw = current_euler[2] + dyaw
-
-            new_quat = tfe.euler2quat(current_euler[0], current_euler[1], new_yaw, axes='sxyz')
+            new_quat = tfe.euler2quat(current_roll, current_pitch, current_yaw + dyaw, axes='sxyz')
             pose.orientation.w = new_quat[0]
             pose.orientation.x = new_quat[1]
             pose.orientation.y = new_quat[2]
@@ -220,8 +104,29 @@ class TelloController(Node):
 
             fut_s = self.cli_set.call_async(req_s)
             rclpy.spin_until_future_complete(self, fut_s)
+
             if not fut_s.result() or not fut_s.result().success:
                 self.get_logger().error("SetEntityState unsuccessful.")
         else:
-            self.send_cmd(0.0, 0.0, 0.0, dyaw)
-            self.get_logger().info(f"Sent yaw velocity: {dyaw:.2f} rad/s")
+            #One Twist with every axis, so the commands don't overwrite each other
+            vx = math.copysign(self.lin_speed, dx) if dx != 0 else 0.0
+            vy = math.copysign(self.lin_speed, dy) if dy != 0 else 0.0
+            vz = math.copysign(self.lin_speed, dz) if dz != 0 else 0.0
+            self.send_cmd(vx, vy, vz, dyaw)
+            self.get_logger().info(f"Sent velocity: vx={vx:.2f}, vy={vy:.2f}, vz={vz:.2f} m/s, yaw={dyaw:.2f} rad/s")
+
+    #Moves the drone forward/backward
+    def step_x(self, dx: float):
+        self.step(dx=dx)
+
+    #Moves the drone left/right
+    def step_y(self, dy: float):
+        self.step(dy=dy)
+
+    #Moves the drone up/down
+    def step_z(self, dz: float):
+        self.step(dz=dz)
+
+    #Rotates the drone
+    def step_yaw(self, dyaw: float):
+        self.step(dyaw=dyaw)
