@@ -29,11 +29,13 @@ class TelloController(Node):
         self.declare_parameter('lin_speed', 0.1)
         self.declare_parameter('yaw_speed', 0.05)
         self.declare_parameter('dz_step', 0.1)
+        self.declare_parameter('full_speed_step', 0.1)
         self.min_z = self.get_parameter('min_z').value
         self.max_z = self.get_parameter('max_z').value
         self.lin_speed = self.get_parameter('lin_speed').value
         self.yaw_speed = self.get_parameter('yaw_speed').value
         self.dz_step = self.get_parameter('dz_step').value
+        self.full_speed_step = self.get_parameter('full_speed_step').value
         self.pub_cmd = self.create_publisher(Twist, self.cmd_vel_topic, 10)
         if self.simulation:
             self.cli_get = self.create_client(GetEntityState, '/gazebo/get_entity_state')
@@ -107,14 +109,22 @@ class TelloController(Node):
         else:
 
             #One Twist with every axis, so the commands don't overwrite each other
-            vx = math.copysign(self.lin_speed, dx) if dx != 0 else 0.0
-            vy = math.copysign(self.lin_speed, dy) if dy != 0 else 0.0
-            vz = math.copysign(self.lin_speed, dz) if dz != 0 else 0.0
-            self.send_cmd(vx, vy, vz, dyaw)
-            self.get_logger().info
-            (
-                f"Sent velocity: vx={vx:.2f}, vy={vy:.2f}, vz={vz:.2f} m/s, yaw={dyaw:.2f} rad/s"
+            #The speed is proportional to the step: a step of full_speed_step (or more) means lin_speed
+            vx = self.step_to_speed(dx)
+            vy = self.step_to_speed(dy)
+            vz = self.step_to_speed(dz)
+
+            #The Tello driver turns cmd_vel into joystick values, so it has to stay between -1 and 1
+            wz = max(-1.0, min(1.0, dyaw))
+            self.send_cmd(vx, vy, vz, wz)
+            self.get_logger().info(
+                f"Sent velocity: vx={vx:.2f}, vy={vy:.2f}, vz={vz:.2f} m/s, yaw={wz:.2f} rad/s"
             )
+
+    #Converts a step (m) into a speed proportional to it, limited to lin_speed
+    def step_to_speed(self, step: float):
+        ratio = max(-1.0, min(1.0, step / self.full_speed_step))
+        return ratio * self.lin_speed
 
     #Moves the drone forward/backward
     def step_x(self, dx: float):
