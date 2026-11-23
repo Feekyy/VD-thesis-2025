@@ -37,9 +37,12 @@ spawn_drone() {
 	ros2 run gazebo_ros spawn_entity.py -file "$DRONE_URDF" -entity tello_drone
 }
 
-#Stops the background processes started by 'demo'
+#Stops the background processes started by 'demo' ('ros2 run' only starts the real node as its child, so that is stopped too)
 stop_demo() {
-	[ -n "$DETECTOR_PID" ] && kill $DETECTOR_PID 2>/dev/null
+	if [ -n "$DETECTOR_PID" ]; then
+		pkill -TERM -P $DETECTOR_PID 2>/dev/null
+		kill $DETECTOR_PID 2>/dev/null
+	fi
 	[ "$STARTED_GAZEBO" = "1" ] && kill $GAZEBO_PID 2>/dev/null
 }
 
