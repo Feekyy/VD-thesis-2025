@@ -102,10 +102,9 @@
         <child link="camera_link"/>
     </joint>
 
-    <!-- Tello plugin for Gazebo -->
+    <!-- Tello plugin for Gazebo (no namespace: it uses the same topics as tello_driver, /cmd_vel, /flight_data, /tello_action) -->
     <gazebo>
         <plugin name="TelloPlugin" filename="libTelloPlugin.so">
-            <namespace>"topic_ns"</namespace>
             <parameter name="use_sim_time" type="bool">1</parameter>
             <link_name>base_link</link_name>
             <center_of_mass>0 0 0</center_of_mass>

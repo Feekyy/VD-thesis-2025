@@ -216,11 +216,12 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
+    <!-- The saved clock starts from 0, because the TelloPlugin counts its battery from the absolute simulation time -->
     <state world_name='donut_world'>
-      <sim_time>13959 298000000</sim_time>
-      <real_time>979 783456563</real_time>
+      <sim_time>0 0</sim_time>
+      <real_time>0 0</real_time>
       <wall_time>1764104453 646372635</wall_time>
-      <iterations>972397</iterations>
+      <iterations>0</iterations>
       <model name='donut_blue'>
         <pose>8.77423 -0.109163 1.88071 0.004489 -0 -1.54014</pose>
         <scale>1 1 1</scale>

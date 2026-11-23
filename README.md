@@ -81,12 +81,28 @@ Kamera (Gazebo) ──/topic_ns/image_raw──▶ tello_camera_contour ──do
 | [`results/fuzzy`](results/fuzzy/README.md) | kézi fuzzy kontra FRI szabálybázis, 300 képes, ismert helyzetű adathalmazon |
 | [`results/hough`](results/hough/README.md) | a Hough-detektor átnézése, összehasonlítás a kontúr alapúval |
 
+## Fizikai szimuláció a `TelloPlugin`-nel
+
+A `tello_ros` Gazebo-pluginje fizikai modellel repülteti a drónt, és ugyanazokat a topicokat és szolgáltatásokat használja, mint a valódi drón drivere (`/cmd_vel`, `/flight_data`, `/tello_action`). A misszió nem ezt használja (lásd lent), de a valódi drónos ág így szimulációban is kipróbálható:
+
+```bash
+bash start.bash gazebo     # 1. terminál
+bash start.bash drone      # 2. terminál, utána felszállás:
+ros2 service call /tello_action tello_msgs/srv/TelloAction "{cmd: 'takeoff'}"
+```
+
+Felszállás után a drón a `/cmd_vel` parancsokra repül; a `TelloController` `simulation=False` módja is ide küldi a parancsait. A `/cmd_vel` értéke a valódi drónhoz hasonlóan botkitérés: a 0,1 vízszintesen 0,8 m/s, függőlegesen 0,4 m/s, forgásnál 0,31 rad/s.
+
+Két hibát kellett javítani, hogy működjön:
+- **A drón modellfájljában a plugin névtere idézőjelekkel szerepelt** (`"topic_ns"`). Ez nem érvényes ROS-név, ezért a plugin betöltéskor hibát dobott, és a Gazebo kikapcsolta.
+- **A világfájl mentett állapota kb. 13 959 s-ról indította a szimuláció óráját.** A plugin az akkumulátort a szimuláció abszolút idejéből számolja (6000 s élettartammal), így induláskor lemerültnek látta, és nem engedett felszállni. Az óra most nulláról indul, az akkumulátor 100 percig bírja (szimulációs időben); a Gazebo újraindítása „feltölti”. A mentett állapotot nem szabad törölni, mert a karikák helye csak abban van meg.
+
 ## Ismert korlátok
 
-- **Kinematikus szimuláció:** a drónt a `TelloController` minden lépésben odateszi, ahová lépnie kell (teleportálás). Nincs tehetetlenség és ütközés. Az eredeti `tello_gazebo` plugin, ami fizikával repültetne, ebben a világban nem használható: a mentett világállapot miatt azonnal lemerült akkumulátort lát.
+- **Kinematikus szimuláció:** a misszió a drónt a `TelloController`-rel minden lépésben odateszi, ahová lépnie kell (teleportálás). Nincs tehetetlenség és ütközés. A `TelloPlugin` a misszió alatt leszállt állapotban marad, és nem zavarja a teleportálást. A misszió átállítása a fizikai szimulációra (felszállás, újrahangolás, a mérések megismétlése) továbbfejlesztési lehetőség.
 - **A célpont szándékosan el van tolva:** a mission a karikát a (450; 290) képpontra igazítja, nem a kép közepére (480; 360). Ez a közelítés során tapasztalt állandó eltérést ellensúlyozza.
 - **A bizalmi értéket csak a detektor használja,** a jelöltek közötti választásra; a mission csak a kiválasztott kör helyét nézi.
-- **Valódi drón:** a parancsút (`/cmd_vel` → `tello_driver` → `rc` parancsok) a driver emulátorával ki van próbálva, valódi repülés nem volt. A misszió paraméterei a szimulációra vannak hangolva.
+- **Valódi drón:** a parancsút (`/cmd_vel` → `tello_driver` → `rc` parancsok) a driver emulátorával, a szimulációban pedig a `TelloPlugin`-nel is ki van próbálva, valódi repülés nem volt. A misszió paraméterei a kinematikus szimulációra vannak hangolva.
 
 ## Felhasznált külső szoftverek
 
