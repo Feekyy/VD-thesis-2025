@@ -1,0 +1,51 @@
+universe "radius"
+    description "Radius of the enclosing circle of the contour in pixels. Roughly logarithmic scaling: tripling the radius is one unit, above the ideal size the differences matter less."
+    "none" 0 0
+    "tiny" 12 1
+    "small" 40 2
+    "ideal" 120 3
+    "large" 360 3.4
+    "max" 1000 3.6
+end
+
+universe "circularity"
+    description "Contour area divided by the area of its enclosing circle. A full ring is close to 1, an arc cut by the image border or a broken piece is much less. Above one half the differences matter less."
+    "arc" 0 0
+    "half" 0.5 0.8
+    "full" 1 1
+end
+
+universe "hue_diff"
+    description "Distance of the mean hue of the ring pixels from the expected hue of the color, in OpenCV hue units (0-90)."
+    "exact" 0 0
+    "far" 25 1
+    "max" 90 1.3
+end
+
+universe "saturation"
+    description "Mean saturation of the ring pixels (0-255). The color masks start at 60."
+    "none" 0 0
+    "low" 60 1
+    "high" 255 2
+end
+
+universe "confidence"
+    description "How much the candidate looks like the searched donut (0-1)."
+    "none" 0 0
+    "low" 0.25 0.25
+    "medium" 0.5 0.5
+    "high" 0.75 0.75
+    "certain" 1 1
+end
+
+rulebase "confidence"
+    description "Confidence of one candidate contour. FRIBE interpolates between the rules, so a few rules are enough for the whole input space."
+    rule description "A full ring of good size with clean color is surely a donut." "certain" when "radius" is "ideal" and "circularity" is "full" and "hue_diff" is "exact" and "saturation" is "high" end
+    rule description "Close donuts are large, they are just as good." "certain" when "radius" is "large" and "circularity" is "full" and "hue_diff" is "exact" and "saturation" is "high" end
+    rule description "A big arc is still the donut, but its center is less accurate." "high" when "radius" is "ideal" and "circularity" is "arc" and "hue_diff" is "exact" and "saturation" is "high" end
+    rule description "The same for a close donut cut by the image border." "high" when "radius" is "large" and "circularity" is "arc" and "hue_diff" is "exact" and "saturation" is "high" end
+    rule description "Small contours are usually broken pieces of a ring." "low" when "radius" is "small" end
+    rule description "Tiny contours are noise." "none" when "radius" is "tiny" end
+    rule description "Wrong color." "none" when "hue_diff" is "far" end
+    rule description "Faded, almost gray color." "none" when "saturation" is "low" end
+end

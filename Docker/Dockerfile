@@ -29,6 +29,14 @@ RUN pip3 install \
 
 RUN rosdep init || true && rosdep update
 
+#Fuzzy rule interpolation engine of the University of Miskolc (FRIBE) and the parser it needs (exprail)
+#Both are pinned to the tested versions, they have no installer, so they are used through PYTHONPATH
+RUN git clone -q https://github.com/piller-imre/exprail-python.git /opt/exprail-python && \
+    git -C /opt/exprail-python checkout -q 1b73a0993d399ef44ada232647845a253b821ecc && \
+    git clone -q https://github.com/piller-imre/fribe-python.git /opt/fribe-python && \
+    git -C /opt/fribe-python checkout -q 4cd0095df0f44254fd24e6f5cbefad0e2f717bbd
+ENV PYTHONPATH=/opt/exprail-python:/opt/fribe-python
+
 #The workspace is mounted from the host at runtime (see start.bash), so it is built inside the running container
 #Gazebo's own setup is needed for its shader library, without it the drone camera cannot be created
 RUN echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc && \

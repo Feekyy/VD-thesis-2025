@@ -4,6 +4,8 @@ DOCKER_IMAGE="foxy-docker:latest"
 CONTAINER_NAME="foxy-docker"
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 WS_DIR="$ROOT_DIR/drone_ws"
+WORLD="$WS_DIR/sim/worlds/donuttest.world"
+DRONE_URDF="$WS_DIR/src/tello_ros/tello_description/urdf/tello.urdf"
 
 #Commands that use ROS 2 only work inside the container
 require_docker() {
@@ -24,29 +26,54 @@ source_ws() {
 	source "$WS_DIR/install/setup.bash"
 }
 
-echo "-----------------------------------"
-echo " Tello Drone Launcher Script"
-echo "-----------------------------------"
-echo "On the host:"
-echo "  build     - Build the docker image"
-echo "  start     - Start the Foxy docker container"
-echo "  start2    - Open another shell in the running container"
-echo "  remove    - Delete the container and the docker image of the project"
-echo "Inside the container:"
-echo "  compile   - Build the ROS 2 workspace (drone_ws)"
-echo "  gazebo    - Start the Gazebo simulation"
-echo "  drone     - Spawn the drone in the simulation"
-echo "  camera1   - Open the camera feed in rqt"
-echo "  camera2   - Start the circle detector node with visualization"
-echo "  detector  - Start the circle detector node"
-echo "  hough     - Start the Hough circle detector node with visualization"
-echo "  hand1     - Keyboard control in the simulation"
-echo "  hand2     - Keyboard control of the real drone"
-echo "  automatic - Start the automatic mission in the simulation"
-echo "  exit      - Exit the script"
-echo "-----------------------------------"
+#True when the Gazebo simulation (with its ROS services) is already running
+gazebo_running() {
+	ros2 service list 2>/dev/null | grep -q "/spawn_entity"
+}
 
-read -p "Write here: " CMD
+#Puts the drone (back) to its starting position: the old one is deleted, a new one is spawned
+spawn_drone() {
+	ros2 service call /delete_entity gazebo_msgs/srv/DeleteEntity "{name: 'tello_drone'}" > /dev/null 2>&1
+	ros2 run gazebo_ros spawn_entity.py -file "$DRONE_URDF" -entity tello_drone
+}
+
+#Stops the background processes started by 'demo'
+stop_demo() {
+	[ -n "$DETECTOR_PID" ] && kill $DETECTOR_PID 2>/dev/null
+	[ "$STARTED_GAZEBO" = "1" ] && kill $GAZEBO_PID 2>/dev/null
+}
+
+show_menu() {
+	echo "-----------------------------------"
+	echo " Tello Drone Launcher Script"
+	echo "-----------------------------------"
+	echo "On the host:"
+	echo "  build     - Build the docker image"
+	echo "  start     - Start the docker container"
+	echo "  start2    - Open another shell in the running container"
+	echo "  remove    - Delete the container and the docker image of the project"
+	echo "Inside the container:"
+	echo "  compile   - Build the ROS 2 workspace (drone_ws)"
+	echo "  demo      - Everything at once: Gazebo, drone, detector and the automatic mission"
+	echo "  gazebo    - Start the Gazebo simulation"
+	echo "  drone     - Put the drone (back) to its starting position"
+	echo "  camera1   - Open the camera feed in rqt"
+	echo "  camera2   - Start the circle detector node with visualization"
+	echo "  detector  - Start the circle detector node"
+	echo "  hough     - Start the Hough circle detector node with visualization"
+	echo "  hand1     - Keyboard control in the simulation"
+	echo "  hand2     - Keyboard control of the real drone (tello_driver has to run)"
+	echo "  automatic - Start the automatic mission in the simulation"
+	echo "  exit      - Exit the script"
+	echo "-----------------------------------"
+}
+
+#The command can also be given as an argument, e.g. "bash start.bash demo"
+CMD="$1"
+if [ -z "$CMD" ]; then
+	show_menu
+	read -p "Write here: " CMD
+fi
 
 case "$CMD" in
 	"build")
@@ -60,8 +87,21 @@ case "$CMD" in
 		echo "Starting docker..."
 		docker stop $CONTAINER_NAME 2>/dev/null
 		docker rm $CONTAINER_NAME 2>/dev/null
-		xhost +local:docker
-		docker run -it --net=host --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$ROOT_DIR:/root/DockerFiles" --name $CONTAINER_NAME $DOCKER_IMAGE
+
+		#Access to the screen: with the login cookie if there is one, otherwise every local container is allowed (xhost)
+		XAUTH_FILE="${XAUTHORITY:-$HOME/.Xauthority}"
+		if [ -f "$XAUTH_FILE" ]; then
+			X_ACCESS=(--env="XAUTHORITY=/tmp/.xauth" --volume="$XAUTH_FILE:/tmp/.xauth:ro")
+		else
+			xhost +local:docker
+			X_ACCESS=()
+		fi
+
+		#HOST_UID/HOST_GID: 'compile' gives the built files back to this user
+		docker run -it --net=host --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" \
+			"${X_ACCESS[@]}" --env="HOST_UID=$(id -u)" --env="HOST_GID=$(id -g)" \
+			--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$ROOT_DIR:/root/DockerFiles" \
+			--name $CONTAINER_NAME $DOCKER_IMAGE
 	;;
 
 	"start2")
@@ -98,21 +138,58 @@ case "$CMD" in
 		require_docker
 		echo "Building the ROS 2 workspace!"
 		cd "$WS_DIR" && colcon build
+		STATUS=$?
+
+		#The container works as root, the built files are given back to the user of the host
+		if [ -n "$HOST_UID" ]; then
+			chown -R "$HOST_UID:$HOST_GID" "$WS_DIR/build" "$WS_DIR/install" "$WS_DIR/log"
+		fi
+		exit $STATUS
+	;;
+
+	"demo")
+		clear
+		require_docker
+		source_ws
+		echo "Starting the whole simulation: Gazebo, drone, detector and the automatic mission (stop: Ctrl+C)"
+
+		#Everything started here is stopped when the demo ends, an already running Gazebo is left alone
+		trap stop_demo EXIT
+		trap "exit 130" INT TERM
+		STARTED_GAZEBO=0
+		if ! gazebo_running; then
+			ros2 launch gazebo_ros gazebo.launch.py world:="$WORLD" > /tmp/gazebo.log 2>&1 &
+			GAZEBO_PID=$!
+			STARTED_GAZEBO=1
+			for i in $(seq 1 60); do
+				gazebo_running && break
+				sleep 2
+			done
+			if ! gazebo_running; then
+				echo "Gazebo did not start, see /tmp/gazebo.log"
+				exit 1
+			fi
+		fi
+
+		spawn_drone
+		ros2 run tello_camera tello_camera_contour --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true > /tmp/detector.log 2>&1 &
+		DETECTOR_PID=$!
+		sleep 3
+		ros2 run tello_mission tello_mission
 	;;
 
 	"gazebo")
 		clear
 		require_docker
-		echo "Starting the Gazebo with a preedited testing ground!"
-		ros2 launch gazebo_ros gazebo.launch.py world:="$WS_DIR/sim/worlds/donuttest.world"
+		echo "Starting Gazebo with the test world (three donuts)!"
+		ros2 launch gazebo_ros gazebo.launch.py world:="$WORLD"
 	;;
 
 	"drone")
 		clear
 		require_docker
 		echo "Spawning drone!"
-		ros2 service call /delete_entity gazebo_msgs/srv/DeleteEntity "{name: 'tello_drone'}" 2>/dev/null
-		ros2 run gazebo_ros spawn_entity.py -file "$WS_DIR/src/tello_ros/tello_description/urdf/tello.urdf" -entity tello_drone
+		spawn_drone
 	;;
 
 	"camera1")
@@ -158,7 +235,7 @@ case "$CMD" in
 		clear
 		require_docker
 		source_ws
-		echo "Starting keyboard control for the drone"
+		echo "Starting keyboard control for the drone (tello_driver has to run and the drone has to be in the air)"
 		ros2 run tello_hand_move tello_hand_move --ros-args -p simulation:=false
 	;;
 
@@ -176,7 +253,11 @@ case "$CMD" in
 
 	*)
 		clear
-		echo "Wrong command! Try again!"
+		echo "Wrong command: '$CMD'"
+		#Typed into the menu: try again, given as an argument: stop
+		if [ -n "$1" ]; then
+			exit 1
+		fi
 		exec bash "$0"
 	;;
 esac

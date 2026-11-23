@@ -7,7 +7,7 @@ import time
 import numpy as np
 
 from rclpy.node import Node
-from std_msgs.msg import Bool, Float32, String
+from std_msgs.msg import String
 from tello_controller.tello_controller import TelloController
 from tello_mission.pid import PID
 
@@ -28,11 +28,7 @@ class TelloMission(Node):
         )
 
         #Subscriptions
-        self.create_subscription(Bool, "donut_detector/activation", self.cb_activation, 10)
-        self.create_subscription(Float32, "donut_detector/activation_degree", self.cb_degree, 10)
         self.create_subscription(String, "donut_detector/circles", self.cb_circles, 10)
-        self.active = False
-        self.degree = 0.0
         self.circles = []
         self.pass_counter = 0
         self.color_order = ["blue", "red", "green"]
@@ -86,12 +82,10 @@ class TelloMission(Node):
 
         #Movement and thresholds
         self.forward_step = 0.12
-        self.radius_threshold_min = 100
         self.radius_threshold_max = 300
         self.last_known_radius = 0.0
 
         #Search / tracking helpers
-        self.missing_counter = 0
         self.pass_steps = 75
         self.max_step_x = 0.20
         self.max_step_y = 0.20
@@ -135,14 +129,6 @@ class TelloMission(Node):
             [self.frame, f"{time.monotonic():.3f}", color, phase, error_x, error_y, r, step_x, step_z, step_yaw]
         )
         self.log_handle.flush()
-
-    #Update activation flag from detector
-    def cb_activation(self, msg):
-        self.active = msg.data
-
-    #Update activation degree from detector
-    def cb_degree(self, msg):
-        self.degree = msg.data
 
     #Parse detected circles JSON and run control loop
     def cb_circles(self, msg):
@@ -241,7 +227,6 @@ class TelloMission(Node):
             return
 
         #Reset search bookkeeping and pick the best donut
-        self.missing_counter = 0
         self.search_step_duration = 0
         self.search_state = 'rotate'
         
@@ -334,8 +319,13 @@ class TelloMission(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = TelloMission()
-    rclpy.spin(node)
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    if rclpy.ok():
+        rclpy.shutdown()
 
 if __name__ == "__main__":
     main()
