@@ -1,0 +1,420 @@
+[INFO] [1795536247.749549403] [tello_controller]: Controller started (simulation=True, model=tello_drone)
+[INFO] [1795536247.753867704] [tello_mission]: PID yaw: kp=0.0005, ki=0.0, kd=0.0 | PID z: kp=0.0024, ki=0.0, kd=0.0
+[INFO] [1795536247.756164740] [tello_mission]: Aligning to blue torus: dx=40, dy=-123 (0/10)
+[INFO] [1795536247.760250892] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.020, r=128.0
+[INFO] [1795536247.830264568] [tello_mission]: Aligning to blue torus: dx=22, dy=-92 (0/10)
+[INFO] [1795536247.836078533] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.011, r=128.0
+[INFO] [1795536247.910017236] [tello_mission]: Aligning to blue torus: dx=11, dy=-68 (0/10)
+[INFO] [1795536247.911486149] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.005, r=128.0
+[INFO] [1795536247.979744483] [tello_mission]: Aligning to blue torus: dx=6, dy=-51 (0/10)
+[INFO] [1795536247.986115675] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.003, r=128.0
+[INFO] [1795536248.055247353] [tello_mission]: Aligning to blue torus: dx=3, dy=-38 (0/10)
+[INFO] [1795536248.057745057] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.002, r=128.0
+[INFO] [1795536248.140983642] [tello_mission]: Aligning to blue torus: dx=2, dy=-28 (1/10)
+[INFO] [1795536248.143724339] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.001, r=128.0
+[INFO] [1795536248.175880529] [tello_mission]: Aligning to blue torus: dx=1, dy=-28 (2/10)
+[INFO] [1795536248.180632306] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.001, r=128.0
+[INFO] [1795536248.225224379] [tello_mission]: Aligning to blue torus: dx=1, dy=-21 (3/10)
+[INFO] [1795536248.229303727] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.001, r=128.0
+[INFO] [1795536248.288691984] [tello_mission]: Aligning to blue torus: dx=0, dy=-14 (4/10)
+[INFO] [1795536248.294373776] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536248.348428196] [tello_mission]: Aligning to blue torus: dx=0, dy=-8 (5/10)
+[INFO] [1795536248.351553096] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536248.375274657] [tello_mission]: Aligning to blue torus: dx=0, dy=-5 (6/10)
+[INFO] [1795536248.377534453] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536248.444990276] [tello_mission]: Aligning to blue torus: dx=0, dy=-3 (7/10)
+[INFO] [1795536248.448029212] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536248.487300460] [tello_mission]: Aligning to blue torus: dx=0, dy=-1 (8/10)
+[INFO] [1795536248.490324414] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536248.573767437] [tello_mission]: Aligning to blue torus: dx=-1, dy=0 (9/10)
+[INFO] [1795536248.575397592] [tello_mission]: Tracking blue: dx=0.00, yaw=0.001, r=128.0
+[INFO] [1795536248.606613566] [tello_mission]: Aligned with blue torus, starting approach.
+[INFO] [1795536248.610906984] [tello_mission]: Tracking blue: dx=0.00, yaw=-0.000, r=128.0
+[INFO] [1795536249.426564943] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.431464067] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=128.0
+[INFO] [1795536249.504185722] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.506242363] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=131.0
+[INFO] [1795536249.573815943] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.576910771] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=134.0
+[INFO] [1795536249.612796683] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.614994903] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=134.0
+[INFO] [1795536249.645993477] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.651224162] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=137.0
+[INFO] [1795536249.684516248] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.685935212] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=141.0
+[INFO] [1795536249.716285524] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.723030857] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=144.0
+[INFO] [1795536249.756317445] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.758304537] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=148.0
+[INFO] [1795536249.790441250] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.791878066] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=152.0
+[INFO] [1795536249.821438792] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.823642893] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=156.0
+[INFO] [1795536249.864352388] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.868325872] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=161.0
+[INFO] [1795536249.889001926] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.891296994] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=166.0
+[INFO] [1795536249.959415587] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536249.962320575] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=176.0
+[INFO] [1795536250.030674554] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.034889792] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=182.0
+[INFO] [1795536250.140431018] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.143364494] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=188.0
+[INFO] [1795536250.167163928] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.175380364] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=188.0
+[INFO] [1795536250.215533413] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.221321697] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=195.0
+[INFO] [1795536250.252389488] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.258607637] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=202.0
+[INFO] [1795536250.289383235] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.292940960] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=210.0
+[INFO] [1795536250.323590757] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.325704951] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=218.0
+[INFO] [1795536250.362087059] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.364698611] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=227.0
+[INFO] [1795536250.395380328] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.397067373] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=236.0
+[INFO] [1795536250.427343603] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.429374650] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=247.0
+[INFO] [1795536250.463002765] [tello_mission]: Alignment required: dx=-32, dy=-7. Correcting.
+[INFO] [1795536250.465269475] [tello_mission]: Tracking blue: dx=0.12, yaw=0.016, r=259.0
+[INFO] [1795536250.500829489] [tello_mission]: Alignment required: dx=-36, dy=-7. Correcting.
+[INFO] [1795536250.502167344] [tello_mission]: Tracking blue: dx=0.12, yaw=0.018, r=272.0
+[INFO] [1795536250.538987076] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.541480419] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=279.0
+[INFO] [1795536250.575149706] [tello_mission]: Aligned. Moving towards blue torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536250.578304627] [tello_mission]: Tracking blue: dx=0.20, yaw=0.000, r=288.0
+[INFO] [1795536250.612998769] [tello_mission]: blue donut: close enough (r=304.0), starting pass-through.
+[INFO] [1795536253.166924171] [tello_mission]: Completed blue torus, finished pass-through.
+[INFO] [1795536253.207970096] [tello_mission]: Rotating 180 degrees... remaining: 19
+[INFO] [1795536253.238806844] [tello_mission]: Rotating 180 degrees... remaining: 18
+[INFO] [1795536253.275499027] [tello_mission]: Rotating 180 degrees... remaining: 17
+[INFO] [1795536253.326660669] [tello_mission]: Rotating 180 degrees... remaining: 16
+[INFO] [1795536253.376859296] [tello_mission]: Rotating 180 degrees... remaining: 15
+[INFO] [1795536253.426312755] [tello_mission]: Rotating 180 degrees... remaining: 14
+[INFO] [1795536253.458465351] [tello_mission]: Rotating 180 degrees... remaining: 13
+[INFO] [1795536253.490164316] [tello_mission]: Rotating 180 degrees... remaining: 12
+[INFO] [1795536253.524722791] [tello_mission]: Rotating 180 degrees... remaining: 11
+[INFO] [1795536253.553509739] [tello_mission]: Rotating 180 degrees... remaining: 10
+[INFO] [1795536253.579633724] [tello_mission]: Rotating 180 degrees... remaining: 9
+[INFO] [1795536253.601349031] [tello_mission]: Rotating 180 degrees... remaining: 8
+[INFO] [1795536253.643712926] [tello_mission]: Rotating 180 degrees... remaining: 7
+[INFO] [1795536253.674283857] [tello_mission]: Rotating 180 degrees... remaining: 6
+[INFO] [1795536253.717445397] [tello_mission]: Rotating 180 degrees... remaining: 5
+[INFO] [1795536253.748609743] [tello_mission]: Rotating 180 degrees... remaining: 4
+[INFO] [1795536253.795080460] [tello_mission]: Rotating 180 degrees... remaining: 3
+[INFO] [1795536253.825775620] [tello_mission]: Rotating 180 degrees... remaining: 2
+[INFO] [1795536253.864287638] [tello_mission]: Rotating 180 degrees... remaining: 1
+[INFO] [1795536253.906874943] [tello_mission]: Rotating 180 degrees... remaining: 0
+[INFO] [1795536253.907345503] [tello_mission]: 180 degree rotation complete.
+[INFO] [1795536253.943974779] [tello_mission]: Aligning to red torus: dx=-418, dy=-102 (0/10)
+[INFO] [1795536253.946663450] [tello_mission]: Tracking red: dx=0.00, yaw=0.150, r=78.0
+[INFO] [1795536253.983349705] [tello_mission]: Aligning to red torus: dx=-253, dy=-91 (0/10)
+[INFO] [1795536253.988646831] [tello_mission]: Tracking red: dx=0.00, yaw=0.127, r=72.0
+[INFO] [1795536254.062145373] [tello_mission]: Aligning to red torus: dx=-105, dy=-66 (0/10)
+[INFO] [1795536254.064831442] [tello_mission]: Tracking red: dx=0.00, yaw=0.052, r=69.0
+[INFO] [1795536254.090244334] [tello_mission]: Aligning to red torus: dx=14, dy=-47 (0/10)
+[INFO] [1795536254.092992549] [tello_mission]: Tracking red: dx=0.00, yaw=-0.007, r=69.0
+[INFO] [1795536254.136083800] [tello_mission]: Aligning to red torus: dx=63, dy=-34 (0/10)
+[INFO] [1795536254.141175000] [tello_mission]: Tracking red: dx=0.00, yaw=-0.032, r=69.0
+[INFO] [1795536254.180525834] [tello_mission]: Aligning to red torus: dx=56, dy=-25 (0/10)
+[INFO] [1795536254.182773488] [tello_mission]: Tracking red: dx=0.00, yaw=-0.028, r=69.0
+[INFO] [1795536254.214557617] [tello_mission]: Aligning to red torus: dx=27, dy=-18 (1/10)
+[INFO] [1795536254.219881905] [tello_mission]: Tracking red: dx=0.00, yaw=-0.013, r=69.0
+[INFO] [1795536254.251599029] [tello_mission]: Aligning to red torus: dx=1, dy=-13 (2/10)
+[INFO] [1795536254.257776328] [tello_mission]: Tracking red: dx=0.00, yaw=-0.001, r=69.0
+[INFO] [1795536254.288865528] [tello_mission]: Aligning to red torus: dx=-12, dy=-10 (3/10)
+[INFO] [1795536254.290873149] [tello_mission]: Tracking red: dx=0.00, yaw=0.006, r=69.0
+[INFO] [1795536254.324368042] [tello_mission]: Aligning to red torus: dx=-13, dy=-7 (4/10)
+[INFO] [1795536254.330509016] [tello_mission]: Tracking red: dx=0.00, yaw=0.007, r=69.0
+[INFO] [1795536254.367286929] [tello_mission]: Aligning to red torus: dx=-7, dy=-5 (5/10)
+[INFO] [1795536254.374418802] [tello_mission]: Tracking red: dx=0.00, yaw=0.004, r=69.0
+[INFO] [1795536254.405743642] [tello_mission]: Aligning to red torus: dx=-1, dy=-4 (6/10)
+[INFO] [1795536254.410556937] [tello_mission]: Tracking red: dx=0.00, yaw=0.001, r=69.0
+[INFO] [1795536254.440892700] [tello_mission]: Aligning to red torus: dx=3, dy=-3 (7/10)
+[INFO] [1795536254.446281758] [tello_mission]: Tracking red: dx=0.00, yaw=-0.002, r=69.0
+[INFO] [1795536254.476970716] [tello_mission]: Aligning to red torus: dx=3, dy=-2 (8/10)
+[INFO] [1795536254.482895331] [tello_mission]: Tracking red: dx=0.00, yaw=-0.002, r=69.0
+[INFO] [1795536254.514507142] [tello_mission]: Aligning to red torus: dx=2, dy=-1 (9/10)
+[INFO] [1795536254.516004641] [tello_mission]: Tracking red: dx=0.00, yaw=-0.001, r=69.0
+[INFO] [1795536254.551994484] [tello_mission]: Aligned with red torus, starting approach.
+[INFO] [1795536254.556246862] [tello_mission]: Tracking red: dx=0.00, yaw=-0.000, r=69.0
+[INFO] [1795536254.586750453] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.589274343] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=69.0
+[INFO] [1795536254.622076263] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.627649767] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=69.0
+[INFO] [1795536254.659403951] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.663668285] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=70.0
+[INFO] [1795536254.693130677] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.699184141] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=71.0
+[INFO] [1795536254.728409464] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.733021451] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=73.0
+[INFO] [1795536254.766223636] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.768890774] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=74.0
+[INFO] [1795536254.799565644] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.803276467] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=75.0
+[INFO] [1795536254.831603187] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.837648585] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=77.0
+[INFO] [1795536254.869781606] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.872274041] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=78.0
+[INFO] [1795536254.903086055] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.909014656] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=80.0
+[INFO] [1795536254.937263073] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.939115415] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=82.0
+[INFO] [1795536254.974151475] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536254.978952326] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=83.0
+[INFO] [1795536255.007501467] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.010324198] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=85.0
+[INFO] [1795536255.043976889] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.047701454] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=87.0
+[INFO] [1795536255.078687702] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.084801944] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=89.0
+[INFO] [1795536255.118320892] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.122831282] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=91.0
+[INFO] [1795536255.158196606] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.163999484] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=93.0
+[INFO] [1795536255.194874363] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.197272148] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=96.0
+[INFO] [1795536255.235619105] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.237387246] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=98.0
+[INFO] [1795536255.263871092] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.266257051] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=101.0
+[INFO] [1795536255.302417162] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.304821660] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=103.0
+[INFO] [1795536255.333843841] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.340696456] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=106.0
+[INFO] [1795536255.375339403] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.378732891] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=109.0
+[INFO] [1795536255.416152398] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.418686765] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=112.0
+[INFO] [1795536255.453007698] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.458719534] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=116.0
+[INFO] [1795536255.492370559] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.494504048] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=119.0
+[INFO] [1795536255.523256821] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.528720110] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=123.0
+[INFO] [1795536255.561083703] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.563354418] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=127.0
+[INFO] [1795536255.594229216] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.596794588] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=131.0
+[INFO] [1795536255.631363698] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.633639286] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=136.0
+[INFO] [1795536255.666464855] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.669340623] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=141.0
+[INFO] [1795536255.700398784] [tello_mission]: Alignment required: dx=-30, dy=-7. Correcting.
+[INFO] [1795536255.702132863] [tello_mission]: Tracking red: dx=0.08, yaw=0.015, r=146.0
+[INFO] [1795536255.736408756] [tello_mission]: Alignment required: dx=-31, dy=-6. Correcting.
+[INFO] [1795536255.742310755] [tello_mission]: Tracking red: dx=0.08, yaw=0.015, r=152.0
+[INFO] [1795536255.774215485] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.778792621] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=154.0
+[INFO] [1795536255.815813780] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.818870375] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=156.0
+[INFO] [1795536255.851780738] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.855581044] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=163.0
+[INFO] [1795536255.882283023] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.883964014] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=170.0
+[INFO] [1795536255.918894487] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.920859095] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=178.0
+[INFO] [1795536255.954683070] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.957627188] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=186.0
+[INFO] [1795536255.989075075] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536255.990755267] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=196.0
+[INFO] [1795536256.028825731] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536256.030490585] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=206.0
+[INFO] [1795536256.055881661] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536256.058558421] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=218.0
+[INFO] [1795536256.102596649] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536256.104202294] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=230.0
+[INFO] [1795536256.143687179] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536256.147770792] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=245.0
+[INFO] [1795536256.173587747] [tello_mission]: Aligned. Moving towards red torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536256.177557392] [tello_mission]: Tracking red: dx=0.20, yaw=0.000, r=262.0
+[INFO] [1795536256.256344990] [tello_mission]: red donut: close enough (r=303.0), starting pass-through.
+[INFO] [1795536259.007376032] [tello_mission]: Completed red torus, finished pass-through.
+[INFO] [1795536259.031766518] [tello_mission]: Search: Target lost. Moving forward.
+[INFO] [1795536260.118459801] [tello_mission]: Search: Target lost. Rotating.
+[INFO] [1795536260.118994744] [tello_mission]: Search: Adjusting height by -0.20 m.
+[INFO] [1795536260.420693691] [tello_mission]: Aligning to green torus: dx=-17, dy=172 (0/10)
+[INFO] [1795536260.426163183] [tello_mission]: Tracking green: dx=0.00, yaw=0.009, r=53.0
+[INFO] [1795536260.455852379] [tello_mission]: Aligning to green torus: dx=477, dy=183 (0/10)
+[INFO] [1795536260.460190397] [tello_mission]: Tracking green: dx=0.00, yaw=-0.150, r=60.0
+[INFO] [1795536260.490346578] [tello_mission]: Aligning to green torus: dx=486, dy=158 (0/10)
+[INFO] [1795536260.497753074] [tello_mission]: Tracking green: dx=0.00, yaw=-0.150, r=60.0
+[INFO] [1795536260.531484163] [tello_mission]: Aligning to green torus: dx=322, dy=126 (0/10)
+[INFO] [1795536260.533133207] [tello_mission]: Tracking green: dx=0.00, yaw=-0.150, r=55.0
+[INFO] [1795536260.570365751] [tello_mission]: Aligning to green torus: dx=177, dy=102 (0/10)
+[INFO] [1795536260.573136934] [tello_mission]: Tracking green: dx=0.00, yaw=-0.088, r=53.0
+[INFO] [1795536260.609515353] [tello_mission]: Aligning to green torus: dx=37, dy=84 (0/10)
+[INFO] [1795536260.615132785] [tello_mission]: Tracking green: dx=0.00, yaw=-0.018, r=52.0
+[INFO] [1795536260.648851108] [tello_mission]: Aligning to green torus: dx=-46, dy=70 (0/10)
+[INFO] [1795536260.652227970] [tello_mission]: Tracking green: dx=0.00, yaw=0.023, r=53.0
+[INFO] [1795536260.687336758] [tello_mission]: Aligning to green torus: dx=-62, dy=58 (0/10)
+[INFO] [1795536260.693106076] [tello_mission]: Tracking green: dx=0.00, yaw=0.031, r=53.0
+[INFO] [1795536260.723287246] [tello_mission]: Aligning to green torus: dx=-41, dy=49 (0/10)
+[INFO] [1795536260.726010508] [tello_mission]: Tracking green: dx=0.00, yaw=0.021, r=53.0
+[INFO] [1795536260.758346715] [tello_mission]: Aligning to green torus: dx=-12, dy=41 (0/10)
+[INFO] [1795536260.760938876] [tello_mission]: Tracking green: dx=0.00, yaw=0.006, r=53.0
+[INFO] [1795536260.796148455] [tello_mission]: Aligning to green torus: dx=8, dy=34 (0/10)
+[INFO] [1795536260.798855878] [tello_mission]: Tracking green: dx=0.00, yaw=-0.004, r=53.0
+[INFO] [1795536260.833731684] [tello_mission]: Aligning to green torus: dx=11, dy=28 (1/10)
+[INFO] [1795536260.836804891] [tello_mission]: Tracking green: dx=0.00, yaw=-0.005, r=53.0
+[INFO] [1795536260.866332186] [tello_mission]: Aligning to green torus: dx=9, dy=24 (2/10)
+[INFO] [1795536260.871603767] [tello_mission]: Tracking green: dx=0.00, yaw=-0.005, r=53.0
+[INFO] [1795536260.906084810] [tello_mission]: Aligning to green torus: dx=3, dy=20 (3/10)
+[INFO] [1795536260.909018229] [tello_mission]: Tracking green: dx=0.00, yaw=-0.002, r=53.0
+[INFO] [1795536260.941444861] [tello_mission]: Aligning to green torus: dx=1, dy=16 (4/10)
+[INFO] [1795536260.944735766] [tello_mission]: Tracking green: dx=0.00, yaw=-0.001, r=53.0
+[INFO] [1795536260.986482557] [tello_mission]: Aligning to green torus: dx=-2, dy=14 (5/10)
+[INFO] [1795536260.991290991] [tello_mission]: Tracking green: dx=0.00, yaw=0.001, r=53.0
+[INFO] [1795536261.032366489] [tello_mission]: Aligning to green torus: dx=-1, dy=11 (6/10)
+[INFO] [1795536261.034874166] [tello_mission]: Tracking green: dx=0.00, yaw=0.001, r=53.0
+[INFO] [1795536261.066121648] [tello_mission]: Aligning to green torus: dx=-1, dy=10 (7/10)
+[INFO] [1795536261.069535844] [tello_mission]: Tracking green: dx=0.00, yaw=0.001, r=53.0
+[INFO] [1795536261.104554286] [tello_mission]: Aligning to green torus: dx=-1, dy=8 (8/10)
+[INFO] [1795536261.109440131] [tello_mission]: Tracking green: dx=0.00, yaw=0.001, r=53.0
+[INFO] [1795536261.147922964] [tello_mission]: Aligning to green torus: dx=-2, dy=7 (9/10)
+[INFO] [1795536261.151094499] [tello_mission]: Tracking green: dx=0.00, yaw=0.001, r=53.0
+[INFO] [1795536261.193740993] [tello_mission]: Aligned with green torus, starting approach.
+[INFO] [1795536261.198784960] [tello_mission]: Tracking green: dx=0.00, yaw=-0.000, r=53.0
+[INFO] [1795536261.229290607] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.233438707] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=53.0
+[INFO] [1795536261.269050835] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.272748216] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=53.0
+[INFO] [1795536261.304974050] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.310449098] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=53.0
+[INFO] [1795536261.340930691] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.343001845] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=54.0
+[INFO] [1795536261.378147966] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.384503682] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=55.0
+[INFO] [1795536261.418526993] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.420128417] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=56.0
+[INFO] [1795536261.448361197] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.452855623] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=56.0
+[INFO] [1795536261.482689618] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.484683703] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=57.0
+[INFO] [1795536261.523021616] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.526514245] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=58.0
+[INFO] [1795536261.564780339] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.570942343] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=59.0
+[INFO] [1795536261.598710058] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.601047249] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=60.0
+[INFO] [1795536261.635381232] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.637583106] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=60.0
+[INFO] [1795536261.674872998] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.681930725] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=61.0
+[INFO] [1795536261.713418488] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.719161887] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=62.0
+[INFO] [1795536261.750954277] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.755572514] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=63.0
+[INFO] [1795536261.788977665] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.791326232] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=64.0
+[INFO] [1795536261.823442468] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.828569819] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=65.0
+[INFO] [1795536261.860701488] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.862358230] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=66.0
+[INFO] [1795536261.890365549] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.894603446] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=67.0
+[INFO] [1795536261.932592943] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.934990756] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=68.0
+[INFO] [1795536261.973257327] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536261.976620717] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=69.0
+[INFO] [1795536262.058225775] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.062676729] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=71.0
+[INFO] [1795536262.080797807] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.090059190] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=72.0
+[INFO] [1795536262.178012530] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.185108783] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=73.0
+[INFO] [1795536262.194754654] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.201368767] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=74.0
+[INFO] [1795536262.267009372] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.270214607] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=76.0
+[INFO] [1795536262.306282205] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.314034904] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=77.0
+[INFO] [1795536262.359890516] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.363428841] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=78.0
+[INFO] [1795536262.403206914] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.409348538] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=80.0
+[INFO] [1795536262.460401156] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.465356436] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=81.0
+[INFO] [1795536262.493410074] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.500506910] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=83.0
+[INFO] [1795536262.547374424] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.553711825] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=85.0
+[INFO] [1795536262.586428313] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.589940539] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=86.0
+[INFO] [1795536262.628368708] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.632859558] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=88.0
+[INFO] [1795536262.663811438] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.668715910] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=90.0
+[INFO] [1795536262.702098587] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.704744843] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=92.0
+[INFO] [1795536262.742919553] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.745312504] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=94.0
+[INFO] [1795536262.779693906] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.782101920] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=96.0
+[INFO] [1795536262.816967089] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.821069860] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=99.0
+[INFO] [1795536262.857817256] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.863062737] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=101.0
+[INFO] [1795536262.892674701] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.898148729] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=103.0
+[INFO] [1795536262.929428232] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.935163860] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=106.0
+[INFO] [1795536262.967010612] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536262.969612705] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=109.0
+[INFO] [1795536263.006864237] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.009341428] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=112.0
+[INFO] [1795536263.068332953] [tello_mission]: Alignment required: dx=-31, dy=-7. Correcting.
+[INFO] [1795536263.071397036] [tello_mission]: Tracking green: dx=0.08, yaw=0.015, r=115.0
+[INFO] [1795536263.087120704] [tello_mission]: Alignment required: dx=-31, dy=-6. Correcting.
+[INFO] [1795536263.091463854] [tello_mission]: Tracking green: dx=0.08, yaw=0.015, r=118.0
+[INFO] [1795536263.113220397] [tello_mission]: Alignment required: dx=-32, dy=-6. Correcting.
+[INFO] [1795536263.114922922] [tello_mission]: Tracking green: dx=0.08, yaw=0.016, r=118.0
+[INFO] [1795536263.144259074] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.148826009] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=119.0
+[INFO] [1795536263.179662021] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.183463835] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=122.0
+[INFO] [1795536263.216781475] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.218325708] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=125.0
+[INFO] [1795536263.252429911] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.256203433] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=129.0
+[INFO] [1795536263.284754611] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.290594719] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=133.0
+[INFO] [1795536263.323004875] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.325283679] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=137.0
+[INFO] [1795536263.356300671] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.358723008] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=142.0
+[INFO] [1795536263.387281912] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.391108276] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=147.0
+[INFO] [1795536263.422819075] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.425275400] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=152.0
+[INFO] [1795536263.460718269] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.463671232] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=158.0
+[INFO] [1795536263.494700079] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.499507316] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=164.0
+[INFO] [1795536263.527473968] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.529775274] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=171.0
+[INFO] [1795536263.561305409] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.568258575] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=178.0
+[INFO] [1795536263.600364778] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.602743340] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=186.0
+[INFO] [1795536263.631435576] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.634682716] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=195.0
+[INFO] [1795536263.666604988] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.669553799] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=204.0
+[INFO] [1795536263.702353973] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.707167870] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=215.0
+[INFO] [1795536263.738830819] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.741356723] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=226.0
+[INFO] [1795536263.788705281] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.795598961] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=239.0
+[INFO] [1795536263.823610627] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.826448012] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=253.0
+[INFO] [1795536263.917620261] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.921222848] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=289.0
+[INFO] [1795536263.947284486] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.950325527] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=289.0
+[INFO] [1795536263.982196466] [tello_mission]: Aligned. Moving towards green torus. Speed: 0.20 m/s (MAX SPEED)
+[INFO] [1795536263.984787413] [tello_mission]: Tracking green: dx=0.20, yaw=0.000, r=289.0
+[INFO] [1795536264.019349083] [tello_mission]: green donut: close enough (r=307.0), starting pass-through.
+[INFO] [1795536266.655944717] [tello_mission]: Completed green torus, finished pass-through.

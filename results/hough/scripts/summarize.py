@@ -3,7 +3,7 @@ import collections, json, statistics as st, sys
 rows = json.load(open(sys.argv[1]))
 def cat(s):
     return {'full': 'teljesen látszik', 'partial': 'részben / képszélen', 'edge': 'részben / képszélen'}.get(s, 'nem látszik')
-for method in ('contour', 'hough'):
+for method in [m for m in ('contour', 'hough', 'hough_improved') if any(r['method'] == m for r in rows)]:
     R = [r for r in rows if r['method'] == method]
     print(f'== {method}')
     for c in ('teljesen látszik', 'részben / képszélen', 'nem látszik'):

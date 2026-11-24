@@ -13,12 +13,15 @@ Szakdolgozat: egy szimulált DJI Tello drón a kamerája alapján megkeresi a sz
 bash start.bash build      # a Docker image elkészítése (első alkalommal pár perc)
 bash start.bash start      # a konténer indítása, a parancssor ezután a konténerben van
 bash start.bash compile    # a konténerben: a ROS 2 munkaterület lefordítása
-bash start.bash demo       # a konténerben: Gazebo, drón, detektor és automatikus misszió egyszerre
+bash start.bash demo1      # a konténerben: Gazebo, drón, kontúr alapú detektor és automatikus misszió egyszerre
+bash start.bash demo2      # ugyanez a Hough-alapú detektorral
 ```
 
 **Mit látsz a demóban:**
 - **Gazebo ablak:** a pálya és a drón.
-- **`donut_detector_fuzzy` ablak:** a drón kameraképe a felismert karikákkal és a bizalmukkal.
+- **A detektor ablaka:** a drón kameraképe a felismert karikákkal.
+  - `demo1`: a `donut_detector_fuzzy` ablak, a karikák bizalmával;
+  - `demo2`: a `donut_detector` ablak, a karika a saját színében, ellipszisként, mellette a színes rész aránya és a vízszintes nyújtás.
 - **A terminál:** a misszió naplója (ráállás, közelítés, átrepülés).
 
 A demó `Ctrl+C`-re mindent leállít. A szimuláció a processzorral renderel, ezért lassabb gépen akadozhat.
@@ -34,13 +37,13 @@ Menüből (`bash start.bash`) vagy argumentumként (`bash start.bash <parancs>`)
 | `start2` | gazdagép | újabb terminál a futó konténerben |
 | `remove` | gazdagép | a konténer és az image törlése (a fájlokhoz nem nyúl) |
 | `compile` | konténer | a munkaterület fordítása; a fájlok a gazdagép felhasználójáé maradnak |
-| `demo` | konténer | minden egyszerre: Gazebo, drón, detektor, misszió |
+| `demo1` | konténer | minden egyszerre: Gazebo, drón, kontúr alapú detektor, misszió |
+| `demo2` | konténer | ugyanez a Hough-alapú detektorral |
 | `gazebo` | konténer | csak a szimuláció |
 | `drone` | konténer | a drón betöltése, illetve visszarakása a kezdőpontra |
-| `camera1` | konténer | a nyers kamerakép (rqt) |
-| `camera2` / `detector` | konténer | a kontúr alapú detektor megjelenítéssel, illetve anélkül |
-| `hough` | konténer | a Hough-kör-kereső detektor (összehasonlításhoz) |
-| `hand1` / `hand2` | konténer | billentyűs vezérlés a szimulációban, illetve a valódi drónnal |
+| `contour` | konténer | a kontúr alapú detektor, ablakkal |
+| `hough` | konténer | a Hough-alapú detektor, ablakkal (a kontúr alapú helyett; a misszió ugyanúgy működik vele) |
+| `hand` | konténer | billentyűs vezérlés a szimulációban |
 | `automatic` | konténer | csak az automatikus misszió |
 
 ## Felépítés
@@ -56,7 +59,7 @@ Kamera (Gazebo) ──/topic_ns/image_raw──▶ tello_camera_contour ──do
 | Csomag | Feladat |
 |---|---|
 | `tello_controller` | a drón mozgatása: szimulációban a helyzet közvetlen beállításával, valódi drónnál `/cmd_vel` sebességparanccsal |
-| `tello_camera` | `tello_camera_contour`: színmaszk, kontúrok, és a bizalom az egyetem FRI motorjával (`rules/donut_confidence.fbdl`); `tello_camera_hough`: alternatív Hough-kör-kereső |
+| `tello_camera` | `tello_camera_contour`: színmaszk, kontúrok, és a bizalom az egyetem FRI motorjával (`rules/donut_confidence.fbdl`); `tello_camera_hough`: alternatív, Hough-alapú detektor a színmaszkokon, az oldalról látott karikához vízszintes nyújtással (az eredeti változat: `-p method:=original`) |
 | `tello_mission` | keresés, ráállás, közelítés, átrepülés; diszkrét PID-osztály (`pid.py`), alapból P-szabályzóként |
 | `tello_hand_move` | billentyűs vezérlés |
 | `tello_ros` | átvett csomag (drónmodell, üzenettípusok, a valódi drón drivere) |
@@ -65,6 +68,11 @@ Kamera (Gazebo) ──/topic_ns/image_raw──▶ tello_camera_contour ──do
 - **`tello_camera_contour`:**
   - `fuzzy_method` (`fri` az alapértelmezett, `manual` az eredeti kézi függvényekhez);
   - `rules_file` (saját FBDL szabályfájl);
+  - `visualize`;
+  - `image_topic`.
+- **`tello_camera_hough`:**
+  - `method` (`improved` az alapértelmezett, `original` az eredeti, szürkeárnyalatos Hough);
+  - `scale`, `param2`, `min_fraction`, `stretches`, `max_radius`, `hold_frames` (a jelentésük a [`results/hough`](results/hough/README.md#a-javított-hough) leírásban);
   - `visualize`;
   - `image_topic`.
 - **`tello_mission`:**
@@ -79,7 +87,7 @@ Kamera (Gazebo) ──/topic_ns/image_raw──▶ tello_camera_contour ──do
 |---|---|
 | [`results/pid`](results/pid/README.md) | P, PD és PID szabályzó összehasonlítása; a befagyott képkockák kezelésének hatása |
 | [`results/fuzzy`](results/fuzzy/README.md) | kézi fuzzy kontra FRI szabálybázis, 300 képes, ismert helyzetű adathalmazon |
-| [`results/hough`](results/hough/README.md) | a Hough-detektor átnézése, összehasonlítás a kontúr alapúval |
+| [`results/hough`](results/hough/README.md) | a Hough-detektor átnézése, javítása, és összehasonlítás a kontúr alapúval |
 
 ## Fizikai szimuláció a `TelloPlugin`-nel
 

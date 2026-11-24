@@ -46,6 +46,37 @@ stop_demo() {
 	[ "$STARTED_GAZEBO" = "1" ] && kill $GAZEBO_PID 2>/dev/null
 }
 
+#Everything at once with the given detector (contour or hough): Gazebo, drone, detector and the automatic mission
+run_demo() {
+	require_docker
+	source_ws
+	echo "Starting the whole simulation with the $1 detector: Gazebo, drone, detector and the automatic mission (stop: Ctrl+C)"
+
+	#Everything started here is stopped when the demo ends, an already running Gazebo is left alone
+	trap stop_demo EXIT
+	trap "exit 130" INT TERM
+	STARTED_GAZEBO=0
+	if ! gazebo_running; then
+		ros2 launch gazebo_ros gazebo.launch.py world:="$WORLD" > /tmp/gazebo.log 2>&1 &
+		GAZEBO_PID=$!
+		STARTED_GAZEBO=1
+		for i in $(seq 1 60); do
+			gazebo_running && break
+			sleep 2
+		done
+		if ! gazebo_running; then
+			echo "Gazebo did not start, see /tmp/gazebo.log"
+			exit 1
+		fi
+	fi
+
+	spawn_drone
+	ros2 run tello_camera tello_camera_$1 --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true > /tmp/detector.log 2>&1 &
+	DETECTOR_PID=$!
+	sleep 3
+	ros2 run tello_mission tello_mission
+}
+
 show_menu() {
 	echo "-----------------------------------"
 	echo " Tello Drone Launcher Script"
@@ -57,15 +88,13 @@ show_menu() {
 	echo "  remove    - Delete the container and the docker image of the project"
 	echo "Inside the container:"
 	echo "  compile   - Build the ROS 2 workspace (drone_ws)"
-	echo "  demo      - Everything at once: Gazebo, drone, detector and the automatic mission"
+	echo "  demo1     - Everything at once with the contour detector: Gazebo, drone, detector and the automatic mission"
+	echo "  demo2     - Everything at once with the Hough detector"
 	echo "  gazebo    - Start the Gazebo simulation"
 	echo "  drone     - Put the drone (back) to its starting position"
-	echo "  camera1   - Open the camera feed in rqt"
-	echo "  camera2   - Start the circle detector node with visualization"
-	echo "  detector  - Start the circle detector node"
-	echo "  hough     - Start the Hough circle detector node with visualization"
-	echo "  hand1     - Keyboard control in the simulation"
-	echo "  hand2     - Keyboard control of the real drone (tello_driver has to run)"
+	echo "  contour   - Start the contour detector with its window"
+	echo "  hough     - Start the Hough detector with its window (instead of the contour detector)"
+	echo "  hand      - Keyboard control in the simulation"
 	echo "  automatic - Start the automatic mission in the simulation"
 	echo "  exit      - Exit the script"
 	echo "-----------------------------------"
@@ -80,13 +109,11 @@ fi
 
 case "$CMD" in
 	"build")
-		clear
 		echo "Building the docker image!"
 		docker build -t $DOCKER_IMAGE "$ROOT_DIR/Docker"
 	;;
 
 	"start")
-		clear
 		echo "Starting docker..."
 		docker stop $CONTAINER_NAME 2>/dev/null
 		docker rm $CONTAINER_NAME 2>/dev/null
@@ -101,20 +128,18 @@ case "$CMD" in
 		fi
 
 		#HOST_UID/HOST_GID: 'compile' gives the built files back to this user
-		docker run -it --net=host --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" \
+		docker run -it --net=host --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" \
 			"${X_ACCESS[@]}" --env="HOST_UID=$(id -u)" --env="HOST_GID=$(id -g)" \
 			--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$ROOT_DIR:/root/DockerFiles" \
 			--name $CONTAINER_NAME $DOCKER_IMAGE
 	;;
 
 	"start2")
-		clear
 		echo "Starting another docker shell..."
 		docker exec -it $CONTAINER_NAME bash
 	;;
 
 	"remove")
-		clear
 		echo "This deletes the '$CONTAINER_NAME' container and every '$DOCKER_IMAGE' image version."
 		echo "Your files in $ROOT_DIR are not touched."
 		read -p "Continue? (y/n): " ANSWER
@@ -137,7 +162,6 @@ case "$CMD" in
 	;;
 
 	"compile")
-		clear
 		require_docker
 		echo "Building the ROS 2 workspace!"
 		cd "$WS_DIR" && colcon build
@@ -150,100 +174,48 @@ case "$CMD" in
 		exit $STATUS
 	;;
 
-	"demo")
-		clear
-		require_docker
-		source_ws
-		echo "Starting the whole simulation: Gazebo, drone, detector and the automatic mission (stop: Ctrl+C)"
+	"demo1")
+		run_demo contour
+	;;
 
-		#Everything started here is stopped when the demo ends, an already running Gazebo is left alone
-		trap stop_demo EXIT
-		trap "exit 130" INT TERM
-		STARTED_GAZEBO=0
-		if ! gazebo_running; then
-			ros2 launch gazebo_ros gazebo.launch.py world:="$WORLD" > /tmp/gazebo.log 2>&1 &
-			GAZEBO_PID=$!
-			STARTED_GAZEBO=1
-			for i in $(seq 1 60); do
-				gazebo_running && break
-				sleep 2
-			done
-			if ! gazebo_running; then
-				echo "Gazebo did not start, see /tmp/gazebo.log"
-				exit 1
-			fi
-		fi
-
-		spawn_drone
-		ros2 run tello_camera tello_camera_contour --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true > /tmp/detector.log 2>&1 &
-		DETECTOR_PID=$!
-		sleep 3
-		ros2 run tello_mission tello_mission
+	"demo2")
+		run_demo hough
 	;;
 
 	"gazebo")
-		clear
 		require_docker
 		echo "Starting Gazebo with the test world (three donuts)!"
 		ros2 launch gazebo_ros gazebo.launch.py world:="$WORLD"
 	;;
 
 	"drone")
-		clear
 		require_docker
 		echo "Spawning drone!"
 		spawn_drone
 	;;
 
-	"camera1")
-		clear
-		require_docker
-		echo "Opening camera feed"
-		ros2 run rqt_image_view rqt_image_view /topic_ns/image_raw
-	;;
-
-	"camera2")
-		clear
+	"contour")
 		require_docker
 		source_ws
-		echo "Starting the circle detector node with visualization"
+		echo "Starting the contour detector"
 		ros2 run tello_camera tello_camera_contour --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true
 	;;
 
-	"detector")
-		clear
-		require_docker
-		source_ws
-		echo "Starting the circle detector node"
-		ros2 run tello_camera tello_camera_contour --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=false
-	;;
-
 	"hough")
-		clear
 		require_docker
 		source_ws
-		echo "Starting the Hough circle detector node"
+		echo "Starting the Hough detector"
 		ros2 run tello_camera tello_camera_hough --ros-args -p image_topic:=/topic_ns/image_raw -p visualize:=true
 	;;
 
-	"hand1")
-		clear
+	"hand")
 		require_docker
 		source_ws
 		echo "Starting keyboard control for the simulation"
 		ros2 run tello_hand_move tello_hand_move
 	;;
 
-	"hand2")
-		clear
-		require_docker
-		source_ws
-		echo "Starting keyboard control for the drone (tello_driver has to run and the drone has to be in the air)"
-		ros2 run tello_hand_move tello_hand_move --ros-args -p simulation:=false
-	;;
-
 	"automatic")
-		clear
 		require_docker
 		source_ws
 		echo "Starting the automatic mission in the simulation"
@@ -255,7 +227,6 @@ case "$CMD" in
 	;;
 
 	*)
-		clear
 		echo "Wrong command: '$CMD'"
 		#Typed into the menu: try again, given as an argument: stop
 		if [ -n "$1" ]; then
