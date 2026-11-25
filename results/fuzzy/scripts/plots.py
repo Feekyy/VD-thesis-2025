@@ -45,7 +45,7 @@ Z_manual = np.array([[manual_confidence(dict(fixed, radius=r, circularity=k)) fo
 Z_fri = np.array([[fri(dict(fixed, radius=r, circularity=k)) for r in radii] for k in circs])
 fig, axes = plt.subplots(1, 2, figsize=(10, 4.4), dpi=200, sharey=True)
 fig.set_facecolor(SURFACE)
-for ax, Z, title in ((axes[0], Z_manual, "Kézi (súlyozott összeg)"), (axes[1], Z_fri, "FRI szabálybázis (FRIBE)")):
+for ax, Z, title in ((axes[0], Z_manual, "Saját fuzzy függvények (súlyozott összeg)"), (axes[1], Z_fri, "FRI szabálybázis (FRIBE)")):
     style(ax)
     mesh = ax.pcolormesh(radii, circs, Z, cmap=CMAP, vmin=0, vmax=1, shading="auto")
     good = [c for c in C if c["good"]]; bad = [c for c in C if not c["good"]]
@@ -68,7 +68,7 @@ axes[0].set_ylabel("Alakjelleg (kontúr / befoglaló kör)", color=INK2, fontsiz
 #The upper left corner of the left panel has no candidates, the legend goes there
 axes[0].legend(loc="upper left", fontsize=8, frameon=True, facecolor=SURFACE, edgecolor=GRID, framealpha=0.95)
 cbar = fig.colorbar(mesh, ax=axes, fraction=0.03, pad=0.02)
-cbar.set_label("Bizalom", color=INK2, fontsize=10)
+cbar.set_label("Tagsági érték", color=INK2, fontsize=10)
 cbar.ax.yaxis.set_major_formatter(comma)
 cbar.ax.tick_params(colors=MUTED, labelsize=9)
 cbar.outline.set_visible(False)
@@ -79,7 +79,7 @@ plt.close(fig)
 
 #2. Confidence of the good and bad candidates per method
 methods = [("Eredeti\n(hibás jellemzők)", lambda c: manual_confidence(c["old"])),
-           ("Kézi\n(javított jellemzők)", lambda c: manual_confidence(c["new"])),
+           ("Saját függvények\n(javított jellemzők)", lambda c: manual_confidence(c["new"])),
            ("FRI", lambda c: fri(c["new"]))]
 fig, ax = plt.subplots(figsize=(8, 4.4), dpi=200)
 fig.set_facecolor(SURFACE); style(ax)
@@ -96,8 +96,8 @@ for i, (name, fn) in enumerate(methods):
     labels.append(f"{name}\nAUC = {auc:.2f}".replace(".", ","))
 ax.set_xticks(range(len(methods))); ax.set_xticklabels(labels, color=INK2, fontsize=9)
 ax.set_ylim(-0.03, 1.03); ax.yaxis.set_major_formatter(comma)
-ax.set_ylabel("Bizalom", color=INK2, fontsize=10)
-ax.set_title("A jó és a rossz jelöltek bizalma (vonal: medián)", loc="left", color=INK, fontsize=12, pad=10)
+ax.set_ylabel("Tagsági érték", color=INK2, fontsize=10)
+ax.set_title("A jó és a rossz jelöltek tagsági értéke (vonal: medián)", loc="left", color=INK, fontsize=12, pad=10)
 ax.legend(loc="upper left", fontsize=9, frameon=False, bbox_to_anchor=(1.0, 1.0))
 fig.savefig(os.path.join(out, "confidence_separation.png"), facecolor=SURFACE, bbox_inches="tight")
 plt.close(fig)
